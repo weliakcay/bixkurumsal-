@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Ekibimiz | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .team-member {
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: transform var(--transition-normal);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-member__img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .team-member__info {
+            padding: var(--space-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link navbar__link--active">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md">Uzman Ekibimiz</h1>
+            <p class="text-lead text-white opacity-80 mx-auto">Sektörün tecrübeli ve en dinamik kadrosuyla yanınızdayız.
+            </p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
+
+        <div class="text-center reveal-up">
+            <h2 class="text-h2 text-charcoal mb-sm" style="color:var(--bix-charcoal);">Profesyonellerimizle Tanışın</h2>
+            <p class="text-muted text-lead">Denetim, sürdürülebilirlik ve kalite süreçleriniz emin ellerde yönetiliyor.
+            </p>
+        </div>
+
+        <div class="team-grid reveal-up delay-200">
+            <!-- Kurucu -->
+            <div class="team-member">
+                <img src="images/bulent-dokuzluoglu.jpg?v=2" alt="Bülent Dokuzluoğlu" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Kurucu / Baş
+                        Denetçi</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Bülent Dokuzluoğlu</h3>
+                    <p class="text-small text-muted">Veteriner Hekim. Travelife, BRC, Global GAP ve ISO Kalite Yönetim
+                        Sistemleri Baş Denetçisi.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Hacer Dokuzluoğlu" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Finans & Üretim</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Hacer Dokuzluoğlu</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Özge Akcasu" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Operasyon</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Özge Akcasu</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Şahin Sevruk" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Şahin Sevruk</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Nihan Eser" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Nihan Eser</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Toprak Adıgüzel" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Toprak Adıgüzel</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Çiğdem Aksoy" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Satış Pazarlama</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Çiğdem Aksoy</h3>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                    alt="Selin Doğan" class="team-member__img">
+                <div class="team-member__info">
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Veri Analisti</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Selin Doğan</h3>
+                    <p class="text-small text-muted">Dream Quality CMS İstatistik Uzmanı ve Optimizasyon Sorumlusu.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="flex-center gap-md mb-lg">
+                <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="social-icon" target="_blank"><i
+                        data-lucide="instagram" size="20"></i></a>
+                <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="social-icon" target="_blank"><i
+                        data-lucide="facebook" size="20"></i></a>
+                <a href="javascript:void(0);" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
+            </div>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

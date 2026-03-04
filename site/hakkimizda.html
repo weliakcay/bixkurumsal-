@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .profile-card {
+            background: var(--bix-off-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-3xl);
+            display: flex;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            object-position: top;
+            border: 4px solid var(--bix-white);
+            box-shadow: var(--shadow-lg);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+                padding: var(--space-xl);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link navbar__link--active">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md">Hakkımızda</h1>
+            <p class="text-lead text-white opacity-80 mx-auto">2005'ten bu yana değer üretiyoruz.</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
+
+        <div class="grid grid--2 gap-4xl mb-4xl align-center reveal">
+            <div>
+                <h2 class="text-h2 mb-md">Biz Kimiz?</h2>
+                <p class="mb-lg">BIX Kurumsal, turizm, konaklama, gıda ve hizmet sektörlerinde faaliyet gösteren
+                    işletmelere; sürdürülebilirlik, kalite yönetim sistemleri, gıda ve su güvenliği ile operasyonel
+                    mükemmeliyet alanlarında danışmanlık, denetim ve eğitim hizmetleri sunan uzman bir kuruluştur.</p>
+                <p class="mb-lg">Kuruluşumuz; ulusal ve uluslararası standartlar çerçevesinde, işletmelerin yalnızca
+                    belge almasını değil, sistem kurmasını, risklerini yönetmesini ve performansını ölçerek sürekli
+                    iyileştirme kültürü oluşturmasını hedefler.</p>
+                <p>Yaklaşımımız; standartlara uyumun ötesinde, kurumsallaşma, stratejik yönetim ve marka değerini
+                    artırmaya odaklanır.</p>
+            </div>
+            <div class="img-wrapper">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="BIX Toplantı">
+            </div>
+        </div>
+
+        <div class="profile-card reveal-up">
+            <img src="images/bulent-dokuzluoglu.jpg?v=2" alt="Bülent Dokuzluoğlu" class="profile-img">
+            <div>
+                <span class="text-small text-orange font-bold uppercase tracking-wider">Kurucu / Baş Denetçi</span>
+                <h3 class="text-h3 mt-xs mb-md">Bülent Dokuzluoğlu</h3>
+                <p class="mb-md">İlk ve orta öğrenimi Kilis'te tamamladıktan sonra Ankara Üniversitesi Veteriner
+                    Fakültesi'nden mezun oldu.</p>
+                <p class="mb-md">Gıda Kontrol Subayı olarak 15 ay Diyarbakır İç Güvenliği Tugay Komutanlığı'nda görev
+                    yaptıktan sonra Antalya'da yaşamaya başladı. Gıda Güvenliği ile ilgili danışmanlık şirketinde 2 yıl
+                    çalıştıktan sonra 2005 yılında BIX Kurumsal'ı kurdu ve işletmelere hijyen denetimleri ve kalite
+                    yönetim sistemleri danışmanlık ve belgelendirme konusunda hizmet vermeye başladı.</p>
+                <p class="mb-md">Turizm sektörüne olan ilgisi nedeniyle Anadolu Üniversitesi Turizm Otel İşletmeciliğini
+                    ikinci üniversite olarak bitirdi.</p>
+                <p class="mb-md">Uluslararası sertifikasyon kuruluşlarından, ISO 22000, ISO 9001, ISO 14001, OHSAS
+                    18001, BRC, Global GAP konularında eğitimlerini tamamlayarak söz konusu standartlar konusunda
+                    denetçi klasifikasyonlarını tamamladı. (<a href="http://www.iso.org" target="_blank"
+                        style="color:var(--bix-orange)">www.iso.org</a>)</p>
+                <p class="mb-md">Global GAP, BRC ve ISO standartlarına göre denetçi klasifikasyonunlarını tamamladı. (<a
+                        href="http://www.brcglobalstandards.com" target="_blank"
+                        style="color:var(--bix-orange)">www.brcglobalstandards.com</a>)</p>
+                <p class="mb-md">ANVR (Hollanda Acentalar Birliği) nin önemli bir projesi ve TUI'nin ana sponsorları
+                    arasında olduğu Travelife Sürdürülebilir Turizm konusunda, Hollanda'da ABTA'dan eğitim alarak
+                    Travelife konusunda denetçi oldu. (<a href="http://www.travelifecollection.com" target="_blank"
+                        style="color:var(--bix-orange)">www.travelifecollection.com</a>)</p>
+                <p class="mb-md">Turizm profesyonellerinin üye olduğu, uluslararası SKAL Antalya Kulübü'nde yönetim
+                    kurulu üyeliği görevini yürütmektedir. (<a href="http://www.skalantalya.org.tr" target="_blank"
+                        style="color:var(--bix-orange)">www.skalantalya.org.tr</a>)</p>
+                <p class="mb-md">Turizm sektöründe kalite bilincinin yerleşmesi ve yaygınlaşması için faaliyetler
+                    yürüten Kalder Turizm Çalışma grubunda görev almaktadır.</p>
+                <p class="mb-lg">Aynı zamanda Aspendos Rotary Kulübü üyesidir.</p>
+                <div class="flex gap-md">
+                    <a href="blog.html" class="btn btn--primary">Köşe Yazılarını Okuyun</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

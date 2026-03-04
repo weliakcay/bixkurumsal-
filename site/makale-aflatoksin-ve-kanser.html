@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Aflatoksin ve Kanser</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Ülkemizde üretilen gıda ürünlerinin zaman zaman gümrük kapılarından dönmesine neden olan aflatoksin, aspergillus flavus ve aspergillus parasiticus adlı küfler tarafından üretilen bir grup toksik bileşiktir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu küfler, uygun sıcaklık ve nem koşullarında bazı yiyecek maddelerinde çoğalır ve aflatoksin oluşmasına neden olurlar. B1, B2, G1 ve G2 gibi belli başlı aflatoksinler değişen oranlarda bir arada bulunur, ancak en zehirli olan Tip B1’dir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Aflatoksin B1 kansere yol açan etkendir ve hasar esas olarak karaciğerde oluşur. Aflatoksinlerin genel olarak iki tür etkisinden söz edilebilir.</p><p class="mb-lg" style="color: var(--bix-body-text);">a- Akut aflatoksikoz, orta düzeyin üstünde aflatoksin alımıyla ortaya çıkar. Kanama, akut karaciğer hasarı, ödem, gıda sindirimi, emilim ve/veya metabolizmasında değişiklik ve ölüm gibi sonuçları olabilir.</p><p class="mb-lg" style="color: var(--bix-body-text);">b- Kronik aflatoksikoz, düşük ve orta düzeyde aflatoksin alımıyla ortaya çıkar. Teşhisi zordur. Ortak belirtiler arasında gıdaların sindiriminde sıkıntı ve düşük büyüme hızı yer alır. Bunlara ek olarak bilinen aflatoksin sendromları da görülebilir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Mısır ve mısır ürünlerinde, fındıkta, amerikan fıstığında ve diğer fıstık türlerinde, pamuk tohumunda, sütte ve cevizde aflatoksin oluşma riski yüksektir. Diğer tahıl ve fındık türlerinde çok daha az yaygındır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir gıda maddesinde aflatoksinin oluşmasına neden olan ilk etmen, toksini(zehir) yapan küfün gıda maddesine bulaşmasıdır. İkinci neden ise, gıdanın kendisinin ve bulunduğu ortamın, küfün çoğalmasını sağlayacak şartlara sahip olmasıdır. Küfler nemli ve sıcak ortamlarda gelişir. Aflatoksin yapan küfler ise 25-35°c sıcaklık ve yüzde 70’in üzerinde nispi nem olan ortamda oluşur. Havada ve toprakta her zaman bulunabilen küflerin gıdalara bulaşması mümkündür. Bulaşmayı önlemek ise hemen hemen imkânsızdır. Bu nedenle esas olan ortamda bulunan küfün gelişmesini sağlayan koşulları yok etmektir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gıdaların üretiminden sonra aflatoksin oluşmasını önlemenin tek yolu gıdaların neminin küfün gelişmesine fırsat tanımayacak kadar kısa sürede düşmesini; başka bir ifadeyle hızla kurumasını sağlamaktır ve gıdaların çok nemli ortamlarda bulunmasını önlemektir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Herhangi bir üründe küflenme meydana geldiği zaman o ürün kesin olarak imha edilmelidir. Küflenme her ne kadar ürünün bir bölümünde oluşmuş gibi görünse de meydana gelen toksinler ürün içerisine yayılmaktadır. Küflenen kısmı uzaklaştırmak tehlikeyi ortadan kaldırmamaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Kurutma aşamasında alınacak ciddi önlemler, aflatoksin sorununu en aza indirir. Ancak; tüm üretim sürecinde özen gösterilmezse, sorunun başka bir aşamada da çıkması işten bile değildir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Aflatoksin birçok üründe meydana gelebiliyor olmasına karşılık;</p><p class="mb-lg" style="color: var(--bix-body-text);">yer fıstığı,</p><p class="mb-lg" style="color: var(--bix-body-text);">antep fıstığı gibi kabuklu kuru meyveler,</p><p class="mb-lg" style="color: var(--bix-body-text);">mısır gibi hububat,</p><p class="mb-lg" style="color: var(--bix-body-text);">pamuk tohumu,</p><p class="mb-lg" style="color: var(--bix-body-text);">ayçiçeği tohumu gibi yağlı tohumlar</p><p class="mb-lg" style="color: var(--bix-body-text);">incir gibi kurutulan meyveler,</p><p class="mb-lg" style="color: var(--bix-body-text);">biber ve diğer baharatlar</p><p class="mb-lg" style="color: var(--bix-body-text);">aflatoksin oluşumuna daha hassas görünmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gıda kaynaklı kanser oluşumlarının başlıca nedenleri; pişirme yöntemi, hormonlar, aflatoksin, renklendirici ve tat vericiler, aşırı tuzlu, füme edilmiş ürünler, kullanım süresi geçmiş gıdalar olarak karşımıza çıkmaktadır. İstatistikler ülkemizde kanser oranının beş yılda yüzde 60 arttığını göstermektedir. Gelişen teknolojinin bize sunduğu sağlıksız beslenme kültürü, kirlenen dünya ve 'özensiz' yaşam tarzı, kanserin tüm dünyada artmasına yol açmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sağlık bakanlığından yapılan açıklamaya göre; "ülkemizde her yıl 100 bin kadar yeni kanserli hasta beklenmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Dünyada her yıl 6 milyon kişinin yakalandığı kanserin, önümüzdeki 25 yılda yüzde 300 artış göstereceğini ortaya koymaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sağlıklı ve güvenli gıdaların üretimi-tüketimi ve etkin gıda güvenliği uygulamaları bizlerin ve misafirlerimizin istenmeyen durumlarla karşılaşmasını engelleyecektir. Bu konuda tüm sektör çalışanlarının hassasiyeti ve titizliği önem taşımaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sağlıklı günler dilerim….</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent DOKUZLUOĞLU</p><p class="mb-lg" style="color: var(--bix-body-text);">Veteriner Hekim</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">HYPERLINK "mailto:bulent@bixkurumsal.com" bulent@bixkurumsal.com</p><p class="mb-lg" style="color: var(--bix-body-text);">http://blog.milliyet.com.tr/bulentdokuzluoglu</p><p class="mb-lg" style="color: var(--bix-body-text);">SHAPE  \* MERGEFORMAT</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE  2</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

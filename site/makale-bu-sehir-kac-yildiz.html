@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">BU ŞEHİR KAÇ YILDIZ</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Strateji • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Türkiye Otelciler Federasyonu (TÜROFED) tarafından hazırlanan 2013 Turizm Raporu'na göre, 5 yıldızlı otel sayısı yüzde 10 artarak 413’e yükseldi. 5 yıldızlı otellerin en fazla olduğu iller sıralamasında, Antalya ilk sırada yer aldı. Ülkemizdeki 5 yıldızlı tesislerin yüzde 51'i Antalya'da faal durumda bulunuyor. Antalya'yı yüzde 13 ile İstanbul, yüzde 8 ile Muğla ve yüzde 4 ile İzmir takip ediyor. Acaba Antalya şehir olarak kaç yıldızlı. Bir şehri yaşanabilir kılan klasik veriler, suç oranının düşük olması, iyi ulaşım imkanı, belediyecilik hizmeti, ekonomi, eğitim, sağlık, güvenlik, kent hayatı ve kültür-sanat etkinliği.</p><p class="mb-lg" style="color: var(--bix-body-text);">Söz konusu kriterleri göz önüne getirerek Antalya şehir yaşanabilirliğine kaç yıldız verirsiniz? Antalya’da hızla büyüyen turizm, arka arkaya açılan beş yıldızlı oteller. Mevcut otellerin hizmet kalitesini misafir memnuniyeti artırma yönünde yaptığı çalışmalar. Bunlar sektörün büyümesine katkı sağlayan önemli faaliyetler. Oysa şehir olarak Antalya son on yılda yaşanabilirlik kriterlerine göre ilerliyor mu yoksa geriye mi gidiyor? Otelcilik sektörü dışındaki tüm insanların; her şey dahil sistem geldi, misafir otel dışına çıkmıyor. Turizm bitti isyanları. Bunlara hak vermek ne yazık ki mümkün değil.</p><p class="mb-lg" style="color: var(--bix-body-text);">Eğer siz turistlerin, her yıl kendini yenileyen, hizmet kalitesini artırmanın yollarını arayan, yurt dışındaki otellerle kendilerini karşılaştırarak yenilik peşinde koşan otellerimizden çıkıp, şehir hayatına karışmasını istiyorsanız bununla ilgili bazı çalışmaları ve akılcı düşünceleri hayata geçirmek zorundasın.</p><p class="mb-lg" style="color: var(--bix-body-text);">Belediye olarak ulaşım sorununu çözmek en önemli kriter. Toplu taşıma imkanlarının artmasını sağlayamıyorsanız, misafir otelden dışarı çıkmaz. Değerli esnaflarımız, misafirlere kaliteli ürün, kaliteli hizmet sunamıyorsanız, misafir otelden dışına çıkmaz. Taksicilerimiz acaba son on yılda verdikleri hangi hizmeti iyileştirdiler, ikinci sınıf ürün satan işyerleri işletmelerinde hangi iyileştirmeleri yaptılar. Misafir memnuniyeti bu şehirdeki insanlara neyi çağrıştırıyor. ISO 9001 neyi çağrıştırıyor merak ediyorum.</p><p class="mb-lg" style="color: var(--bix-body-text);">Diyelim şehir hayatındaki bu yıldızsız hizmetleri bilmeyen bir misafir otel dışına çıkmaya karar verdi. İnternetten araştırma yaparak bir Türk şarkıcısının sahne aldığı bir yere gitmeye karar verdi. Belek’te olan bu misafir Antalya ya gidecek. Taksiyle gitse, nasıl gidecek nasıl dönecek ne kadar ücret edecek bir muamma. Bir araba kiralamaya karar verdi. Arabasını aldı zar zor şarkıyı izleyeceği yerin önüne geldi. Valeler karşılıyor, sert bir bakış ve “bu alandan sonra arabayı biz park ediyoruz. Yani konser biletinin yarısını alacağız bizi zorlama. Hoş geldiniz veya bir güleryüz bekliyorsanız şehrin kaç yıldız olduğunu bilmiyorsunuz. Öğrenmeye başlayacaksınız.</p><p class="mb-lg" style="color: var(--bix-body-text);">Arabanızı sert bakışlı valeye teslim ettiniz. Oradan güvenlik kontrolü, bodygardlar onları da aştınız ve mekâna girdiniz. Sahnenin ön tarafındaki yerlerde viski, votka rezervasyonları, nereye geçeceğinizi bilmiyorsunuz. Bir garson geliyor, rezervasyonunuz var mı? Bilet almıştım.. O zaman şöyle arka taraflara doğru geçin iki kişilik masa etrafında tabure bulabilirseniz şanslısınız. Geçiyor misafirimiz oraya bakıyor olacak gibi değil. Ön tarafa rezervasyon ücretini ödeyerek geçiyor. Güzel bir performans izlemek için. Salon doldukça doluyor, doldukça doluyor, tabureler yan yana, insanlar zar zor geçiyor. Sonra bir garson yaklaşıyor, burası çok dar olmuş ben geçemiyorum, şöyle bir kenara geçin. Tabi salon benim, biletleri ben sattım, içeriye kaç kişi alacağıma ben karar verdim. Sizin geçmeniz için yeri ben ayarlarım. Şöyle biraz sıkışayım. Bu arada içiyorsunuz diyen garsonlar parayı peşin alıp üzerin unutturmaya çalışıyor. Çok iyi hizmet verdiniz ya tabiî ki hakkınız. Performansı izlerken, sigara vb ihtiyaçları için çıkan insanlar, siparişleri dağıtan garsonlar sizi sürekli rahatsız ediyor. Tabiî ki geç başlayan bir program geç bitiyor.</p><p class="mb-lg" style="color: var(--bix-body-text);">Vale ücretini de ödedikten sonra otelinizin yolunu tutuyorsunuz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sizce bu misafir bir daha otelden şehre çıkar mı? Tabiî ki çıkmaz. Ama problem nerede? Her şey dahil otellerde. Onlar misafirleri dışarı çıkarmıyorlar. Yoksa şehrin her yeri ayrı güzel, her hizmeti kaliteli.</p><p class="mb-lg" style="color: var(--bix-body-text);">Eğer bu şehir, belediyesiyle yaşanabilirliği, restoranlarıyla, barlarıyla, taksicisiyle, butikleriyle hizmet kalitesini artırmazsa, misafir memnuniyeti kavramını öğrenmemeye devam ederse, daha çok otelcilere, her şey dahil sisteme veryansın eder. Ama boşuna eder. Avrupa’yı takip eden otellerimiz, gerek kendi istekleriyle gerekse acentelerin itici gücüyle hizmetlerini iyileştiriyorlar. Uluslararası kalite yönetim sistemlerini uyguluyorlar. Kolay para kazanmak artık mümkün değil. Rekabet oldukça güç. Bir işletme için başarılı olmanın, kalıcı olmanın en önemli yolu misafir memnuniyeti sağlamak için, hizmet kalitesin artırmak. Artık sadece deniz, güneş için gelen hizmet beklemeyen misafir yok. Misafirler her zamankinden daha değerli. Antalya’nın artık bir bütün olarak düşünmesi, yaşaması ve ilerlemesi gerek. Birbirine yol gösterici, uyum içerisinde şehrimizin de yıldızlarını artırmak zorundayız. Sadece beş yıldızlı otellerin artması turizmin sürdürülebilirliği için tek başına yeterli değildir. Hep birlikte şehrimizin de yıldızını artırmalı ve turizmimizi sürdürülebilir kılmalıyız.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">www.bixkurumsal.com</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE  1</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md">Uzman Görüşü</h1>
+            <p class="text-lead text-white opacity-80 mx-auto">Sektördeki son gelişmeler, stratejik analizler ve kalite
+                standartları üzerine makalelerimiz.</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+
+        <div class="filter-nav reveal-up">
+            <button class="filter-btn active">Tümü</button>
+            <button class="filter-btn">Gıda Güvenliği</button>
+            <button class="filter-btn">Strateji</button>
+            <button class="filter-btn">Sürdürülebilirlik</button>
+            <button class="filter-btn">Yönetim</button>
+        </div>
+
+        <div class="grid grid--3">
+            <!-- Blog Card -->
+            <a href="makale-avm-lerde-gida-guvenligi.html" class="blog-card reveal" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">AVM lerde Gıda Güvenliği</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Tüm Türkiye’de olduğu gibi, Antalya’da da hızla alışveriş merkezleri açılmaktadır.
+Bugün bir AVM içerisinde yaklaşık 25 ile 50 arasında toplu tüketim ...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-gida-guvenligi-denetimleri.html" class="blog-card reveal delay-100" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">GIDA GÜVENLİĞİ DENETİMLERİ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Denetim kelimesi kulağımıza pek hoş gelmese de hayatımızın ve yönetim sistemlerinin olmazsa olmazları arasında yer almaktadır. Denetim olgusunu biraz ...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-gida-guvenligi-proje-asamasinda-baslar.html" class="blog-card reveal delay-200" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">GIDA GÜVENLİĞİ PROJE AŞAMASINDA BAŞLAR</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Her yıl onlarca otel işletmesinin açıldığı ve yüzlerce otelinde renovasyona girdiği ülkemizde, otelin kalbi olan mutfak projeleri hazırlanırken gıda g...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-gundem-strateji-mi-taktik-mi.html" class="blog-card reveal" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">GÜNDEM STRATEJİ Mİ TAKTİK Mİ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Turizm sektöründe bir kış dönemini daha tamamlarken, otellerimizin gündemini meşgul eden konuları hep birlikte değerlendirelim. 2019 yılı bütçelerinin...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-hijyen-denetimi-mi-o-da-ne.html" class="blog-card reveal delay-100" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">HİJYEN DENETİMİ Mİ? O DA NE!</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Turizm sektöründe yeralan otel ve restoranlarda gıda güvenliği ve misafir güvenliği konularında çalışmalara başladığımda, yaptığımız işi anlatmak gerç...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-bu-sehir-kac-yildiz.html" class="blog-card reveal delay-200" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">BU ŞEHİR KAÇ YILDIZ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Türkiye Otelciler Federasyonu (TÜROFED) tarafından hazırlanan 2013 Turizm Raporu'na göre, 5 yıldızlı otel sayısı yüzde 10 artarak 413’e yükseldi. 5 yı...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-denetim-kimin-icin-gerekli.html" class="blog-card reveal" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Denetim Kimin İçin Gerekli;</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Türk Dil kurumunda denetim;
+Kamu ya da özel bir kuruluşa ilişkin bilgilerin önceden belirlenmiş ölçütlere uygunluğunun saptanması ve rapor edilmesi am...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-gelecek-icin-bagimsiz-denetim.html" class="blog-card reveal delay-100" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Gelecek İçin Bağımsız Denetim</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Türk Dil kurumunda denetim;
+Kamu ya da özel bir kuruluşa ilişkin bilgilerin önceden belirlenmiş ölçütlere uygunluğunun saptanması ve rapor edilmesi am...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-birazda-ekonomi.html" class="blog-card reveal delay-200" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Birazda Ekonomi</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Türk Dil kurumunda ekonomi;
+İnsanların yaşayabilmek için üretme, ürettiklerini bölüşme biçimlerinin ve bu faaliyetlerden doğan ilişkilerin bütünü, ikt...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-dunyayi-tanri-hollandayi-hollandalilar-yaratti.html" class="blog-card reveal" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Dünyayı tanrı, Hollanda’yı Hollanda’lılar yarattı</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Tam olarak denetimlerin gerekliliği ve turizm sektörünün bütünlüğünden bahsederken, tekne yangını ve rafting kazası yaklaşık aynı zamanda meydana geld...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-pazarlama-kimin-isi.html" class="blog-card reveal delay-100" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">PAZARLAMA KİMİN İŞİ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Türk Dil Kurumu satış ve pazarlamayı şöyle tanımlıyor:
+Satış; Satıcı ile alıcı arasında yapılan ve bir malın veya hizmetin alıcıya verilmesi ve bunun ...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-esnafimizi-hersey-dahil-degil-kalitesizlik-oldurdu.html" class="blog-card reveal delay-200" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">ESNAFIMIZI HERŞEY DAHİL DEĞİL KALİTESİZLİK ÖLDÜRDÜ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Yaşadığımız bu zor günlerde, umudumuzu kaybetmeden, en yüksek enerjimizle çalışmalarımızı sürdürmeliyiz. Çünkü hayat devam ediyor ve her kriz içerisin...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-kalite-patronla-baslar.html" class="blog-card reveal" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">KALİTE PATRONLA BAŞLAR</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Turizm Bakanlığı 2007 yılında Türkiye Turizm Stratejisi 2023 ‘ü yayınladı.
+Hizmet Kalitesi Stratejisi başlığı önemliydi, strateji ise turizm sektörünü...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-aflatoksin-ve-kanser.html" class="blog-card reveal delay-100" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Aflatoksin ve Kanser</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Ülkemizde üretilen gıda ürünlerinin zaman zaman gümrük kapılarından dönmesine neden olan aflatoksin, aspergillus flavus ve aspergillus parasiticus adl...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-gida-denetimlerinde-metod-degisikligi.html" class="blog-card reveal delay-200" data-category="Gıda Güvenliği">
+                <div class="blog-meta">
+                    <span>Gıda Güvenliği</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">GIDA DENETİMLERİNDE METOD DEĞİŞİKLİĞİ</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Denetim kelimesi kulağımıza pek hoş gelmese de hayatımızın ve yönetim sistemlerinin olmazsa olmazları arasında yer almaktadır. Denetim olgusunu biraz ...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-surdurulebilir-turizm-yarinin-misafirlerini-bugund.html" class="blog-card reveal" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">SÜRDÜRÜLEBİLİR TURİZM: YARININ MİSAFİRLERİNİ BUGÜNDEN KAZANMAK</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Sürdürülebilir turizm, sadece çevre duyarlılığının bir yansıması değil; aynı zamanda ekonomik ve sosyo-kültürel değerlerin korunarak gelecek nesillere...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-biz-bu-isi-nasil-yapacagiz.html" class="blog-card reveal delay-100" data-category="Strateji">
+                <div class="blog-meta">
+                    <span>Strateji</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">Biz Bu İşi Nasıl Yapacağız?</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">Bilimin doğrularını iş hayatımıza uygulamalı mıyız? Yoksa iç güdülerimiz ve geleneksel yöntemlerimizle yerimizde saymaya devam mı etmeliyiz?
+Tarihte b...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+            <!-- Blog Card -->
+            <a href="makale-denetim-kulturunu-kurumsal-hafizaya-donusturmek.html" class="blog-card reveal delay-200" data-category="Sürdürülebilirlik">
+                <div class="blog-meta">
+                    <span>Sürdürülebilirlik</span> • Bülent Dokuzluoğlu
+                </div>
+                <h3 class="text-h4 mb-md">DENETİM KÜLTÜRÜNÜ KURUMSAL HAFIZAYA DÖNÜŞTÜRMEK</h3>
+                <p class="text-small text-muted mb-lg blog-card__text">İşletmelerdeki organizasyon başarısı, operasyon yöneticilerinin vizyonu ve kuralların sadece kâğıt üzerinde kalmamasıyla mümkündür. Bir denetim veya k...</p>
+                <span class="text-orange font-medium text-small flex align-center gap-xs blog-card__btn">Devamını Oku <i
+                        data-lucide="chevron-right" size="14"></i></span>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

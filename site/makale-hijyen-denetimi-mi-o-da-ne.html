@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">HİJYEN DENETİMİ Mİ? O DA NE!</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Turizm sektöründe yeralan otel ve restoranlarda gıda güvenliği ve misafir güvenliği konularında çalışmalara başladığımda, yaptığımız işi anlatmak gerçekten zor oluyordu. Bazı arkadaşlarım bana ya seni uzun zamandır tanıyoruz, ancak ne iş yaptığını bir türlü anlayamadık diyorlardı. Eğitim mi? Denetim mi? Bu denetimleri resmi kurumlara mı bağlı olarak yapıyorsun? Resmi kurumlara bağlı değilsen paranı kimden alıyorsun? Ya insan hiç kendi şirketini para verip denetletir mi? Soruları oldukça sık karşılaştığım sorulardan bazıları. Yanıt vermekten asla usanmadığım bu soruların yanıtlarını siz okurlarımla da paylaşmak istedim. Eminim yazılarımı okuyup ne iş yaptığım hakkında aklında soru işareti olan çok fazla kişi vardır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu çalışmalara nasıl başladım? Aslında oldukça ilginç. Bir akşam arkadaşlarımla bir yerde yemek yemeğe gitmiştik. Siparişlerimizi verdikten sonra tuvaletin yerini sorarak o yöne doğru hareketlendim. Tuvaletler restoranın altında mutfağın kenarından geçerek ulaşılabilen bir yerdeydi. Aşağıya doğru inerken mutfak içerisinde ekipmanların pisliği, haşerelerin hareketleri bugün bile gözümün önünden gitmiyor. O tabloyu görür görmez hızla işimi bitirip siparişlerimizi iptal ederek oradan uzaklaştık. Meslek itibariyle askerlik hizmetimi yaparken, askeriye ve karakollarda bulunan mutfakları denetliyorduk. Birden gözümün önüne o yıllar ve tabiî ki ülkemizde hijyen diye bir kavramın var olduğunu öğreten sevgili Uğur Dündar’ın gizli kamera çekimleriyle yaptığı baskınlar geldi aklıma. Yüzlerce hastalığın insanlara bulaşmasına neden olan gıda terörü maalesef, bilinçsizlik, duyarsızlık, resmi denetimlerin yetersizliği, temizlik kültürünün oluşmaması nedeniyle hala etkisini gösteriyor. Uğur Dündar’ın medyadan uzaklaşmasıyla birlikte ülkemizinde gündeminden düşen bir konu oldu gıda terörü.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sadece yasal düzenlemelerle çözülemeyecek bir konu olan gıda güvenliği konusunda maalesef insanlarımız yayınlanmış yasalardan da bihaber. Yatırımcı umursamaz, devletin denetim mekanizmalarının hali ortada. Peki insanların sağlığını bu kadar tehdit eden, insanların başta kanser hastalıkları olmak üzere, Böbrek yetmezlikleri, menenjit, kalp zarı iltihaplanması, ishal, brucella gibi hastalıklara yakalanmasına neden olan bu konu ile ilgili yapılacak hiç bir şey yoktu.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">www.bixkurumsal.com</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE  1</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

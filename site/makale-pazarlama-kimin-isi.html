@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">PAZARLAMA KİMİN İŞİ</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Strateji • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Türk Dil Kurumu satış ve pazarlamayı şöyle tanımlıyor:</p><p class="mb-lg" style="color: var(--bix-body-text);">Satış; Satıcı ile alıcı arasında yapılan ve bir malın veya hizmetin alıcıya verilmesi ve bunun karşılığında bir fiyat, bir değer alınması yoluyla yapılan işlem, satım.</p><p class="mb-lg" style="color: var(--bix-body-text);">Pazarlama;</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir ürünün, bir malın, bir hizmetin satışını geliştirmek amacıyla tanıtmayı, paketlemeyi, satış elemanlarının yetişmesini, piyasa gereksinimlerini belirlemeyi ve karşılamayı içeren etkinliklerin bütünü.</p><p class="mb-lg" style="color: var(--bix-body-text);">İngiltere, çayın yetişmediği, ama tüm dünya satılan lipton çaylara sahip</p><p class="mb-lg" style="color: var(--bix-body-text);">Amerika, mutfağı bile olmayan bir ülke, ama tüm dünyaya satılan Mcdonalds’ı var</p><p class="mb-lg" style="color: var(--bix-body-text);">Bırakın yararı olmasını zararları saymakla bitmeyen, ama tüm dünyaya satılan coca cola</p><p class="mb-lg" style="color: var(--bix-body-text);">Kanserin dünyada yayılmasının en önemli nedenlerinden biri ama tüm dünyada satılan marlboro markası var..</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu ürünler nasıl bu kadar başarılı oluyor? Sadece kalitelerimi yüksek, yoksa tüm dünyada satılmalarının başka bir sırrı var mı? Avrupa da bizden farklı olarak ne var? Amerika da ne var? Almanya da ne var, İspanya da ne var? Fransa da ne var? Bizi onların gerisinde bırakan ne? İyi satış metotlarımı yoksa bir bütünlük halinde uygulanan pazarlama stratejileri mi? Bizimle onlar arasındaki temel farklılık ne? Peki biz neyi eksik yapıyoruz?</p><p class="mb-lg" style="color: var(--bix-body-text);">Hepimiz biliyoruz ki onların markası var.. Bizim ise markamız yok.. Tüm dünyaya satabildiğimiz içecek markamız yok, tüm dünyaya satabildiğimiz arabamız yok, tüm dünyaya satabildiğimiz otelimiz yok. Biz satış yapıyoruz, onların yaptığı ise pazarlama. Bizler elimizdeki ürün ve hizmetin kalitesi artırmaya zaman, emek, para ve işgücü ayırıyoruz ama sonuç istediğimiz gibi olmuyor.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki penceremizi biraz daraltalım. Dünya da eşi benzer olmayan tesislerimiz var. Hizmet kalitemizi, Avrupa da benzer bir tesisten almak isterseniz en az on katı ücret ödemek zorundasınız. Kalitemiz, tesislerimiz, doğamız bu kadar mükemmel iken neden bu kadar ucuz kalıyoruz. Antalya da ne yok? Antalya olarak nereden başlamalıyız? Neyin peşinde olmalıyız? Zamanımızı, emeğimizi, işgücümüzü hangi noktaya odaklamalıyız.</p><p class="mb-lg" style="color: var(--bix-body-text);">Biz satmak istiyorsak öncelikle pazarlama yapmak zorundayız. Pazarlama yapmazsanız hiç bir şeyi hak ettiği değerde satamazsınız. Antalya da o kadar çok pazarlanacak şey var ki? Ama biz onların hiçbiriyle sistematik, organize ve planlı olarak ilgilenmiyoruz, Peki ne yapıyoruz, hepimiz kendi otelimizi satmaya çalışıyoruz. Ama şunun farkına varmak zorundayız, hiçbir tesis kendi başına yaptığı çalışmalarla, bir hizmet markası yaratamaz, bir şehir markası yaratamaz. HP'nin kurucularından David Packard "Pazarlama, pazarlama departmanına bırakılmayacak kadar önemli bir iştir" diyerek bu çalışmanın bireysel olarak, geniş açıyla baktığınızda tek bir işletme olarak yapılmasının mümkün olamayacağını açıkça ortaya koymuştur. Bir patron, yüzlerce milyon euro yatırımını yaparak, tesisini yapar, açılışına dünyanın önemli yıldızlarını getirir, ancak yolu, şehir planı, trafiği, yaşam alanları düzenli planlanmazsa, dünyaca ünlü müzesi, film festivali, futbol takımı yoksa, yani tesis mükemmel, gerisi hikaye ise bu tesisler çok düşük verimlilik ve karlılıkla yaşamını sürdürmek zorunda kalmaya mahkûmdur.</p><p class="mb-lg" style="color: var(--bix-body-text);">Şehir markasını yaratmak için, doğru pazarlama için, birlikte ne yapılmalı ve bu kim tarafından yapılmalıdır. Devlet, belediye, patronlar, sivil toplum kuruluşları, üniversiteler, medya tüm yöneticiler bir arada; pazarlama için stratejiler oluşturmalı ve bunları hayata geçirmelidir. Şunu bilmek zorundayız hepimiz aynı gemideyiz ve bu gemi batarsa gemiden hiç kimse kurtulamaz, bu nedenle pazarlama stratejileri organize olarak yapılmalıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Antalya da eksik kalan ve iyi pazarlandığında, Antalya da devrim yapabilecek, Antalya yı bulunduğu yerden çok iyi daha iyi yerlere getirebilecek iki önemli başlangıç noktası, belirlenmelidir. Futbol ve festival bunlar için iyi bir seçenek olacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bütün dünyayı peşinde sürükleyen futbol. Antalya’ nın kâbusu kış dönemine kısmen hayat veren futbol turizmi. Hayal edin ki; Antalyaspor, şampiyonlar ligi kupasını kazanmış, Avrupa’nın en büyük takımları Antalya ya şampiyonlar ligi maçları için geliyor seyirciler, tüm basın, fanatikleri.. Barcelona ile Antalyaspor u aynı konumda hayal edin. Barcelona ya gidip Nou camp ı kimler geziyor, Antalyaspor un futbol sahası neresi?</p><p class="mb-lg" style="color: var(--bix-body-text);">Altın portakal Film Festivali’nde tüm Hollywood yıldızları, Avrupa’nın önde gelen sinema eleştirmenleri, izleyiciler, basın ordusu… Festival de Cannes ile Altın Portakal Film Festivali ni aynı konumda hayal edin. Altın Portakal Film Festivali nin Ramada Otelindeki tanıtım kokteylini bu hayalle izledim.. Sponsorlar ve katılımcılar arasında sadece birkaç otelci ve turizmci gördüm. Oysa Altın Portakal Film Festivali çok farklı bir şekilde pazarlanması gereken bir festival..</p><p class="mb-lg" style="color: var(--bix-body-text);">Dünyadaki tüm örnekler şunu doğrulamaktadır, sadece hayali olan insanlar ve ülkeler bu hayallerini gerçekleştirebilir, Hepimizin hayalleri de var, bu hayalleri gerçekleştirecek gücümüz de. Geriye sadece başlamak kalıyor. Hep birlikte pazarlamaya başlamak zorundayız.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

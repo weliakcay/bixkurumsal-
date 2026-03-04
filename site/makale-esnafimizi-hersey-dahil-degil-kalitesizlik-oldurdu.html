@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">ESNAFIMIZI HERŞEY DAHİL DEĞİL KALİTESİZLİK ÖLDÜRDÜ</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Strateji • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Yaşadığımız bu zor günlerde, umudumuzu kaybetmeden, en yüksek enerjimizle çalışmalarımızı sürdürmeliyiz. Çünkü hayat devam ediyor ve her kriz içerisinde bazı fırsatları da barındırır. Bizlerde bu kriz günlerinde nelere etki edebiliriz onları gözden geçirerek ilk günkü motivasyonumuzla çalışmalarımıza devam etmeliyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Son yıllarda her ağzımızı açtığımızda sık sık dillendirdiğimiz bir konuyu irdelemek istiyorum. Herşey dahil sistemi geldi esnaf öldü. Gerçekten herşey dahil sistemi geldiği için mi esnaf öldü, yoksa değişime, yeniliğe, kaliteye ayak uyduramadığı için mi esnaf öldü.</p><p class="mb-lg" style="color: var(--bix-body-text);">Önce iğneyi biraz kendimize batırmamız gerekiyor sevgili esnaf kardeşlerim. Matbaanın bulunuşu nasıl bir dönüm noktasıysa, 2000 li yıllarda internetin hayatımıza girmesi de bir dönüm noktasıdır. Bizim esnafımız, taksicimiz 2000 li yıllardan önceyi arayıp duruyor. Eski dönemler bitti artık. Müşterinin önüne ne koyarsan yediği zamanlar tarih oldu. Artık müşteri kral. Ürün ve hizmetler ise sürekli gelişmek zorunda. Eğer müşteriye kalitesiz hizmet veriyorsan, çakma malzeme satmaya kalkıyorsan, hizmet verip saygı duymuyor, yolunacak kaz gibi görüyorsan sen zaten öldün sevgili kardeşim. Herşey dahil bunun sadece bahanesi.</p><p class="mb-lg" style="color: var(--bix-body-text);">Çok basit bir sorum var sevgili kardeşlerime. Sen 20 yıl önce üretilmiş televizyonu, telefonu kullanıyor musun, arabaya biniyor musun? Peki o zaman ey taksici kardeşim 20 yıl önce verdiğin hizmetten bugün hangi farklı hizmeti veriyorsun. Duyamadım. Eğer farklı bir hizmetin yoksa kusura bakma o zaman ölmeye mahkumsun.</p><p class="mb-lg" style="color: var(--bix-body-text);">Değişime karşı duran ne Erikson telefonlar, ne Nokia telefonlar ne kodak fotoğraf makineleri kaldı bugün.</p><p class="mb-lg" style="color: var(--bix-body-text);">Tabi esnaf dediğimiz zaman Anadolu’daki basit esnaflar gelmesin aklımıza. Turizmin başkenti burası, adı küçük yatırımı büyük burada esnaflığın. Bir taksi durağının yatırımını düşünelim isterseniz. Tahmini bir taksi plakası 300.000TL. araç maliyeti. 75.000 TL. Bir durakta yirmi taksi olduğunu düşünürsek bunun yatırımı tahmini 7.500.000-8.000.000 TL. Çok basite alınacak bir yatırım değil. Şimdi şu serzenişi duyar gibiyim. Zaten para kazanmıyoruz nasıl hizmetimizi iyileştirebiliriz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Basit bir senaryo yazayım size. Gözlerinizi kapatın ve bir evinize telefonla duraktan bir taksi çağırdığınızı hayal edin. Aracınız geldi taksi şoförü kardeşimiz şık beyaz bir gömlek ve ütülü bir pantolonla sizi karşıladı hoş geldiniz efendim diyerek, aracın kapısını açtı ve araca bindiniz.  Gideceğiniz yeri sordu, navigasyon ekranına bunu girdi, kaç kilometre olduğunu söyledi ve seyahat başladı. Size, dinlediğiniz müzik türünü sorarak, şarkıları ayarladı, okumak istediğiniz dergi türünü koltuk arkasından seçebileceğinizi söyledi ve içi dışı pırıl pırıl bir taksi ile seyahatinizi tamamladınız.  Acaba ne düşünürsünüz farklı bir taksi durağını tercih edebilir misiniz? Acaba bu hizmet geliştirmenin bir taksi için maliyeti nedir? Yatırım maliyeti içindeki payı yüzde kaçtır? Yeter ki isteyelim, okuyalım, gelişime açık olalım, vizyoner olalım.</p><p class="mb-lg" style="color: var(--bix-body-text);">Biz Antalya bölgesinde turizmin başkentinde yaşıyoruz. Avrupa kenti, dünya kenti olmak zorundayız. Kenti diyorum burası önemli, müthiş beş yıldızlı tesislerimiz tek başına yetmez. Yoluyla, esnafıyla, taksisiyle, dolmuşuyla, barlarıyla, Antalyaspor’umuzla, restoran cafeleriyle herşeyiyle bunu başarabilmeliyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Turizm Bakanlığı 2007 yılında Türkiye Turizm Stratejisi 2023 ‘ü yayınladı.</p><p class="mb-lg" style="color: var(--bix-body-text);">Hizmet Kalitesi Stratejisi başlığı önemliydi, strateji ise turizm sektörünün her bileşeninde Toplam Kalite Yönetiminin Etkin Kılınmasıydı.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu stratejinin gerekliliklerini önümüzdeki hafta sizlerle paylaşacağım.</p><p class="mb-lg" style="color: var(--bix-body-text);">Sağlıcakla kalın.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE</p><p class="mb-lg" style="color: var(--bix-body-text);">PAGE  2</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

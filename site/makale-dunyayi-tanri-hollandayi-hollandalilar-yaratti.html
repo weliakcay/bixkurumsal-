@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Dünyayı tanrı, Hollanda’yı Hollanda’lılar yarattı</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Tam olarak denetimlerin gerekliliği ve turizm sektörünün bütünlüğünden bahsederken, tekne yangını ve rafting kazası yaklaşık aynı zamanda meydana geldi.</p><p class="mb-lg" style="color: var(--bix-body-text);">Meydana gelen kazalar; bir kayıp ve bir ölüm olayıyla sonuçlandı.</p><p class="mb-lg" style="color: var(--bix-body-text);">Ben her zaman soruna odaklanmanın bize bir fayda sağlamayacağını, asıl önemli olan konunun çözüme odaklanmak olduğu varsayımına inanırım.</p><p class="mb-lg" style="color: var(--bix-body-text);">Söz konusu yaşanan olayda, yangın, misafir kaynaklı, teknenin alt yapısından kaynaklı, herhangi bir kurumun denetim eksikliği vb bir nedenden kaynaklanmış olabilir. Önemli olan sonuçtur ve tekne yanmış bir misafir ise kaybolmuştur. Sektör olarak bizde olaydaki can kaybının çok daha fazla olmamasına dua etmişizdir. Peki sonrasında ne olmalıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Acaba bu yangını, rafting kazasını, otobüs kazasını, gıda zehirlenmesini, boğulmayı kim önleyebilirdi? Bundan sonra olabilecek yangını, kazayı, zehirlenmeyi, ölümü, kim nasıl önleyecek? Önemli olan bu soruya birilerinin cevap vermesidir. Aksi takdirde biz yine dua etmeye devam edeceğiz. Sektörün tüm temsilcileri artık topu taca atmaktan vazgeçmelidir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Yaşanan bu tür acı olaylarda,</p><p class="mb-lg" style="color: var(--bix-body-text);">Patrona sorarsanız, kalifiye eleman yok, devlet bu işi çözmeli</p><p class="mb-lg" style="color: var(--bix-body-text);">Müşteriye sorarsanız acente sorumlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Acenteye sorarsanız kim hizmet veriyorsa, gerekli şartları ve emniyet tedbirlerini almalı</p><p class="mb-lg" style="color: var(--bix-body-text);">Devlete sorarsanız, parayı kazanan işini iyi yapmalı,</p><p class="mb-lg" style="color: var(--bix-body-text);">Sivil toplum örgütüne sorarsanız bizi kimse dinlemiyor… Monogları sürer gider.</p><p class="mb-lg" style="color: var(--bix-body-text);">Tüm paydaşlar sorunu kendisinin değil bir başkasının çözmesi gerektiğini düşünerek yaşamını bir sonraki olaya kadar devam ettirir. Nasıl olsa olayda kendi suçu veya sorumluluğu yoktur, sorumluluk bir başkasınındır çözümü de o başkası düşünmelidir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bana sorarsanız, ben de dahil olmak üzere turizm sektörünün tüm paydaşları bu tür kazalardan ve sektörün geleceğinden sorumludur…</p><p class="mb-lg" style="color: var(--bix-body-text);">Hollandanın bir atasözünü çok beğeniyorum.“Dünyayı tanrı, Hollanda’yı Hollandalılar yarattı.” Türkiye deki turizmi de bizler yarattık, bu hale getirdik, eğer başarılıysak bunu biz yaptık, başarılı değilsek de biz yaptık, öncelikle bunu kabul etmemiz ve sorunu da çözümü de artık dışarıda aramaktan vazgeçmeliyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Merak ediyorum, sistemin her bir elemanı, yani acentesi, patronu, çalışanı, sivil toplum kuruluşu veya devlet; ben sorunu çözmek için nereden başlamalıyım, kiminle nasıl bir işbirliği içerisine girmeliyim sorusunu kendine soruyor mu? yoksa, sorumlu olarak karşı tarafı gösterip, sorumluluktan kaçıyor mu?</p><p class="mb-lg" style="color: var(--bix-body-text);">Tabiî ki karşı tarafı suçlamak, sorumluluğu üzerine almamak işin en kolay yoludur ve kolay yolu seçmekte insanları her zaman başarısızlığa götüren yoldur. Biz çözümün bir parçası olmak için sorumluluk almak yerine, kolayı seçiyor ve karşı tarafı suçluyorsak bu, bindiğimiz dalı hala kesmeye devam ettiğimiz anlamına gelir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Şunu unutmamak zorundayız, eğer burada turizm olmazsa bizde olmayız, basında olmaz, yatırımcıda olmaz, acente de olmaz tekne sahibi olmaz ve hepimiz acı acı etrafımızda suçlu aramaya devam ederiz. Çözüme odaklanmadan sadece sorunu konuşarak, çözümün bir parçası olmak yerine sorunun bir parçası olmaya devam ederek yaşar dururuz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Hızlı bir şekilde sektörün tüm paydaşları; sektörün ve ülkenin sorumluluğunu kendi omuzlarında hissetmeli ve etkin bir işbirliği yaparak çözüme katkı sağlamalıdır. Bölgemizde turizmi sürdürmek istiyorsak, geleceğimizi de şimdiden planlamak ve meydana gelen olaylarda karşı tarafı sorumlu görmekten artık vazgeçerek çözümün bir parçası olmak zorundayız. Sadece bugünü kurtarmaya dönük yaşamaya ve davranmaya devam edersek gün bittiğinde bizlerde biteriz..</p><p class="mb-lg" style="color: var(--bix-body-text);">Önemli olan bugünden geleceği planlamak onun yatırımlarını, çalışmalarına yapmak ve gelecekte de var olabilmektir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gelecekte var olabilmemiz için ağırladığımız tüm konukların sağlıklı, güvenli ve mutlu bir şekilde evlerine dönmesi dileklerimle.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">*BÜLTENİMİZİ ALMAK İSTEMİYORSANIZ LÜTFEN MAİL YOLUYLA BİLDİRİNİZ.</p><p class="mb-lg" style="color: var(--bix-body-text);">SHAPE  \* MERGEFORMAT</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

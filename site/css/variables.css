@@ -1,0 +1,124 @@
+/* ============================================
+   BIX KURUMSAL — Design Tokens
+   ============================================ */
+
+:root {
+  /* ── Primary Colors ── */
+  --bix-charcoal: #1A1A2E;
+  --bix-orange: #E8922D;
+  --bix-orange-light: #F4A94D;
+  --bix-orange-dark: #D07B1E;
+  --bix-orange-glow: rgba(232, 146, 45, 0.15);
+
+  /* ── Secondary Colors ── */
+  --bix-navy: #16213E;
+  --bix-teal: #0F3460;
+  --bix-green: #4A8B3E;
+  --bix-green-light: #5CA84E;
+
+  /* ── Neutral Colors ── */
+  --bix-white: #FFFFFF;
+  --bix-off-white: #F8F9FA;
+  --bix-light-grey: #E9ECEF;
+  --bix-mid-grey: #6C757D;
+  --bix-dark-grey: #343A40;
+  --bix-dark-text: #212529;
+  --bix-body-text: #495057;
+
+  /* ── Glassmorphism ── */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  /* ── Gradients ── */
+  --bix-gradient: linear-gradient(135deg, #E8922D 0%, #D07B1E 100%);
+  --bix-gradient-hover: linear-gradient(135deg, #F4A94D 0%, #E8922D 100%);
+  --bix-dark-gradient: linear-gradient(180deg, #1A1A2E 0%, #16213E 100%);
+  --bix-hero-overlay: linear-gradient(135deg, rgba(26, 26, 46, 0.88) 0%, rgba(22, 33, 62, 0.75) 100%);
+  --bix-green-gradient: linear-gradient(135deg, #4A8B3E 0%, #3A7A2E 100%);
+
+  /* ── Typography ── */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --text-hero: clamp(2.8rem, 6vw, 5rem);
+  --text-h1: clamp(2rem, 4vw, 3.5rem);
+  --text-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --text-h3: clamp(1.2rem, 2vw, 1.75rem);
+  --text-h4: clamp(1.05rem, 1.5vw, 1.25rem);
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-small: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --weight-thin: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.8;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  --letter-spacing-wider: 0.1em;
+
+  /* ── Spacing ── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  --section-padding: clamp(4rem, 8vw, 8rem);
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-pill: 50rem;
+  --radius-full: 50%;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 50px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 30px rgba(232, 146, 45, 0.2);
+
+  /* ── Transitions ── */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --transition-fast: 0.2s var(--ease-out);
+  --transition-normal: 0.3s var(--ease-out);
+  --transition-slow: 0.5s var(--ease-out);
+
+  /* ── Z-index ── */
+  --z-behind: -1;
+  --z-default: 1;
+  --z-sticky: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  /* ── Container ── */
+  --container-max: 1200px;
+  --container-lg: 1400px;
+  --container-sm: 960px;
+  --gutter: clamp(1rem, 3vw, 2rem);
+}

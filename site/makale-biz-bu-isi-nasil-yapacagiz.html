@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Biz Bu İşi Nasıl Yapacağız?</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Strateji • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Bilimin doğrularını iş hayatımıza uygulamalı mıyız? Yoksa iç güdülerimiz ve geleneksel yöntemlerimizle yerimizde saymaya devam mı etmeliyiz?</p><p class="mb-lg" style="color: var(--bix-body-text);">Tarihte bilimden uzaklaşan topluluklar her zaman yok olmuşlar. Bu realite tüm toplum ve topluluklar için geçerli. Bizlerde varlığımızı sürdürmek istiyorsak hayatlarımızı ve şirketlerimizi bilimsel bilgiler doğrultusunda yönetmek zorundayız. Yönetmezsek tüm tarihte olduğu gibi bizlerde, şirketlerimizde kuşak geçişlerinde yok olacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki şirket yönetiminde bilim ne diyor?</p><p class="mb-lg" style="color: var(--bix-body-text);">1990 lı yıllarda Michael Everett Porter sermayenin beş ana boyutunu tanımlamaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Birincisi, klasik anlamdaki nakit sermaye olup, mevcut ve potansiyel hissedarların şirkete duydukları güven karşılığında sağladıkları nakit imkandır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Şirketlerin sermaye piyasaları ile ilgili girişimleri ve iletişimleri bu imkandan nasıl faydalandıklarını ortaya koyar.</p><p class="mb-lg" style="color: var(--bix-body-text);">İkincisi, şirketlerin zaman içerisinde edindikleri gayri nakdi fiziksel varlıklardır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu varlıkları uygun fiyat karşılığı edinmiş olmak, veya bu varlıkların bugünkü piyasa değerlerinin yüksek olması şirket değerini artırabilir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Ancak, önemli olan ucuza elde edilmiş varlıklara sahip olmak değil, onları etkin kullanarak verim elde etmektir. Bazen, bu tip değerlerin elden çıkarılması da etkin kullanım olabilir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Üçüncüsü, bir şirketin sahip olduğu insan sermayesi olarak adlandırılır. Bu kavram insan kaynaklarının yetkinlikleri, yeni şartlara uyum sağlama kabiliyetleri gibi özelliklerini içerir. Dolayısıyla, şirketlerin bu kaynakları şirkette tutabilme yeteneği ile sınırlıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Dördüncüsü, ilişki ağının değeridir. Bu kavram şirketin geçmişinden kaynaklanan ve başta müşterileri olmak üzere tedarik zincirini oluşturan firmalarla ve diğer sosyal paydaşlarla sağladığı olumlu ilişkilerin yarattığı değeri ifade eder.</p><p class="mb-lg" style="color: var(--bix-body-text);">Beşincisi ise organizasyonel sermaye olarak adlandırılır.  Bu kavram ise şirketin markasının, fikri mülkiyet haklarının, organizasyonel yapısının, süreçlerinin ve sistemlerinin yarattığı değeri ifade eder. Ya da entelektüel sermaye olarak adlandır bu sermeye boyutu.</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim ve organizasyon güçleri, kurumsallaşma seviyesi, kurum ve marka kimliğine yaptıkları yatırımlar, insan kaynakları yönetimi, pazarlama, dağıtım kanalları gücü, IT alt yapısı, bulunduğu sektöre yönelik kullandığı teknolojilerin seviyesi, araştırma ve geliştirme kabiliyeti, sundukları ürün ve hizmetteki “know-how” becerisi, sahip oldukları veya kiraladıkları patentler, lisanslar ve doğal ve sosyal çevreye yaptıkları yatırımlardır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Aynı dönemde(1996) Robert S.Kaplan ve David P.Norton Strateji Haritaları kitabında Dengeli Ölçüm Kartı modelini tanımlamaktadırlar.  Robert Kaplan ve David Norton şirket değerlendirme sistemlerini yetersiz bulmuşlar; Ağırlıklı olarak finansal ölçütlere bakarak performans değerlendirirsek de şirketlerin gelecekte oluşturabileceği değeri engelleyebileceklerini öngörmüşler. Bu dengeyi Bu dengeyi 4 ana başlıkta toplamışlar;</p><p class="mb-lg" style="color: var(--bix-body-text);">•	Finansal boyut, hissedarlarımıza nasıl görünüyoruz?</p><p class="mb-lg" style="color: var(--bix-body-text);">•	Müşteri boyutu, müşterilerimiz bizi nasıl görüyorlar?</p><p class="mb-lg" style="color: var(--bix-body-text);">•	Operasyonel boyut, hangi konularda mükemmel olmalıyız?</p><p class="mb-lg" style="color: var(--bix-body-text);">•	İnsan sermayesi boyutu, iyileşmeye ve değer yaratmaya devam edebilir miyiz?</p><p class="mb-lg" style="color: var(--bix-body-text);">Marka yolculuğuna hazır mıyız?</p><p class="mb-lg" style="color: var(--bix-body-text);">1. Operasyon</p><p class="mb-lg" style="color: var(--bix-body-text);">2. Standartlar (ISO 9001,ISO 22000, ISO 10002, ISO 14001, ISO 45001, 6 Sigma, EFQM, Yalın Yönetim, Dengeli Ölçüm Kartı, Kıyaslama, Değer Yaratma, Müşteri İlişkileri, Bilgi teknolojileri, İşletme Kaynak Planlama sistemleri)</p><p class="mb-lg" style="color: var(--bix-body-text);">3. Konsept ürün ve hizmet geliştirme.</p><p class="mb-lg" style="color: var(--bix-body-text);">4. Marka</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki biz bu bilimsel çalışmaları şirket yönetimlerimizde ne kadar hayata geçiriyoruz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Güzel binalar yaparak, güzel makineler ithal ederek, başarıdan başarıya koşmayı umut mu ediyoruz?</p><p class="mb-lg" style="color: var(--bix-body-text);">Yatırımlarımızı hayata geçirdiğimiz şu günlerde, insan kaynaklarına, sisteme ve teknolojiye ne kadar yatırım yaptığımızı tekrar bir değerlendirelim ve kararlarımızı verirken bilim hep yanımızda, aklımız da olsun.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">BIX Kurumsal</p><p class="mb-lg" style="color: var(--bix-body-text);">Sürdürülebilir Turizm Konusu Önceliğimiz Olmalı</p><p class="mb-lg" style="color: var(--bix-body-text);">3.Aşama GSTC Sürdürülebilir Turizm Denetçisi Bülent Dokuzluoğlu Sürdürülebilir Turizm Sertifikasyonu ile ilgili açıklama yaptı.</p><p class="mb-lg" style="color: var(--bix-body-text);">15 Kasım 2022 tarihli turizm bakanlığı genelgesi ile otel işletmelerinde sürdürülebilir turizm sertifikası alınması zorunlu hale getirilmiştir.</p><p class="mb-lg" style="color: var(--bix-body-text);">GSTC ve Turizm Bakanlığı Turizm Geliştirme Ajansı tarafından projelendirilen programın amacı:</p><p class="mb-lg" style="color: var(--bix-body-text);">Turizmin arz kaynakları olan doğal, kültürel ve sosyal unsurlardan koruma-kullanma dengesini göz önünde bulundurarak faydalanmak ve bu unsurları riske atmadan gelişmelerini ve küresel ölçekte tanınmalarını sağlamak ve  ulusal sürdürülebilir turizm standartlarını ulusal ve uluslararası paydaşlarla iş birliği halinde geliştirmektedir.   Sertifikasyon Programının kriterleri dört bölümden oluşmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">BÖLÜM A: Etkili bir sürdürülebilir yönetimin gösterilmesi</p><p class="mb-lg" style="color: var(--bix-body-text);">BÖLÜM B: Yerel toplumun sosyal ve ekonomik faydalarının en üst düzeye çıkarılması ve olumsuz etkilerin en aza indirilmesi</p><p class="mb-lg" style="color: var(--bix-body-text);">BÖLÜM C: Kültürel mirasın faydalarının en üst düzeye çıkarılması ve olumsuz etkilerinin en aza indirilmesi</p><p class="mb-lg" style="color: var(--bix-body-text);">Bölüm D: Çevreye olan faydaların en üst düzeye çıkarılması ve olumsuz etkilerin en aza indirilmesi</p><p class="mb-lg" style="color: var(--bix-body-text);">Konu ile ilgili detaylı bilgi almak için BIX Kurumsal a aşağıdaki iletişim kanalları ile ulaşabilirsiniz.</p><p class="mb-lg" style="color: var(--bix-body-text);">info@bixkurumsal.com</p><p class="mb-lg" style="color: var(--bix-body-text);">05302253878</p><p class="mb-lg" style="color: var(--bix-body-text);">www.bixkurumsal.com</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">AVM lerde Gıda Güvenliği</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Tüm Türkiye’de olduğu gibi, Antalya’da da hızla alışveriş merkezleri açılmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bugün bir AVM içerisinde yaklaşık 25 ile 50 arasında toplu tüketim ve satış yeri olarak geçen, restoran, fast food vb gıda satışı yapılan yerler bulunmaktadır. Bu noktalarda gıda üretim ve tüketimi belli saatlerde yoğunlaşmaktadır. Öğle ve akşam yaklaşık 2-3 saatlik dilimlerde tüm satışlar yapılmaktadır. Tabiî ki bu hızlı işleyiş gıda güvenliği konusunda yapılabilecek hataları ve riskleri de beraberinde getirmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Çalışan personeller genellikle mesleki anlamda, usta çırak ilişkisi içerisinde yetişmektedir. Oysa gıda güvenliği ayrı bir bilim dalı olarak karşımızda çıkmakta ve bu konuda yayımlanmış yasalar ve sistemler bulunmaktadır. Gıda ile ilgili işletmelerde çalışan personelin, gıda mevzuatı, gıdaların depolanması, kirlenme türleri ve mikrobiyoloji konularında bilinçlendirilmesi ve eğitimi oldukça önem taşımaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Açılış konusunda öncelikle restoran olarak kullanılacak alanların belirlenmesi ve projelerin o doğrultuda hazırlanması gerekmektedir. Ancak bazı belirsizlikler ve bu konuda yeterli bilinç olmaması nedeniyle, gıda üretimi ve depolama alanları planlanmadan sadece dış müşteri alanları belirleniyor. Oysa bir restoran planlanırken müşteri alanları kadar, satınalınan gıda maddelerinin girdi kontrollerinin yapılacak alanlar, depolama alanları, bulaşık yıkama alanları, üretim, sunum alanlarının planlanması gerekmektedir. Bu planlamalar proje aşamasında gözden kaçmakta işletmeler açıldıktan sonra ise altyapı ile ilgili bu eksiklikleri düzeltmek mümkün olmamaktadır. Havalandırma ve soğutma sistemlerinin, giyim mağazasından farklı olarak tasarlanması zorunludur. Aksi takdir içeride fırın ve ocakların çalıştığı bir yeri soğutmak çok mümkün olmamaktadır. Yasal olarak bu bahsettiğimiz alanların birbirinden ayrı olması gerekmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir AVM içerisinde restoran açarken mutlaka bu restoranın mutfağı gerekli alt yapı, ekipman koşullarını sağlamalıdır. Burada AVM yöneticileri de taşın altına elini sokarak kendi bünyelerinde olan restoran, fast food tarzı yerlerin gıda güvenliği açısından denetimlerini yaptırmalıdır. Nasıl ki AVM planlamalarında engelli vatandaşlarımız düşünülüyor, onların ihtiyaçlarını karşılayacak, otopark düzeni, tuvalet düzeni vb kuruluyor. Gıda Güvenliği ile ilgili de aynı özen gösterilmelidir. Bugün bir AVM içerisinde yeralan restoranda gıda zehirlenmesi yaşandığında tek sorumlu o işletme olmamalıdır. Söz konusu yerler planlama aşamasından itibaren konu ile ilgili uzmanları tarafından değerlendirilen projeler uygulanmalı ve hayata geçirilmelidir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gıda güvenliği ile ilgili çalışmaları iki ana başlıkta incelemeliyiz, ilk olarak alt yapı ekipmanlar ve ikinci olarak uygulama kayıtlar.</p><p class="mb-lg" style="color: var(--bix-body-text);">Restoran ve fast foodlarda öncelikle satın alınan gıda hammaddelerinin kontrolü, bu maddelerin depolanması için soğuk ve şok dolapların ayrı olması, sebze yıkama alanı, üretim alanı, bulaşık yıkama alanı ve servis alanlarının ayrılması gerekmektedir. Ürünler depolanması sırasında, ürün özelliklerine göre ayrı olarak muhafaza edilmelidir. Süt ürünleri, et ürünleri, balık ürünleri, sebze ve meyveler, şoklu ürünler, yumurtalar çapraz bulaşmayı önleyecek şekilde depolanmalıdır. Restoran mutfaklarında kirli ve temiz alan ayrımları yapılmalıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Hammaddeler, soğuk zinciri bozulmadan +4 C de, ürün şoklu ise -18C de alınmalıdır. Sebzeler mutlaka üretim alanına alınmadan önce dezenfekte edilmelidir. Yumurtalar diğer ürünlerde ayrı olarak +4C de buzdolabında muhafaza edilmelidir. Şoklu ürünler ortam sıcaklığında değil +4C de veya mikrodalga fırın içerisinde soğutulmalıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Hazırlanan sos ve ürünler etiketlenerek raf ömürleri takip edilmelidir. Kısaca özetlediğim bu konuların yanı sıra daha pek çok detay bulunmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu konuda uluslararası standartlar organizasyonu ISO tarafından yayımlanmış ISO 22000 Gıda Güvenliği Yönetim Sistemi Standartı mevcuttur. AVM lerde toplu tüketim ve satış yapan tüm işletmeler bu standartın istediği koşulları yerine getirmek zorundadır.  Tarım Bakanlığı tarafından Avrupa Birliği Uyum çalışmaları kapsamında gıda güvenliği konusunda yeni bir kanun değişikliği oldu.11.06.2010 tarihinde Veteriner Hizmetleri, Bitki Sağlığı Gıda ve Yem kanunu yayınlandı. Bu kanunla beraber devlette kontrolleri artık Gıda Güvenliği Sistemini baz alarak yapacağını ortaya koymuştur. Bir anlamda bu kanun değişikliği, ISO 22000 Gıda Güvenliği Sistemi AVM lerdeki gıda işletmeleri tarafından yasal olarak uygulanmasını zorunlu hale getirmiştir. Bu kanun aynı zamanda cezaları ağırlaştırmaktadır. Bugün çoğu yatırımcı ve işletmeci tarafından bilinmemekle birlikte, gıda güvenliği ile ilgili para cezasının yanı sıra hapis cezası ile sonuçlanacak yaptırımlar mevcuttur. Çünkü bu konuda yapılacak bir hata onlarca bazen yüzlerce insanın sağlığını ve yaşamını risk altına sokacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Altyapı ve teknik donanımlarla ilgili bilinçsizlik veya önemsememe nedeniyle belli eksikliklerle karşılaşabilmekteyiz. Bu konu yatırımcı veya işletmeciler tarafından dikkatle incelenmeli ve proje aşamasında bu konuda uzman görüşü alınmalıdır. Yatırım sonrasında işletmeler açıldıktan sonra bunları tamamlamak oldukça güçleşiyor. Önemli bir konuda personel kalifikasyonu ve eğitimleri. Gıda ile ilgili konularda çalışan personelin mutlaka gıda mevzuatı, tehlike analizleri, depolama koşulları, girdi kontrol, temizlik kimyasalları ve metotları hakkında eğitimler almalıdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bugün acentalar neden misafirlerini konaklattırdığı otellerin gıda güvenliği ve müşteri güvenliği açısından denetimlerini özel şirketlere yaptırmaktadır. Müşterisinin sağlığını sadece otelin inisiyatifine bırakmamaktadır. Bu tür sistemsel sorunlar tek bir kuruluşun sorumluluğu ile çözülemez. Çözüm ancak işletmeci, yatırımcı, tüketici ve devletin ilgili kuruluşlarının duyarlılığı ile olacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">AVM içerisindeki restoran ve fast foodlara,  devlet kurumları tarafından ancak yılda 1 kez denetim yapılabiliyor. Eğer yatırımcı bu konuyla ilgilenmez, işletme sahibi ve çalışanlarda eğitimsiz ve bilinçsiz ise istenilen gıda güvenliği sisteminin uygulanması mümkün olamamaktadır. Devletin yapacağı denetim ve cezai işlemlerle ancak belli bir noktaya varabiliriz. Toplumsal bilinçlenme bu konuda oldukça önem taşımaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu işletmelerin tamamındaki gıda güvenliği sorunlarını sadece devlet kurumlarının çözmesi ancak bir hayaldir. Bu konuda her paydaş üzerine düşen görevi yerine getirmelidir. Vatandaş, devletten, devlet, yatırımcıdan, yatırımcı işletmeden bu sorunu çözmesi beklerse, bu sorunun çözülmesi mümkün olamayacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu konuda her paydaşın üzerine düşen sorumluluğu tekrar gözden geçirmesi ve sorunun çözümünü başkalarından beklemeyi bırakarak, sosyal sorumluluk düşüncesi içerisinde üzerine düşeni yerine getirmesi gerekmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">www.bixkurumsal.com</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

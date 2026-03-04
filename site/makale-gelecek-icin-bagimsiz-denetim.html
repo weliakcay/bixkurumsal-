@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Gelecek İçin Bağımsız Denetim</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Türk Dil kurumunda denetim;</p><p class="mb-lg" style="color: var(--bix-body-text);">Kamu ya da özel bir kuruluşa ilişkin bilgilerin önceden belirlenmiş ölçütlere uygunluğunun saptanması ve rapor edilmesi amacı ile bir uzman birimi tarafından kanıt toplama ve değerlendirme süreci olarak tanımlanmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki hangi ihtiyaçtan doğdu bu kavram ve işletmelere neler kazandırmaktadır?</p><p class="mb-lg" style="color: var(--bix-body-text);">Dünyada yapılan istatistiklerine bakıldığında, aile şirketlerinin ikinci nesile geçme oranı %18, üçüncü nesile geçme oranı %4 olarak görülmektedir. Yani şirketler kuruluyor ancak ikinci, üçüncü nesile geçmesi pek mümkün olamıyor.. Neden? Pek çok aile şirketi bu endişeyi yaşıyor ancak günlük operasyonları takip etmekten şirketinin geleceğine yatırım yapamıyor. Sonunda yoğun emekler ve uzun çabalarla kurulan şirketlerin ömrü uzun olamıyor..</p><p class="mb-lg" style="color: var(--bix-body-text);">Şirketinizin geleceğini bugün koruma altına almak için bağımsız denetim sistemi kurmak önemli bir başlangıç..</p><p class="mb-lg" style="color: var(--bix-body-text);">Dünyaca kabul edilen ISO yönetim sistemlerinin temel kriterleri dört ana unsur oluşturmaktadır. Planlama, uygulama, kontrol ve iyileştirme…</p><p class="mb-lg" style="color: var(--bix-body-text);">Kontrol yani bağımsız denetim hizmetleri..</p><p class="mb-lg" style="color: var(--bix-body-text);">Şirketinizin ömrünü uzatmak, sistemli bir hale getirebilmek için yapılması şart olan ana kriter. Artık şirket ömrünü uzatmak isteyen yatırımcılar, bu ana kriteri işletmelerine uygulamak zorundalar. Benim için şirketin geleceği, çocuklarımın şirket içindeki durumu önemli değil diyenlere tabiî ki herhangi bir tavsiyemiz yok. Onlara hayata başarılar…</p><p class="mb-lg" style="color: var(--bix-body-text);">Ama nereden başlamamız gereken diyen yatırımcılara, öncelikle şirketlerinin iş yapma şeklini, müşterileri ile olan ilişkilerini objektif olarak görebilmek ve değerlendirmesini yapabilmek için bağımsız denetim çalışmalarına ivedilikle başlamasını önermekteyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bunu kendi ekibinizle yöneticilerinizle yapmanız mümkün olamayacaktır, çünkü objektif veya bağımsız kalamayacaklardır. Gizli müşteri denetimleri, operasyon denetimleri, hijyen denetimleri kurumsallaşma çalışmalarının temelini oluşturacaktır. Size bir fırsat yaratacaktır. Aksi takdirde günü kurtarma işleri, sizin gelecek yatırımlarınızı önleyecek ve şirketinizin, çocuklarınıza veya torunlarınıza kadar sürmesine engel olacaktır. Bu konu ile ilgili yaşanmış olay örneklerini şöyle bir etrafınıza baktığınızda rahatlıklar görebileceksiniz. Aynı sonuçları yaşamamak için şirket yönetiminizi farklılaştırmak zorundasınız. Yoksa kaçınılmaz son sizi de vuracaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir yerde, bir konuda sistemden bahsetmek için dört temel kavramı hayata geçirmiş olmamız gerekmektedir.  Bu dört temel kavram toplam kalite yönetiminin temel teoremi olan PUKO döngüsü diye adlandırdığımız kavramdır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Yani Planla Uygula Kontrol Et ve Önlem al.</p><p class="mb-lg" style="color: var(--bix-body-text);">Ülkemizdeki işleyişi bu dört kavram penceresinden bakarak değerlendirdiğimizde ise en güçlü yön olarak uygulamayı görmekteyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bizler uygulamayı hızlı bir şekilde hayata geçiren bir kültür yapısına sahibiz. Bunun olumlu yönleri olduğu açıktır. Ancak sistematik olarak baktığımızda, iyi planlama yapmadan uygulamaya geçirmek bizi zaman zaman beklenmeyen sonuçlarla karşılaştırmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu nedenle planlama bizim ilk hareket noktamız olmalıdır. Bir işi, bir projeyi yönetirken planlama aşamasının uzun sürmesi, detaylandırılması, uygulamalarımızın bizi istediğimiz sonuca götürmesini sağlayacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gözden kaçırdığımız veya göz ardı ettiğimiz bir diğer önemli sistem elemanı ise, kontrol etmektir. Yapılan uygulamaların mutlaka doğru metotlarla bağımsız olarak kontrol edilmesi, denetlenmesi gerekmektedir. Denetimlerin işimizde iyileştirmeler ve değişiklikler açısından bir fırsat olduğunu bilmemiz ve bu bakış açısıyla işlerimizin denetimi için doğru metotları bularak hayata geçirmeliyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Çünkü iyileşme ancak bu denetim sonuçlarının irdelenmesi ve bulguların değerlendirilmesi sonucunda alacağımız önlemlerle sağlanacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Kurumsal işletmeleri irdelediğimizde doğru bir denetim mekanizmalarının olduğunu görmekteyiz. Denetim asla bir güvensizlik değildir. Amacı sadece yapılan uygulamaların bizi planlarımıza ulaştırıp ulaştırmadığını göstermesidir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Nesiller boyu, kalıcı olmak ve geleceği bugün planlamak istiyorsak bağımsız denetim çalışmalarına bugün başlamak zorundayız.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">HYPERLINK "http://www.bixkurumsal.com" www.bixkurumsal.com</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

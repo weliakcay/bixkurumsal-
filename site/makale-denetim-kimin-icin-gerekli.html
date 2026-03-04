@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Denetim Kimin İçin Gerekli;</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Gıda Güvenliği • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Türk Dil kurumunda denetim;</p><p class="mb-lg" style="color: var(--bix-body-text);">Kamu ya da özel bir kuruluşa ilişkin bilgilerin önceden belirlenmiş ölçütlere uygunluğunun saptanması ve rapor edilmesi amacı ile bir uzman birimi tarafından kanıt toplama ve değerlendirme süreci olarak tanımlanmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bilindiği gibi gıda güvenliği ve müşteri güvenliği ile ilgili denetimler turizm sektöründe son yıllarda artmaya başladı. Denetim kelimesi bizlere pek sevimli gelmemekle birlikte; denetim insanların sağlığı ve güvenliği için olmazsa olmaz bir konu olarak karşımıza çıkmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir resmi bir denetim kurumunun başındaki kişi resmi kuruluşların yaptığı denetim pahalı bir eğitimdir diyerek, yapılan denetimlerin sistemlerin etkinliğini nasıl artırdığına işaret etmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Turizm sektöründe sistem denetimi kavramı, özellikle İngiliz acentelerin etkisiyle başladı, diğer Avrupa pazarı acenteleri ve son olarak ETS nin son iki yıldır devam ettirdiği denetim süreciyle artık daha bilinir hale geldi.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki hangi ihtiyaçtan doğdu bu kavram?</p><p class="mb-lg" style="color: var(--bix-body-text);">Her yıl milyonlarca misafir Antalya bölgesindeki tesislerde konaklamakta, tekne turları, safari turları, hamam sauna turlarına katılmakta bir noktadan bir noktaya seyahat etmektedir. Tabiî ki bizler ülkemizde yurt dışından gelen misafirleri konaklatıyor ve onlara belli turlar satıyorsak, verdiğimiz hizmetler yasal gereklilikleri ve belli standartları karşılamak zorunda. Bizler; misafirlerimiz ülkemize nasıl sağlıklı olarak geldiyse aynı şekilde sağlıklı olarak ülkelerine dönmelerinden sorumluyuz. Bu nedenle işletme, restoran, otel, acente, devlet olarak her türlü güvenlik tedbirini almalı ve gerekli olan sistemi kurmalı ve denetimlerle bunların etkinliğini sağlamak zorundayız. Aksi takdirde biz tedbirlerimizi almaz isek misafirlerimizin başına gelebilecek her türlü olumsuz olaydan, kazadan, yaralanmadan ve ölümden, işletme sahibi, devlet, medya, sivil toplum kuruluşu, Antalya ve Türkiye Turizmi olarak biz sorumlu olacağız. Ne yazık ki bu tür olayların acı tecrübelerini hep birlikte yaşadık.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bir boğulma olayında savcının söylediği gibi, “eğer burada bir havuzun var ve misafirler bu havuza giriyorsa sende işletmeci olarak gerekli koşulları sağlayacak ve cankurtaranını burada bulunduracaksın… yani gerekli tedbiri alacaksın…aksi takdirde sorumluluk sende..</p><p class="mb-lg" style="color: var(--bix-body-text);">Tabiî ki işletmelerin bu tedbirleri alıp almadıklarını ve uymakla yükümlü oldukları yasal gerekliliklerini sağlayıp sağlamadıklarını kontrol etmek için gerekli olan eylemdir denetim.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki bu denetimi faaliyetini yapmak kimin işidir ve kimin sorumluluğundadır. Evet hepimizin aklına ilk gelen bu denetim faaliyetini devletin yapmasıdır. Peki devlet bu işi tek başına yapabilir ve tüm işletmelere yetişebilir mi?</p><p class="mb-lg" style="color: var(--bix-body-text);">Avrupa ya baktığımızda evet devlet denetim faaliyetini etkin olarak yapıyor ama tek başına değil, kimlerle birlikte?</p><p class="mb-lg" style="color: var(--bix-body-text);">Öncelikle her sektördeki firmalar kendi tedarikçilerini denetliyor,</p><p class="mb-lg" style="color: var(--bix-body-text);">yani, acente; oteli ve satmış olduğu turları,</p><p class="mb-lg" style="color: var(--bix-body-text);">otel; satın alma yaptığı gıda toptancısını, gıda fabrikasını,</p><p class="mb-lg" style="color: var(--bix-body-text);">marketler; satın alma yaptığı tüm firmaları denetliyor.</p><p class="mb-lg" style="color: var(--bix-body-text);">Yani herkes kendi tedarikçisini denetleyerek, öyle bir mekanizma ile bütünlük sağlanıyor ki devletin yükü azalıyor ve denetlenen firmalar müşteriler tarafından denetlendiği için sistemlerini hızlı bir şekilde ilerletmek zorunda kalıyor. Müşteri tarafından denetlenen işletme mecburen sistemini düzeltmek zorunda kalıyor, Aksi takdirde müşterisini kaybedecek. Tabiî ki bu mekanizma çalışmaya başlayınca, işletme kendi faaliyetlerini de bağımsız denetim şirketleri tarafından denetletmeye ve iyileştirmeleri de kendi başına yapmayı tercih ediyor.</p><p class="mb-lg" style="color: var(--bix-body-text);">Peki bu komple yani devletin ve işletmecilerin hep birlikte taşın altına elini koyarak yaptığı bu denetim mekanizması neyi sağlayacaktır; gerekli alt yapısını oluşturmadan, misafirlerin sağlığını ve güvenliğini riske atan işletmelerin faaliyetlerini sürdürmesini önleyecek, aynı zamanda, bu yıl ve geçtiğimiz yıllarda yaşadığımız talihsiz olayların tekrar etmesini engelleyecektir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu sayede, bölgemizin ve Türkiye turizminin imajını, geleceğini güvence altına alacaktır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu sistemin öncülüğünü yapan şirketlerin tüm işletmelere örnek olması ve ağırladığımız konukların sağlıklı, güvenli ve mutlu bir şekilde evlerine dönmesi dileklerimle.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">*BÜLTENİMİZİ ALMAK İSTEMİYORSANIZ LÜTFEN MAİL YOLUYLA BİLDİRİNİZ.</p><p class="mb-lg" style="color: var(--bix-body-text);">SHAPE  \* MERGEFORMAT</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

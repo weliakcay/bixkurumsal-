@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzman Görüşü (Blog) | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead27d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: var(--bix-white);
+        }
+
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            background: var(--bix-white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            border: 1px solid var(--bix-light-grey);
+            transition: all var(--transition-normal);
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--bix-orange-light);
+            transform: translateY(-4px);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            font-size: var(--text-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--bix-mid-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .blog-meta span {
+            color: var(--bix-orange);
+            font-weight: var(--weight-semibold);
+        }
+
+
+
+        .blog-card__btn {
+            margin-top: auto;
+        }
+
+        .filter-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-3xl);
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--bix-light-grey);
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--bix-orange);
+            color: white;
+            border-color: var(--bix-orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link navbar__link--active">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container reveal-scale">
+            <h1 class="text-h1 mb-md" style="font-size: clamp(1.5rem, 4vw, 2.5rem); max-width:800px; margin: 0 auto; line-height:1.2;">Birazda Ekonomi</h1>
+            <p class="text-lead text-white opacity-80 mx-auto mt-md">Strateji • Bülent Dokuzluoğlu</p>
+        </div>
+    </header>
+
+    <main class="container py-5xl" style="padding-top: var(--space-4xl); padding-bottom: var(--space-5xl);">
+<div style="max-width:800px; margin:0 auto; font-size:1.1rem; line-height:1.8; color: var(--bix-charcoal);"><p class="mb-lg" style="color: var(--bix-body-text);">Türk Dil kurumunda ekonomi;</p><p class="mb-lg" style="color: var(--bix-body-text);">İnsanların yaşayabilmek için üretme, ürettiklerini bölüşme biçimlerinin ve bu faaliyetlerden doğan ilişkilerin bütünü, iktisat olarak tanımlanmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gündemimizi sürekli ülkelerin, şirketlerin ekonomik durumları, performansları işgal ediyor. Birazda kişisel ekonomimizle ilgilensek hiç fena olmayacak. Biliyoruz ki, ülke ekonomisini aslında bireylerin ekonomik durumları oluşturmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Hangi gelir seviyesine sahip olursa olsun, tüm kesimlerde bir gelecek endişesi mevcut. Bu endişe ise insanların hayatlarını zorlaştırmakta ve insanları stresli, uzun saatler boyunca çalışmak zorunda bırakmaktadır. Tabi ki bundan en çok olumsuz etkilenen şeylerin başında ise, ikili ilişkiler, evlilik, akraba ve arkadaşlık ilişkileri gelmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">İnsanların, ailelerine, arkadaşlarına, akrabaları ve en başta kendilerine, gelecek endişesi nedeniyle zaman ayıramaması hayatı yoğun, çekilmez, insanları ise mutsuz hale getirmektedir.</p><p class="mb-lg" style="color: var(--bix-body-text);">Bu kısır döngüden çıkmak kolay olamamaktadır. İnsanlar yoğun çalıştıkça, ilişkiler kötü etkilenmekte ve tek odaklanılan şey para kazanma arzusu yani gelir artışı olmaktadır. Ancak gelir seviyesini yükselten insanlarında benzer mutsuzluk tablosundan kendini kurtaramadığını görmekteyiz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Burada yanlış bir hesap yapıldığı çok açık. İnsanlar emeklilik endişesiyle daha çok gelir elde etmek istemekte, bununla birlikte giderleri de sürekli artmaktadır. Aslında gelir seviyesi artmasına rağmen, gelir gider dengesinde herhangi bir değişiklik olmamaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Eskiden zenginlik yerine kullanılan bir kavram vardı. Varlıklı olmak. Aslında gerçek durumu yansıtan doğru kavram bu, ancak ne yazık ki günümüzde bu kavram kullanılmamaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Geçmişte insanlar elde ettikleri gelirleri harcarken bir kısmı ile de varlık yaratmaya çalışırlardı. Yaşlandıkları zaman kendi güvencelerini sağlamak için. Nedir bu varlık? Felsefe tanımına baktığımızda, kalıcı olan, gelip geçici olmayan şey olarak tanımlanıyor varlık. Ekonomik anlamı ise, kendi başına gelir getiren değer ve mallar olarak tanımlayabiliriz. Bir anlamda emeklilik endişesini ortadan kaldırmak için ihtiyaç duyduğumuz şey. Bunları, emlak, değerli maden (altın, gümüş vb) ve şirket olarak değerlendirebiliriz günümüzde. Bizim çalışmamıza ihtiyaç duymadan gelir getiren değerler…</p><p class="mb-lg" style="color: var(--bix-body-text);">Geçmişte insanların günümüze göre daha az olan gelirlerinin bir kısmını varlıklara ayırdığını biliyoruz. Oysa tüketim çılgınlığı ile birlikte artık geliri artan insanlar sürekli, gelirlerini giderlere ve değeri düşen şeylere harcamaktadır. Kredi kartlarıyla birlikte günümüzde insanlar, bırakın güncel edindiği geliri, gelecekte edineceği gelirlerini bile değeri düşen ürün ve hizmetlere harcamakta ve gelir, gider, borç şeytan üçgeninde sıkışıp, çırpınmak zorunda kalmaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Eskiden var olan günümüzde ise şirket yönetiminde kullanılan varlık kavramı maalesef insanların gündeminden çıkmış durumunda. Aslında emeklilik endişesinin temel kaynağı da burada gizli. İnsanlar sadece çalışabildikleri sürece giderlerini zorla karşılayabilecek durumdalar.. İnsanlar çok çalışıyor, çok kazanıyor ancak çok harcadıkları ve varlıklara yatırım yapmadıkları için aslında her geçen gün fakirleşiyorlar.</p><p class="mb-lg" style="color: var(--bix-body-text);">Robert Kiyosaki’ nin dediği gibi, insanlar zengin görünmeye çalışarak fakirleşiyorlar ancak bunun farkına varamıyorlar. Ünlü yazarın zenginlik tanımı ise oldukça çarpıcı; Zenginlik; varlık gelirlerinin giderlerini karşıladığı noktada başlar. Bunun gelir seviyesiyle herhangi bir ilgisi bulunmamaktadır.</p><p class="mb-lg" style="color: var(--bix-body-text);">Belki bizlerde kişisel ekonomik düzenimizi gelir gider hesabından çıkarıp, gelir, gider, varlık çerçevesinde değerlendirebilirsek, daha az stresli, aile, arkadaş ilişkilerinin daha sağlıklı olabileceği günler yaşayabiliriz.</p><p class="mb-lg" style="color: var(--bix-body-text);">Gelirlerimizi değeri düşen şeylere harcadığımız kadar, varlıklara da harcamak dileğiyle…..</p><p class="mb-lg" style="color: var(--bix-body-text);">Bülent Dokuzluoğlu</p><p class="mb-lg" style="color: var(--bix-body-text);">Yönetim Danışmanı</p><p class="mb-lg" style="color: var(--bix-body-text);">HYPERLINK "http://www.bixkurumsal.com" www.bixkurumsal.com</p><div class="mt-4xl pt-xl text-center" style="border-top: 1px solid var(--bix-light-grey);"><a href="blog.html" class="btn btn--primary">Tüm Yazılara Dön</a></div></div>
+</main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const category = btn.textContent.trim();
+
+                    // Filter cards
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'Tümü' || cardCategory === category) {
+                            card.style.display = 'flex';
+                            // Reset animation
+                            card.style.animation = 'none';
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = null; 
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

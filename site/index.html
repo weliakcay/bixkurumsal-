@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIX Kurumsal | Kalite, Tedarikçi ve Hijyen Denetimi</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/earth-quotes.css">
+
+    <!-- Custom inline styles for index specific elements -->
+    <style>
+        .hero {
+            height: 90vh;
+            /* Slightly smaller to allow stats bar to overlap */
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            color: var(--bix-white);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--bix-hero-overlay);
+            z-index: 1;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            /* Aligned left, limited width like GreenNest */
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .hero__title {
+            font-size: var(--text-hero);
+            font-weight: var(--weight-thin);
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            letter-spacing: -0.02em;
+        }
+
+        .hero__title strong {
+            font-weight: var(--weight-bold);
+            color: var(--bix-white);
+            /* Keep white for extreme cleanliness */
+        }
+
+        .hero__subtitle {
+            font-size: var(--text-body-lg);
+            font-weight: var(--weight-light);
+            line-height: var(--line-height-loose);
+            margin-bottom: var(--space-2xl);
+            opacity: 0.9;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+
+        .feature-item__icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bix-off-white);
+            border-radius: var(--radius-full);
+            color: var(--bix-charcoal);
+            flex-shrink: 0;
+        }
+
+        .feature-item__title {
+            font-size: var(--text-large);
+            font-weight: var(--weight-semibold);
+            color: var(--bix-charcoal);
+            margin-bottom: var(--space-xs);
+        }
+
+        .feature-item__desc {
+            font-size: var(--text-small);
+            color: var(--bix-body-text);
+            line-height: var(--line-height-normal);
+        }
+
+        .category-glass-section {
+            background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            padding: var(--space-5xl) 0;
+            position: relative;
+        }
+
+        .category-glass-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 26, 46, 0.5);
+            /* Soft dark overlay for contrast */
+        }
+
+        .promo-banner {
+            background: var(--bix-charcoal);
+            color: var(--bix-white);
+            padding: var(--space-4xl) 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link navbar__link--active">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section class="hero" id="hero">
+        <div class="container relative">
+            <div class="hero__content">
+                <p class="text-orange text-small font-semibold tracking-wider mb-md uppercase reveal">Sürdürülebilirlik
+                    & Kalite Denetimi</p>
+                <h1 class="hero__title reveal delay-100"><strong>Şimdi Değer Yönetme</strong><br>Zamanı.</h1>
+                <p class="hero__subtitle reveal delay-200">Sürdürülebilirlikte, Kalitede ve Güvenilirlikte Standart
+                    Değil, Sistem Kuruyoruz. İşletmenizin geleceğini sağlam temellere oturtun.</p>
+                <div class="flex gap-md hero__cta reveal delay-300">
+                    <a href="hizmetlerimiz.html" class="btn btn--primary">Hizmetlerimizi İncele <i
+                            data-lucide="arrow-right" class="btn__icon"></i></a>
+                    <a href="iletisim.html" class="btn btn--ghost text-white border-white">Bize Ulaşın</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1.5: Floating Glass Stats Bar -->
+    <div class="container reveal-up delay-400" id="stats-section">
+        <div class="floating-stats-bar">
+            <div class="stat-box" style="padding: 0;">
+                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.5rem;" data-target="2005"
+                    data-plus="false">0</div>
+                <div class="stat-box__label">Kuruluş Yılı</div>
+            </div>
+            <div class="stat-box" style="padding: 0;">
+                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.5rem;" data-target="500">0
+                </div>
+                <div class="stat-box__label">Başarılı Denetim</div>
+            </div>
+            <div class="stat-box" style="padding: 0; position: relative; z-index: 10;">
+                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.5rem;" data-target="50">0
+                </div>
+                <div class="stat-box__label">ISO Belgelendirme</div>
+            </div>
+            <div class="stat-box" style="padding: 0;">
+                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.5rem;" data-target="100">0
+                </div>
+                <div class="stat-box__label">Eğitim Programı</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Center Image Layout (Why BIX) -->
+    <section class="section section--grey">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-header__label" style="color:var(--bix-orange);">Neden BIX Kurumsal?</span>
+                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Turizm Sektöründe Yeral İşletme
+                    Dinamikleri</h2>
+                <p class="section-header__desc text-muted mx-auto" style="max-width: 600px;">Sadece kağıt üzerinde
+                    değil, operasyonel gerçekliğe dokunan ve işletmenizin DNA'sına işleyen entegre kalite sistemleri
+                    kuruyoruz.</p>
+            </div>
+
+            <div class="center-image-layout reveal">
+                <!-- Sol Özellikler -->
+                <div class="center-image-layout__side text-right">
+                    <div class="feature-item" style="flex-direction: row-reverse;">
+                        <i data-lucide="shield-alert" class="feature-item__icon"></i>
+                        <div>
+                            <h4 class="feature-item__title">Risk Temelli Düşünme</h4>
+                            <p class="feature-item__desc">Reaktif değil proaktif yaklaşımla, krizleri ve zararları
+                                oluşmadan önce haritalandırıp önlüyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item" style="flex-direction: row-reverse;">
+                        <i data-lucide="bar-chart-2" class="feature-item__icon"></i>
+                        <div>
+                            <h4 class="feature-item__title">Veri Odaklı Kararlar</h4>
+                            <p class="feature-item__desc">Dream Quality CMS altyapımız ile kalite verilerinizi
+                                dijitalleştiriyor, ölçülebilir kararlar almanızı sağlıyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Merkez Görsel -->
+                <div class="center-image-layout__center">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="BIX Yaklaşımı">
+                </div>
+
+                <!-- Sağ Özellikler -->
+                <div class="center-image-layout__side">
+                    <div class="feature-item">
+                        <i data-lucide="refresh-cw" class="feature-item__icon"></i>
+                        <div>
+                            <h4 class="feature-item__title">Sürekli İyileştirme</h4>
+                            <p class="feature-item__desc">Standartları korumanın ötesinde, her denetim ve inceleme ile
+                                operasyonel mükemmelliği bir adım ileri taşıyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="scale" class="feature-item__icon"></i>
+                        <div>
+                            <h4 class="feature-item__title">Yasal Uyum ve Etik</h4>
+                            <p class="feature-item__desc">Çevre, İSG ve turizm yasalarına tam uyumluluk ve şeffaflık
+                                ilkelerine dayanan yönetim yaklaşımı.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-3xl reveal">
+                <a href="hakkimizda.html" class="btn btn--primary"
+                    style="padding: 1rem 2.5rem; font-size: 1.1rem; box-shadow: 0 10px 25px rgba(243, 156, 18, 0.4);">Bizim
+                    Hikayemizi Okuyun</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Glassmorphism Category Section -->
+    <section class="category-glass-section">
+        <div class="container relative z-10">
+            <div class="grid grid--2 gap-2xl">
+                <!-- Glass Card 1 -->
+                <div class="glass-panel reveal-scale"
+                    style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.3); display: flex; flex-direction: column; height: 100%;">
+                    <div>
+                        <div class="flex-between mb-xl">
+                            <h3 class="text-h3 text-white">Sürdürülebilirlik Danışmanlığı</h3>
+                            <span
+                                class="text-orange bg-white rounded-pill px-sm py-xs text-xs font-bold uppercase">Popüler</span>
+                        </div>
+                        <p class="text-white mb-2xl" style="opacity: 0.95;">GSTC sertifikasyon süreçleri, karbon ayak
+                            izi
+                            yönetimi ve
+                            sürdürülebilir enerji stratejileri ile markanızı geleceğe hazırlayın.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#surdurulebilirlik" class="btn btn--primary"
+                        style="width: 100%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); margin-top: auto;">Detayları
+                        İncele</a>
+                </div>
+
+                <!-- Glass Card 2 -->
+                <div class="glass-panel reveal-scale delay-200"
+                    style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.3); display: flex; flex-direction: column; height: 100%;">
+                    <div>
+                        <div class="flex-between mb-xl">
+                            <h3 class="text-h3 text-white">Kalite Yönetim Sistemleri</h3>
+                        </div>
+                        <p class="text-white mb-2xl" style="opacity: 0.95;">ISO 9001, 22000, 14001, 45001 belge
+                            hazırlığı,
+                            dokümantasyon, iç denetim ve kalite kültürü optimizasyonu.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#kalite" class="btn btn--ghost"
+                        style="width: 100%; border: 2px solid white; font-weight: 600; margin-top: auto;">Detayları
+                        İncele</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Earth Quotes -->
+    <section class="earth-quotes-section">
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container">
+
+                    <div class="inner cover reveal">
+                        <div class="highlight">
+                            <h2 id="quote" class="cover-heading">Dünya hepimizin ortak noktasıdır.</h2>
+                            <p id="speaker" class="lead">-Wendell Berry</p>
+                            <br>
+                            <a href="#" id="quote-button" class="btn btn-lg btn-default">Bir Başka Söz</a>
+                        </div>
+                    </div>
+
+                </div> <!-- end cover-container -->
+            </div> <!-- end site-wrapper-inner -->
+        </div> <!-- end site-wrapper -->
+
+        <footer class="footer container" style="display:flex; justify-content:space-between; width:100%;">
+            <p id="location" class="pull-left text-muted">Orhangazi, Turkey</p>
+            <p class="pull-right text-muted">Görseller: <a href="https://earthview.withgoogle.com/">Earth View</a></p>
+        </footer>
+    </section>
+
+    <!-- Section 4: Clean Service Grid (Our Favourite Services) -->
+    <section class="section section--grey">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Tüm Hizmetlerimiz</h2>
+                <p class="section-header__desc text-muted">İşletmenizin her kademesinde mükemmelliği yakalamak için
+                    ihtiyaç duyduğunuz tüm danışmanlık kalemleri.</p>
+            </div>
+
+            <div class="grid grid--4 mt-2xl">
+                <!-- Card 1 -->
+                <div class="card text-center reveal-scale flex column"
+                    style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Çevre" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
+                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal); hyphens: none; word-wrap: normal;"
+                            lang="tr">Sürdürülebilir Turizm</h3>
+                        <p class="text-small text-muted mb-lg">GSTC Belgelendirme ve Raporlama Yönetimi.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#surdurulebilirlik" class="btn btn--dark"
+                        style="width: 100%; margin-top: auto;">Detaylar</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card text-center reveal-scale delay-100 flex column"
+                    style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="ISO" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
+                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal); hyphens: none; word-wrap: normal;"
+                            lang="tr">ISO Belgelendirme</h3>
+                        <p class="text-small text-muted mb-lg">Uluslararası standartlarda yönetim mimarisi.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#kalite" class="btn btn--dark"
+                        style="width: 100%; margin-top: auto;">Detaylar</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card text-center reveal-scale delay-200 flex column"
+                    style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Gıda" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
+                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal); hyphens: none; word-wrap: normal;"
+                            lang="tr">Gıda Güvenliği</h3>
+                        <p class="text-small text-muted mb-lg">HACCP, hijyen ve su güvenliği risk analizleri.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#gida-guvenligi" class="btn btn--dark"
+                        style="width: 100%; margin-top: auto;">Detaylar</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card text-center reveal-scale delay-300 flex column"
+                    style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                            alt="Misafir" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
+                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal);">Gizli Misafir</h3>
+                        <p class="text-small text-muted mb-lg">Gerçek misafir perspektifinden hizmet ölçümü.</p>
+                    </div>
+                    <a href="hizmetlerimiz.html#gizli-misafir" class="btn btn--dark"
+                        style="width: 100%; margin-top: auto;">Detaylar</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-xl reveal">
+                <a href="hizmetlerimiz.html" class="text-muted text-small font-medium hover-orange"
+                    style="text-decoration: underline; text-underline-offset: 4px;">Tüm yelpazeyi görüntüle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: CMS Promo Banner -->
+    <section class="promo-banner">
+        <div class="container grid grid--2 align-center gap-4xl reveal">
+            <div class="text-left">
+                <h2 class="text-h2 text-white mb-md">Süreçlerinizi Dijitale Taşıyın</h2>
+                <p class="text-lead text-white opacity-80 mb-xl">Denetim formları, uygunsuzluk kayıtları ve aksiyon
+                    planlarınızı yönetmek için kendi geliştirdiğimiz "Dream Quality CMS" altyapısını kullanmaya
+                    başlayın.</p>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn"
+                    style="background: var(--bix-white); color: var(--bix-charcoal);">Sisteme Giriş Yapın</a>
+            </div>
+            <div class="img-wrapper shadow-lg" style="height: 300px;">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    alt="CMS Dashboard" style="border-radius: var(--radius-xl);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials (Clean Cards Layout) -->
+    <section class="section section--grey">
+        <div class="container">
+            <div class="section-header reveal mb-2xl">
+                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Müşterilerimiz Neler Söylüyor?
+                </h2>
+            </div>
+
+            <div class="grid grid--2 gap-2xl reveal-up">
+                <!-- Testimonial 1 -->
+                <div class="card" style="flex-direction: row; align-items: center; gap: var(--space-xl);">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                        alt="Resort" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                        <p class="text-small text-muted mb-sm italic">"BIX Kurumsal sayesinde tesisimizde sürdürülebilir
+                            kalite altyapısını kurduk. Tüm ekibe teşekkürler."</p>
+                        <div class="flex gap-xs text-orange mb-xs">
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                        </div>
+                        <h4 class="text-small font-bold" style="color: var(--bix-charcoal);">Akdeniz Resort Hotel</h4>
+                        <p class="text-xs text-muted">Genel Müdür</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card" style="flex-direction: row; align-items: center; gap: var(--space-xl);">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                        alt="Hotel" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                    <div>
+                        <p class="text-small text-muted mb-sm italic">"GSTC sertifikasyon sürecindeki uzmanlıkları paha
+                            biçilemezdi. Kesinlikle tavsiye ediyoruz."</p>
+                        <div class="flex gap-xs text-orange mb-xs">
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                        </div>
+                        <h4 class="text-small font-bold" style="color: var(--bix-charcoal);">Lara Turizm Grubu</h4>
+                        <p class="text-xs text-muted">Kalite Yöneticisi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Newsletter/CTA (Get the Green in Your Inbox equivalent) -->
+    <section class="section"
+        style="background: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(26,26,46,0.85);"></div>
+        <div class="container relative z-10 text-center reveal text-white py-4xl">
+            <h2 class="text-h2 mb-md">Sektördeki Gelişmeleri Yakından Takip Edin</h2>
+            <p class="text-lead text-white opacity-80 mx-auto mb-2xl text-center" style="text-align: center;">Aylık
+                kalite ve sürdürülebilirlik bültenimize
+                abone olun.</p>
+
+            <form class="minimal-form mx-auto"
+                style="display: flex; align-items: center; gap: var(--space-sm); border-bottom: none; background: rgba(255,255,255,0.1); border-radius: var(--radius-pill); padding: 5px 5px 5px var(--space-md); max-width: 500px; width: 100%;">
+                <input type="email" class="minimal-form__input" placeholder="E-posta adresiniz..."
+                    style="flex-grow: 1; width: auto; border: none; padding: 0.5rem 0;">
+                <button type="submit" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; text-transform:none; flex-shrink: 0; min-height: 48px;">Abone
+                    Ol</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 8: Blog / Uzman Görüşü -->
+    <section class="section section--grey">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Uzman Görüşü Blogu</h2>
+                <p class="section-header__desc text-muted mx-auto">Sektörel makalelerimiz ve stratejik kalite
+                    analizlerimiz.</p>
+            </div>
+
+            <div class="grid grid--3 reveal-up mt-xl">
+                <!-- Blog Card -->
+                <div class="card"
+                    style="padding: 0; border: none; background: transparent; box-shadow: none; display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Blog"
+                        style="height: 220px; width: 100%; object-fit: cover; border-radius: var(--radius-xl); margin-bottom: var(--space-md);">
+                    <h3 class="text-h4 mb-xs" style="color: var(--bix-charcoal);">Sürdürülebilir Turizm Önceliğimiz
+                        Olmalı</h3>
+                    <p class="text-small text-muted mb-md flex-grow-1">Turizm bakanlığı genelgesi ile otel
+                        işletmelerinde sertifika zorunluluğu detayları.</p>
+                    <a href="blog.html" class="btn btn--dark"
+                        style="padding: 0.6rem; margin-top: auto; display: inline-block; text-align: center;">Daha
+                        Fazla Oku</a>
+                </div>
+
+                <!-- Blog Card -->
+                <div class="card"
+                    style="padding: 0; border: none; background: transparent; box-shadow: none; display: flex; flex-direction: column;">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Blog"
+                        style="height: 220px; width: 100%; object-fit: cover; border-radius: var(--radius-xl); margin-bottom: var(--space-md);">
+                    <h3 class="text-h4 mb-xs" style="color: var(--bix-charcoal);">"Biz Bu İşi Nasıl Yapacağız?"</h3>
+                    <p class="text-small text-muted mb-md flex-grow-1">Bilimsel yönetim tekniklerinin geleneksel
+                        işletmelere entegrasyon yöntemleri.</p>
+                    <a href="blog.html" class="btn btn--dark"
+                        style="padding: 0.6rem; margin-top: auto; display: inline-block; text-align: center;">Daha
+                        Fazla Oku</a>
+                </div>
+
+                <!-- Blog Card -->
+                <div class="card"
+                    style="padding: 0; border: none; background: transparent; box-shadow: none; display: flex; flex-direction: column;">
+                    <img src="images/hygiene-inspection-blog.png" alt="Blog"
+                        style="height: 220px; width: 100%; object-fit: cover; border-radius: var(--radius-xl); margin-bottom: var(--space-md);">
+                    <h3 class="text-h4 mb-xs" style="color: var(--bix-charcoal);">Hijyen Denetimi Mi? O Da Ne!</h3>
+                    <p class="text-small text-muted mb-md flex-grow-1">Turizm sektöründe gıda güvenliği kavramının zaman
+                        içindeki evrimi ve zorluklar.</p>
+                    <a href="blog.html" class="btn btn--dark"
+                        style="padding: 0.6rem; margin-top: auto; display: inline-block; text-align: center;">Daha
+                        Fazla Oku</a>
+                </div>
+            </div>
+
+            <div class="text-center mt-2xl reveal">
+                <a href="blog.html" class="text-muted text-small hover-orange font-medium"
+                    style="text-decoration: underline; text-underline-offset: 4px;">Tüm Yazıları Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Footer -->
+    <footer class="section section--dark pt-4xl pb-lg border-t" style="border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="container">
+            <div class="grid grid--4 footer-grid gap-2xl">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+                    <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic.
+                        Ltd. Şti.</p>
+                    <div class="flex gap-sm">
+                        <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="btn btn--ghost"
+                            style="padding: 0.5rem; border-radius: var(--radius-md);"><i data-lucide="facebook"
+                                size="18"></i></a>
+                        <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="btn btn--ghost"
+                            style="padding: 0.5rem; border-radius: var(--radius-md);"><i data-lucide="instagram"
+                                size="18"></i></a>
+                        <a href="javascript:void(0);" class="btn btn--ghost"
+                            style="padding: 0.5rem; border-radius: var(--radius-md);"><i data-lucide="linkedin"
+                                size="18"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-white mb-lg">Kurumsal</h4>
+                    <ul class="footer-links">
+                        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                        <li><a href="blog.html">Referanslar</a></li>
+                        <li><a href="blog.html">Sektörel Yazılar</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="https://quality.bixkurumsal.com/" target="_blank">Dream Quality CMS</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-white mb-lg">Hizmetlerimiz</h4>
+                    <ul class="footer-links">
+                        <li><a href="hizmetlerimiz.html#surdurulebilirlik">Sürdürülebilirlik Danışmanlığı</a></li>
+                        <li><a href="hizmetlerimiz.html#kalite">Kalite Yönetim Sistemleri</a></li>
+                        <li><a href="hizmetlerimiz.html#gida-guvenligi">Gıda ve Su Güvenliği</a></li>
+                        <li><a href="hizmetlerimiz.html#gizli-misafir">Gizli Misafir Denetimleri</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-info" style="display: flex; flex-direction: column; gap: var(--space-xl);">
+                    <h4 class="text-white mb-xs" style="font-size: 1.25rem;">Bize Ulaşın</h4>
+
+                    <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                        <a href="mailto:info@bixkurumsal.com"
+                            class="flex align-center gap-md text-small opacity-80 hover-white"
+                            style="text-decoration: none;">
+                            <i data-lucide="mail" size="22" style="flex-shrink: 0; align-self: center;"></i>
+                            <span style="font-size: 1.05rem; letter-spacing: 0.3px;">info@bixkurumsal.com</span>
+                        </a>
+
+                        <a href="tel:+905302253878" class="flex align-center gap-md text-small opacity-80 hover-white"
+                            style="text-decoration: none;">
+                            <i data-lucide="phone" size="22" style="flex-shrink: 0; align-self: center;"></i>
+                            <span style="font-size: 1.05rem; letter-spacing: 0.5px;">+90 530 225 38 78</span>
+                        </a>
+
+                        <div class="flex align-start gap-md text-small opacity-80" style="margin-top: var(--space-xs);">
+                            <i data-lucide="map-pin" size="22" style="flex-shrink: 0; margin-top: 5px;"></i>
+                            <div style="line-height: 1.7; font-size: 1.05rem;">
+                                <span style="display: block; white-space: nowrap;">Kızılarık Mah. 2754 Sk. No: 1</span>
+                                <span style="display: block; white-space: nowrap;">İç Kapı No: 409</span>
+                                <span style="display: block; white-space: nowrap;">Muratpaşa, Antalya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+                <div class="flex gap-lg">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- Custom Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/earth-quotes.js"></script>
+</body>
+
+</html>

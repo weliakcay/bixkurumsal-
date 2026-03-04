@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | BIX Kurumsal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        .contact-box {
+            padding: var(--space-xl);
+            background: var(--bix-off-white);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+        }
+
+        .contact-box i {
+            color: var(--bix-orange);
+            flex-shrink: 0;
+            background: rgba(232, 146, 45, 0.1);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-label {
+            display: block;
+            font-size: var(--text-small);
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+            color: var(--bix-charcoal);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--bix-light-grey);
+            border-radius: var(--radius-md);
+            background: var(--bix-white);
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--bix-orange);
+        }
+    </style>
+    <!-- Leaflet CSS for Custom Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <style>
+        .map-container {
+            height: 400px;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            margin-top: var(--space-3xl);
+            z-index: 1;
+            /* prevents leaflet map from overlapping fixed navbar */
+        }
+
+        /* Leaflet tile reset for global img resets */
+        .leaflet-container img {
+            max-width: none !important;
+            max-height: none !important;
+            height: auto !important;
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar--light">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                B<span class="navbar__brand-icon">!</span>X KURUMSAL
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link navbar__link--active">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5xl" style="padding-top: 150px; padding-bottom: var(--space-5xl);">
+
+        <div class="section-header text-left reveal mb-4xl">
+            <h1 class="text-h1 mb-md">Bize Ulaşın</h1>
+            <p class="text-lead">Hizmetlerimiz hakkında detaylı bilgi almak veya işletmenize özel danışmanlık talep için
+                bizimle iletişime geçebilirsiniz.</p>
+        </div>
+
+        <div class="grid grid--2 gap-4xl">
+
+            <!-- Sol: İletişim Bilgileri -->
+            <div class="reveal-left">
+                <h3 class="text-h3 mb-lg">İletişim Bilgilerimiz</h3>
+
+                <div class="contact-box">
+                    <i data-lucide="map-pin"></i>
+                    <div>
+                        <h4 class="mb-xs">Genel Merkez</h4>
+                        <p class="text-muted">Kızılarık Mah. 2754 Sk. No: 1 İç Kapı No: 409<br>Muratpaşa, Antalya</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <i data-lucide="phone"></i>
+                    <div>
+                        <h4 class="mb-xs">Telefon</h4>
+                        <a href="tel:+905302253878" class="text-muted hover-orange">+90 530 225 38 78</a>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <i data-lucide="mail"></i>
+                    <div>
+                        <h4 class="mb-xs">E-Posta</h4>
+                        <a href="mailto:info@bixkurumsal.com" class="text-muted hover-orange">info@bixkurumsal.com</a>
+                    </div>
+                </div>
+
+                <div class="mt-xl">
+                    <h4 class="mb-sm">Sosyal Medya</h4>
+                    <div class="flex gap-sm">
+                        <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="btn btn--ghost-dark"
+                            style="padding: 0.8rem; border-radius: 5px;"><i data-lucide="facebook" size="20"></i></a>
+                        <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="btn btn--ghost-dark"
+                            style="padding: 0.8rem; border-radius: 5px;"><i data-lucide="instagram" size="20"></i></a>
+                        <a href="javascript:void(0);" class="btn btn--ghost-dark"
+                            style="padding: 0.8rem; border-radius: 5px;"><i data-lucide="linkedin" size="20"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ: İletişim Formu -->
+            <div class="reveal-right">
+                <h3 class="text-h3 mb-lg">Mesaj Gönderin</h3>
+                <form action="#" method="POST">
+                    <div class="grid grid--2" style="gap: var(--space-md)">
+                        <div class="form-group">
+                            <label class="form-label">Adınız Soyadınız</label>
+                            <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Şirketiniz</label>
+                            <input type="text" class="form-input" placeholder="Kurum Adı">
+                        </div>
+                    </div>
+                    <div class="grid grid--2" style="gap: var(--space-md)">
+                        <div class="form-group">
+                            <label class="form-label">E-Posta</label>
+                            <input type="email" class="form-input" placeholder="ornek@sirket.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Telefon</label>
+                            <input type="tel" class="form-input" placeholder="0532 000 0000">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Konu</label>
+                        <select class="form-input">
+                            <option>Sürdürülebilirlik Danışmanlığı</option>
+                            <option>Kalite Yönetim Sistemleri (ISO)</option>
+                            <option>Gıda ve Su Güvenliği</option>
+                            <option>Gizli Misafir Denetimi</option>
+                            <option>Eğitim</option>
+                            <option>Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mesajınız</label>
+                        <textarea class="form-input" rows="4" placeholder="Size nasıl yardımcı olabiliriz?"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary" style="width: 100%;">Mesajı Gönder</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Harita -->
+        <div class="map-container" id="map">
+            <!-- Map will be mounted here -->
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo">B<span>!</span>X</a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+
+    <!-- Leaflet JS for Free Premium Maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Coordinate of BIX Kurumsal (Antalya)
+            var bixLocation = [36.9157, 30.7188];
+
+            // Initialize the map, zoom control false for a cleaner look
+            var map = L.map('map', {
+                zoomControl: false,
+                scrollWheelZoom: false
+            }).setView(bixLocation, 14);
+
+            // Add smooth minimal zoom controls to bottom-right
+            L.control.zoom({
+                position: 'bottomright'
+            }).addTo(map);
+
+            // Add the CartoDB Dark Matter tile layer (Premium Dark Theme - Free & No API Key Needed)
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            // Create a custom modern marker
+            var customIcon = L.divIcon({
+                className: 'custom-bix-marker',
+                html: `<div style="background-color: var(--bix-orange); width: 24px; height: 24px; border-radius: 50%; border: 3px solid var(--bix-white); box-shadow: 0 0 10px rgba(0,0,0,0.5);"></div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            // Add marker to map
+            L.marker(bixLocation, { icon: customIcon })
+                .addTo(map)
+                .bindPopup('<b style="color:var(--bix-charcoal);">BIX Kurumsal</b><br>Kızılarık Mah, Antalya.')
+                .openPopup();
+        });
+    </script>
+</body>
+
+</html>
