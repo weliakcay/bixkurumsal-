@@ -33,13 +33,15 @@
         }
 
         .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: var(--space-2xl);
             margin-top: var(--space-4xl);
         }
 
         .team-member {
+            width: calc(25% - (var(--space-2xl) * 0.75));
             background: var(--bix-white);
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -72,20 +74,20 @@
         }
 
         @media (max-width: 1024px) {
-            .team-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .team-member {
+                width: calc(33.333% - (var(--space-2xl) * 0.666));
             }
         }
 
         @media (max-width: 768px) {
-            .team-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .team-member {
+                width: calc(50% - (var(--space-2xl) * 0.5));
             }
         }
 
         @media (max-width: 480px) {
-            .team-grid {
-                grid-template-columns: 1fr;
+            .team-member {
+                width: 100%;
             }
         }
     </style>
@@ -130,84 +132,78 @@
 
         <div class="text-center reveal-up">
             <h2 class="text-h2 text-charcoal mb-sm" style="color:var(--bix-charcoal);">Profesyonellerimizle Tanışın</h2>
-            <p class="text-muted text-lead">Denetim, sürdürülebilirlik ve kalite süreçleriniz emin ellerde yönetiliyor.
+            <p class="text-muted text-lead mx-auto">Denetim, sürdürülebilirlik ve kalite süreçleriniz emin ellerde
+                yönetiliyor.
             </p>
         </div>
 
         <div class="team-grid reveal-up delay-200">
-            <!-- Kurucu -->
+            <!-- 1. Üye -->
             <div class="team-member">
-                <img src="images/bulent-dokuzluoglu.jpg?v=2" alt="Bülent Dokuzluoğlu" class="team-member__img">
+                <img src="images/team/Bülent-Dokuzluoğlu.jpg" alt="Bülent Dokuzluoğlu" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Kurucu / Baş
-                        Denetçi</span>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">KURUCU</span>
                     <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Bülent Dokuzluoğlu</h3>
-                    <p class="text-small text-muted">Veteriner Hekim. Travelife, BRC, Global GAP ve ISO Kalite Yönetim
-                        Sistemleri Baş Denetçisi.</p>
                 </div>
             </div>
 
+            <!-- 2. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Hacer Dokuzluoğlu" class="team-member__img">
+                <img src="images/team/Özge-Akcasu.jpg" alt="Özge Akcasu" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Finans & Üretim</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Hacer Dokuzluoğlu</h3>
-                </div>
-            </div>
-
-            <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Özge Akcasu" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Operasyon</span>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">OPERASYON
+                        MÜDÜRÜ</span>
                     <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Özge Akcasu</h3>
                 </div>
             </div>
 
+            <!-- 3. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Şahin Sevruk" class="team-member__img">
+                <img src="images/team/Sahin-Sevrük.jpg" alt="Şahin Sevrük" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Şahin Sevruk</h3>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">BATI AKDENİZ BÖLGE
+                        YÖNETİCİSİ / DENETÇİ</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Şahin Sevrük</h3>
                 </div>
             </div>
 
+            <!-- 4. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Nihan Eser" class="team-member__img">
+                <img src="images/team/Çiğdem-Kaplan.jpg" alt="Çiğdem Kaplan" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Nihan Eser</h3>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">MUHASEBE
+                        YÖNETİCİSİ</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Çiğdem Kaplan</h3>
                 </div>
             </div>
 
+            <!-- 5. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Toprak Adıgüzel" class="team-member__img">
+                <img src="images/team/Toprak-Adıgüzel.jpg" alt="Toprak Adıgüzel" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Denetçi</span>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">İŞ GELİŞTİRME VE
+                        OPERASYONEL DENETİM YÖNETİCİSİ</span>
                     <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Toprak Adıgüzel</h3>
                 </div>
             </div>
 
+            <!-- 6. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Çiğdem Aksoy" class="team-member__img">
+                <img src="images/team/Ezgi-Öter.jpg" alt="Ezgi Öter" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Satış Pazarlama</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Çiğdem Aksoy</h3>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">İNSAN KAYNAKLARI VE
+                        EĞİTİM YÖNETİCİSİ</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Ezgi Öter</h3>
                 </div>
             </div>
 
+            <!-- 7. Üye -->
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                    alt="Selin Doğan" class="team-member__img">
+                <img src="images/team/Nihan-Eser.jpg" alt="Nihan Eser" class="team-member__img">
                 <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">Veri Analisti</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Selin Doğan</h3>
-                    <p class="text-small text-muted">Dream Quality CMS İstatistik Uzmanı ve Optimizasyon Sorumlusu.</p>
+                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">SİSTEM BELGELENDİRME
+                        YÖNETİCİSİ</span>
+                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Nihan Eser</h3>
                 </div>
             </div>
 
@@ -217,13 +213,14 @@
     <!-- Footer -->
     <footer class="section section--dark pt-4xl pb-lg">
         <div class="container text-center">
-            <a href="index.html" class="footer-logo"><img src="images/logo-white.png" alt="BIX Kurumsal" style="height: 60px; width: auto; display: inline-block;"></a>
+            <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="BIX Kurumsal"
+                    style="height: 60px; width: auto; display: inline-block;"></a>
             <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
                 Şti.</p>
-            <div class="flex-center gap-md mb-lg">
-                <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="social-icon" target="_blank"><i
+            <div class="flex flex-center gap-md mb-lg">
+                <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="social-icon"><i
                         data-lucide="instagram" size="20"></i></a>
-                <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="social-icon" target="_blank"><i
+                <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="social-icon"><i
                         data-lucide="facebook" size="20"></i></a>
                 <a href="javascript:void(0);" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
             </div>

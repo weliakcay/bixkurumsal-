@@ -129,6 +129,29 @@
             padding: var(--space-4xl) 0;
             text-align: center;
         }
+
+        .single-item-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .single-item-center>* {
+            width: 100%;
+        }
+
+        @media (min-width: 992px) {
+            .single-item-center>* {
+                width: calc(25% - 1.5rem);
+                /* var(--space-xl) is 2rem, 0.75 * 2rem = 1.5rem */
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 991px) {
+            .single-item-center>* {
+                width: calc(50% - 1rem);
+                /* var(--space-xl) is 2rem, 0.5 * 2rem = 1rem */
+            }
+        }
     </style>
 </head>
 
@@ -210,7 +233,8 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-header__label" style="color:var(--bix-orange);">Neden BIX Kurumsal?</span>
-                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Global Standartlar, Yerel Uzmanlık</h2>
+                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Global Standartlar, Yerel Uzmanlık
+                </h2>
                 <p class="section-header__desc text-muted mx-auto" style="max-width: 650px;">Uluslararası standartlara
                     uyum; yalnızca denetimle değil, doğru sistem tasarımı ve saha disiplini ile sağlanır. Küresel
                     referansları yerel operasyonel gerçeklikle birleştiriyoruz.</p>
@@ -397,7 +421,8 @@
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                             alt="Misafir" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
                         <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal);">Gizli Misafir</h3>
-                        <p class="text-small text-muted mb-lg">Midscale'den Ultra Luxury'ye gerçek misafir perspektifinden hizmet ölçümü.</p>
+                        <p class="text-small text-muted mb-lg">Midscale'den Ultra Luxury'ye gerçek misafir
+                            perspektifinden hizmet ölçümü.</p>
                     </div>
                     <a href="hizmetlerimiz.html#gizli-misafir" class="btn btn--dark"
                         style="width: 100%; margin-top: auto;">Detaylar</a>
@@ -405,15 +430,17 @@
             </div>
 
             <!-- 2. Satır: 5. Hizmet -->
-            <div class="grid grid--4 mt-xl">
+            <div class="single-item-center mt-xl">
                 <!-- Card 5 -->
                 <div class="card text-center reveal-scale flex column"
                     style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
                     <div>
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                             alt="Eğitim" class="rounded-lg mb-md" style="height:200px; object-fit:cover; width:100%;">
-                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal); hyphens: none; word-wrap: normal;" lang="tr">Misafir Deneyimi Eğitimi</h3>
-                        <p class="text-small text-muted mb-lg">Strateji odaklı liderlik, proaktif hizmet ve misafir temas kültürü programları.</p>
+                        <h3 class="text-h4 mb-sm" style="color: var(--bix-charcoal); hyphens: none; word-wrap: normal;"
+                            lang="tr">Misafir Deneyimi Eğitimi</h3>
+                        <p class="text-small text-muted mb-lg">Strateji odaklı liderlik, proaktif hizmet ve misafir
+                            temas kültürü programları.</p>
                     </div>
                     <a href="hizmetlerimiz.html#egitim" class="btn btn--dark"
                         style="width: 100%; margin-top: auto;">Detaylar</a>
@@ -582,7 +609,8 @@
             <div class="grid grid--4 footer-grid gap-2xl">
                 <!-- Brand -->
                 <div>
-                    <a href="index.html" class="footer-logo"><img src="images/logo-white.png" alt="BIX Kurumsal" style="height: 60px; width: auto; display: inline-block;"></a>
+                    <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="BIX Kurumsal"
+                            style="height: 60px; width: auto; display: inline-block;"></a>
                     <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic.
                         Ltd. Şti.</p>
                     <div class="flex gap-sm">
