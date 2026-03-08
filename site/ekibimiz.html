@@ -32,6 +32,7 @@
             color: var(--bix-white);
         }
 
+        /* ── Team Grid ── */
         .team-grid {
             display: flex;
             flex-wrap: wrap;
@@ -40,53 +41,145 @@
             margin-top: var(--space-4xl);
         }
 
-        .team-member {
+        .team-card {
             width: calc(25% - (var(--space-2xl) * 0.75));
-            background: var(--bix-white);
-            border-radius: var(--radius-lg);
+            min-width: 220px;
+        }
+
+        /* ── Resim + overlay kabı ── */
+        .team-card__media {
+            position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            transition: transform var(--transition-normal);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
         }
 
-        .team-member:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .team-member__img {
+        .team-card__img {
             width: 100%;
-            height: 280px;
+            height: 300px;
             object-fit: cover;
             object-position: top;
+            display: block;
+            transition: transform 0.4s ease;
         }
 
-        .team-member__info {
-            padding: var(--space-lg);
-            flex-grow: 1;
+        .team-card:hover .team-card__img {
+            transform: scale(1.04);
+        }
+
+        /* Hover overlay */
+        .team-card__overlay {
+            position: absolute;
+            inset: 0;
+            border: 18px solid rgba(243, 156, 18, 0.18);
+            background-color: rgba(26, 26, 46, 0.82);
+            opacity: 0;
+            transition: opacity 0.3s ease;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
+            gap: var(--space-lg);
+            padding: var(--space-xl);
+            text-align: center;
         }
 
+        .team-card:hover .team-card__overlay {
+            opacity: 1;
+        }
+
+        /* Overlay içi metin */
+        .team-card__overlay-title {
+            color: var(--bix-orange);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateY(-16px);
+            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease;
+        }
+
+        .team-card__overlay-desc {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(-12px);
+            transition: opacity 0.3s 0.15s ease, transform 0.3s 0.15s ease;
+        }
+
+        /* LinkedIn butonu */
+        .team-card__linkedin {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--bix-orange);
+            color: #fff;
+            text-decoration: none;
+            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease, background 0.2s ease;
+        }
+
+        .team-card:hover .team-card__overlay-title,
+        .team-card:hover .team-card__overlay-desc,
+        .team-card:hover .team-card__linkedin {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .team-card__linkedin:hover {
+            background: #fff;
+            color: var(--bix-orange);
+        }
+
+        /* Alt bilgi bandı */
+        .team-card__info {
+            background: var(--bix-white);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-top: none;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            padding: var(--space-md) var(--space-lg) var(--space-lg);
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .team-card__name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--bix-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+
+        .team-card__role {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--bix-orange);
+            letter-spacing: 0.12em;
+            font-weight: 600;
+        }
+
+        /* Responsive */
         @media (max-width: 1024px) {
-            .team-member {
+            .team-card {
                 width: calc(33.333% - (var(--space-2xl) * 0.666));
             }
         }
 
         @media (max-width: 768px) {
-            .team-member {
+            .team-card {
                 width: calc(50% - (var(--space-2xl) * 0.5));
             }
         }
 
         @media (max-width: 480px) {
-            .team-member {
+            .team-card {
                 width: 100%;
             }
         }
@@ -123,87 +216,161 @@
     <header class="page-hero">
         <div class="container reveal-scale">
             <h1 class="text-h1 mb-md">Uzman Ekibimiz</h1>
-            <p class="text-lead text-white opacity-80 mx-auto">Sektörün tecrübeli ve en dinamik kadrosuyla yanınızdayız.
-            </p>
+            <p class="text-lead text-white opacity-80 mx-auto">Sektörün tecrübeli ve en dinamik kadrosuyla yanınızdayız.</p>
         </div>
     </header>
 
-    <main class="container py-5xl" style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
+    <main class="container" style="padding-top: var(--space-5xl); padding-bottom: var(--space-5xl);">
 
         <div class="text-center reveal-up">
-            <h2 class="text-h2 text-charcoal mb-sm" style="color:var(--bix-charcoal);">Profesyonellerimizle Tanışın</h2>
-            <p class="text-muted text-lead mx-auto">Denetim, sürdürülebilirlik ve kalite süreçleriniz emin ellerde
-                yönetiliyor.
-            </p>
+            <h2 class="text-h2 mb-sm" style="color: var(--bix-charcoal);">Profesyonellerimizle Tanışın</h2>
+            <p class="text-muted text-lead mx-auto" style="max-width: 560px;">Denetim, sürdürülebilirlik ve kalite
+                süreçleriniz emin ellerde yönetiliyor.</p>
         </div>
 
         <div class="team-grid reveal-up delay-200">
-            <!-- 1. Üye -->
-            <div class="team-member">
-                <img src="images/team/bulent-dokuzluoglu.jpg" alt="Bülent Dokuzluoğlu" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">KURUCU</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Bülent Dokuzluoğlu</h3>
+
+            <!-- 1. Bülent Dokuzluoğlu -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/bulent-dokuzluoglu.jpg" alt="Bülent Dokuzluoğlu" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Kurucu</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Bülent Dokuzluoğlu</div>
+                    <div class="team-card__role">Kurucu</div>
                 </div>
             </div>
 
-            <!-- 2. Üye -->
-            <div class="team-member">
-                <img src="images/team/ozge-akcasu.jpg" alt="Özge Akcasu" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">OPERASYON
-                        MÜDÜRÜ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Özge Akcasu</h3>
+            <!-- 2. Hacer Dokuzluoğlu -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/hacer-dokuzluoglu.jpg" alt="Hacer Dokuzluoğlu" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Finans Yöneticisi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Hacer Dokuzluoğlu</div>
+                    <div class="team-card__role">Finans Yöneticisi</div>
                 </div>
             </div>
 
-            <!-- 3. Üye -->
-            <div class="team-member">
-                <img src="images/team/sahin-sevruk.jpg" alt="Şahin Sevrük" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">BATI AKDENİZ BÖLGE
-                        YÖNETİCİSİ / DENETÇİ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Şahin Sevrük</h3>
+            <!-- 3. Özge Akcasu -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/ozge-akcasu.jpg" alt="Özge Akcasu" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Operasyon Müdürü</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Özge Akcasu</div>
+                    <div class="team-card__role">Operasyon Müdürü</div>
                 </div>
             </div>
 
-            <!-- 4. Üye -->
-            <div class="team-member">
-                <img src="images/team/cigdem-kaplan.jpg" alt="Çiğdem Kaplan" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">MUHASEBE
-                        YÖNETİCİSİ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Çiğdem Kaplan</h3>
+            <!-- 4. Şahin Sevrük -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/sahin-sevruk.jpg" alt="Şahin Sevrük" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Batı Akdeniz Bölge Yöneticisi / Denetçi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Şahin Sevrük</div>
+                    <div class="team-card__role">Batı Akdeniz Bölge Yöneticisi / Denetçi</div>
                 </div>
             </div>
 
-            <!-- 5. Üye -->
-            <div class="team-member">
-                <img src="images/team/toprak-adiguzel.jpg" alt="Toprak Adıgüzel" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">İŞ GELİŞTİRME VE
-                        OPERASYONEL DENETİM YÖNETİCİSİ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Toprak Adıgüzel</h3>
+            <!-- 5. Toprak Adıgüzel -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/toprak-adiguzel.jpg" alt="Toprak Adıgüzel" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">İş Geliştirme ve Operasyonel Denetim Yöneticisi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Toprak Adıgüzel</div>
+                    <div class="team-card__role">İş Geliştirme ve Operasyonel Denetim Yöneticisi</div>
                 </div>
             </div>
 
-            <!-- 6. Üye -->
-            <div class="team-member">
-                <img src="images/team/ezgi-oter.jpg" alt="Ezgi Öter" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">İNSAN KAYNAKLARI VE
-                        EĞİTİM YÖNETİCİSİ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Ezgi Öter</h3>
+            <!-- 6. Ezgi Öter -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/ezgi-oter.jpg" alt="Ezgi Öter" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">İnsan Kaynakları ve Eğitim Yöneticisi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Ezgi Öter</div>
+                    <div class="team-card__role">İnsan Kaynakları ve Eğitim Yöneticisi</div>
                 </div>
             </div>
 
-            <!-- 7. Üye -->
-            <div class="team-member">
-                <img src="images/team/nihan-eser.jpg" alt="Nihan Eser" class="team-member__img">
-                <div class="team-member__info">
-                    <span class="text-small text-orange font-bold uppercase tracking-wider mb-xs">SİSTEM BELGELENDİRME
-                        YÖNETİCİSİ</span>
-                    <h3 class="text-h4 mb-xs" style="color:var(--bix-charcoal);">Nihan Eser</h3>
+            <!-- 7. Nihan Eser -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/nihan-eser.jpg" alt="Nihan Eser" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Sistem Belgelendirme Yöneticisi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Nihan Eser</div>
+                    <div class="team-card__role">Sistem Belgelendirme Yöneticisi</div>
+                </div>
+            </div>
+
+            <!-- 8. Çiğdem Kaplan -->
+            <div class="team-card">
+                <div class="team-card__media">
+                    <img src="images/team/cigdem-kaplan.jpg" alt="Çiğdem Kaplan" class="team-card__img">
+                    <div class="team-card__overlay">
+                        <span class="team-card__overlay-title">Muhasebe Yöneticisi</span>
+                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
+                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" size="20"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-card__info">
+                    <div class="team-card__name">Çiğdem Kaplan</div>
+                    <div class="team-card__role">Muhasebe Yöneticisi</div>
                 </div>
             </div>
 
@@ -213,15 +380,11 @@
     <!-- Footer -->
     <footer class="section section--dark pt-4xl pb-lg">
         <div class="container text-center">
-            <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="BIX Kurumsal"
+            <a href="index.html" class="footer-logo"><img src="images/logo-white.png" alt="BIX Kurumsal"
                     style="height: 60px; width: auto; display: inline-block;"></a>
             <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
                 Şti.</p>
             <div class="flex flex-center gap-md mb-lg">
-                <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="social-icon"><i
-                        data-lucide="instagram" size="20"></i></a>
-                <a href="https://www.facebook.com/BixKurumsal/" target="_blank" class="social-icon"><i
-                        data-lucide="facebook" size="20"></i></a>
                 <a href="javascript:void(0);" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
             </div>
             <div class="footer-bottom" style="margin-top: 2rem;">
