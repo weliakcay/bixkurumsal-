@@ -183,6 +183,111 @@
                 width: 100%;
             }
         }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--bix-white);
+            margin: auto;
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 600px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-img-container {
+            width: 100%;
+            height: 350px;
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .modal-info {
+            padding: var(--space-xl);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: var(--space-md);
+            right: var(--space-md);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bix-charcoal);
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            box-shadow: var(--shadow-sm);
+            transition: background 0.2s;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background: white;
+            color: var(--bix-orange);
+        }
+
+        @media (min-width: 768px) {
+            .modal-body {
+                flex-direction: row;
+            }
+
+            .modal-img-container {
+                width: 40%;
+                height: auto;
+                min-height: 300px;
+            }
+
+            .modal-info {
+                width: 60%;
+            }
+        }
     </style>
 </head>
 
@@ -216,7 +321,8 @@
     <header class="page-hero">
         <div class="container reveal-scale">
             <h1 class="text-h1 mb-md">Uzman Ekibimiz</h1>
-            <p class="text-lead text-white opacity-80 mx-auto">Sektörün tecrübeli ve en dinamik kadrosuyla yanınızdayız.</p>
+            <p class="text-lead text-white opacity-80 mx-auto">Sektörün tecrübeli ve en dinamik kadrosuyla yanınızdayız.
+            </p>
         </div>
     </header>
 
@@ -232,12 +338,13 @@
 
             <!-- 1. Bülent Dokuzluoğlu -->
             <div class="team-card">
-                <div class="team-card__media">
+                <div class="team-card__media" style="cursor: pointer;"
+                    onclick="openTeamModal('images/team/bulent-dokuzluoglu.jpg', 'Bülent Dokuzluoğlu', 'Kurucu', 'İlk ve orta öğrenimi Kilis\'te tamamladıktan sonra Ankara Üniversitesi Veteriner Fakültesi\'nden mezun oldu. <br><br>Gıda Güvenliği ile ilgili danışmanlık şirketinde 2 yıl çalıştıktan sonra 2005 yılında BIX Kurumsal\'ı kurdu ve işletmelere hijyen denetimleri ve kalite yönetim sistemleri danışmanlık ve belgelendirme konusunda hizmet vermeye başladı.')">
                     <img src="images/team/bulent-dokuzluoglu.jpg" alt="Bülent Dokuzluoğlu" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Kurucu</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/bulent-dokuzluoglu-7a511910/" class="team-card__linkedin"
+                            target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -254,8 +361,8 @@
                     <img src="images/team/hacer-dokuzluoglu.jpg" alt="Hacer Dokuzluoğlu" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Finans Yöneticisi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/hacer-dokuzluoglu-56293688/" class="team-card__linkedin"
+                            target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -272,8 +379,8 @@
                     <img src="images/team/ozge-akcasu.jpg" alt="Özge Akcasu" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Operasyon Müdürü</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/%C3%B6zge-dalk%C4%B1l%C4%B1%C3%A7-akcasu-b449a59/"
+                            class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -290,8 +397,8 @@
                     <img src="images/team/sahin-sevruk.jpg" alt="Şahin Sevrük" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Batı Akdeniz Bölge Yöneticisi / Denetçi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/bix-kurumsal/posts/?feedView=all"
+                            class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -308,8 +415,8 @@
                     <img src="images/team/toprak-adiguzel.jpg" alt="Toprak Adıgüzel" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">İş Geliştirme ve Operasyonel Denetim Yöneticisi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/y%C4%B1ld%C4%B1r%C4%B1m-toprak-ad%C4%B1g%C3%BCzel-73991a1b2/"
+                            class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -326,8 +433,8 @@
                     <img src="images/team/ezgi-oter.jpg" alt="Ezgi Öter" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">İnsan Kaynakları ve Eğitim Yöneticisi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/ezgi-%C3%B6ter-94b126209/" class="team-card__linkedin"
+                            target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -344,8 +451,8 @@
                     <img src="images/team/nihan-eser.jpg" alt="Nihan Eser" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Sistem Belgelendirme Yöneticisi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/nihan-y-84b11a1a8/" class="team-card__linkedin"
+                            target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -362,8 +469,8 @@
                     <img src="images/team/cigdem-kaplan.jpg" alt="Çiğdem Kaplan" class="team-card__img">
                     <div class="team-card__overlay">
                         <span class="team-card__overlay-title">Muhasebe Yöneticisi</span>
-                        <p class="team-card__overlay-desc">Detaylı özgeçmiş ve uzmanlık alanları yakında eklenecektir.</p>
-                        <a href="#" class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/company/bix-kurumsal/posts/?feedView=all"
+                            class="team-card__linkedin" target="_blank" aria-label="LinkedIn">
                             <i data-lucide="linkedin" size="20"></i>
                         </a>
                     </div>
@@ -385,7 +492,8 @@
             <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
                 Şti.</p>
             <div class="flex flex-center gap-md mb-lg">
-                <a href="javascript:void(0);" class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
+                <a href="https://www.linkedin.com/company/bix-kurumsal/posts/?feedView=all" target="_blank"
+                    class="social-icon"><i data-lucide="linkedin" size="20"></i></a>
             </div>
             <div class="footer-bottom" style="margin-top: 2rem;">
                 <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
@@ -396,6 +504,51 @@
     <script>lucide.createIcons();</script>
     <script src="js/navbar.js"></script>
     <script src="js/animations.js"></script>
+
+    <!-- Modal HTML -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()"><i data-lucide="x"></i></button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalImg" src="" alt="" class="modal-img">
+                </div>
+                <div class="modal-info">
+                    <span id="modalTitle"
+                        class="text-small text-orange font-bold uppercase tracking-wider mb-sm block"></span>
+                    <h3 id="modalName" class="text-h3 mb-md" style="color:var(--bix-charcoal);"></h3>
+                    <p id="modalDesc" class="text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Script -->
+    <script>
+        const modal = document.getElementById("teamModal");
+        function openTeamModal(imgSrc, name, title, desc) {
+            if (!desc || desc.trim() === '') return;
+            document.getElementById("modalImg").src = imgSrc;
+            document.getElementById("modalName").textContent = name;
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalDesc").innerHTML = desc;
+
+            modal.classList.add("show");
+            document.body.style.overflow = "hidden";
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            modal.classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 
 </html>

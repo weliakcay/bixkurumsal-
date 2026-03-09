@@ -204,57 +204,67 @@
 
     <!-- Section 1.5: Floating Glass Stats Bar -->
     <div class="container reveal-up delay-400" id="stats-section">
-        <div class="floating-stats-bar" style="align-items: stretch; gap: 0;">
+        <div class="floating-stats-bar"
+            style="flex-direction: column; align-items: center; gap: var(--space-xl); padding-top: var(--space-2xl);">
 
-            <!-- 2005 — Öne çıkan kutu -->
-            <div class="stat-box" style="
-                padding: var(--space-xl) var(--space-2xl);
-                border-right: 1px solid rgba(0,0,0,0.07);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background: var(--bix-charcoal);
-                border-radius: var(--radius-xl) 0 0 var(--radius-xl);
-                flex: 0 0 auto;
-                min-width: 200px;
-            ">
-                <div style="
-                    font-size: clamp(3rem, 5vw, 4.5rem);
-                    font-weight: 700;
-                    line-height: 1;
-                    color: var(--bix-orange);
-                    letter-spacing: -2px;
-                    font-variant-numeric: tabular-nums;
-                " data-target="2005" data-plus="false">2005</div>
-                <div style="
-                    font-size: 0.7rem;
-                    font-weight: 600;
-                    letter-spacing: 0.15em;
-                    text-transform: uppercase;
-                    color: rgba(255,255,255,0.7);
-                    margin-top: 6px;
-                ">Kuruluş Yılı</div>
-                <div style="
-                    font-size: 0.65rem;
-                    color: rgba(255,255,255,0.45);
-                    margin-top: 4px;
-                    letter-spacing: 0.05em;
-                ">20+ yıllık deneyim</div>
+            <!-- Üst Satır: 2005 — Öne çıkan kutu -->
+            <div
+                style="width: 100%; display: flex; justify-content: center; border-bottom: 1px solid rgba(0,0,0,0.07); padding-bottom: var(--space-xl);">
+                <div class="stat-box" style="
+                    padding: var(--space-xl) var(--space-4xl);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--bix-charcoal);
+                    border-radius: var(--radius-xl);
+                    box-shadow: var(--shadow-xl);
+                    min-width: 250px;
+                ">
+                    <div style="
+                        font-size: clamp(3rem, 5vw, 4.5rem);
+                        font-weight: 700;
+                        line-height: 1;
+                        color: var(--bix-orange);
+                        letter-spacing: -2px;
+                        font-variant-numeric: tabular-nums;
+                    " data-target="2005" data-plus="false">2005</div>
+                    <div style="
+                        font-size: 0.7rem;
+                        font-weight: 600;
+                        letter-spacing: 0.15em;
+                        text-transform: uppercase;
+                        color: rgba(255,255,255,0.7);
+                        margin-top: 6px;
+                    ">Kuruluş Yılı</div>
+                    <div style="
+                        font-size: 0.65rem;
+                        color: rgba(255,255,255,0.45);
+                        margin-top: 4px;
+                        letter-spacing: 0.05em;
+                    ">20+ yıllık deneyim</div>
+                </div>
             </div>
 
-            <!-- Diğer istatistikler -->
-            <div class="stat-box" style="padding: var(--space-lg) var(--space-xl); border-right: 1px solid rgba(0,0,0,0.07); flex: 1;">
-                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;" data-target="500">0</div>
-                <div class="stat-box__label">Başarılı Denetim</div>
-            </div>
-            <div class="stat-box" style="padding: var(--space-lg) var(--space-xl); border-right: 1px solid rgba(0,0,0,0.07); flex: 1; position: relative; z-index: 10;">
-                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;" data-target="50">0</div>
-                <div class="stat-box__label">ISO Belgelendirme</div>
-            </div>
-            <div class="stat-box" style="padding: var(--space-lg) var(--space-xl); flex: 1;">
-                <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;" data-target="100">0</div>
-                <div class="stat-box__label">Eğitim Programı</div>
+            <!-- Alt Satır: Diğer istatistikler -->
+            <div style="width: 100%; display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div class="stat-box"
+                    style="padding: var(--space-lg) var(--space-xl); border-right: 1px solid rgba(0,0,0,0.07); flex: 1;">
+                    <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;"
+                        data-target="500">0</div>
+                    <div class="stat-box__label">Başarılı Denetim</div>
+                </div>
+                <div class="stat-box"
+                    style="padding: var(--space-lg) var(--space-xl); border-right: 1px solid rgba(0,0,0,0.07); flex: 1; position: relative; z-index: 10;">
+                    <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;"
+                        data-target="50">0</div>
+                    <div class="stat-box__label">ISO Belgelendirme</div>
+                </div>
+                <div class="stat-box" style="padding: var(--space-lg) var(--space-xl); flex: 1;">
+                    <div class="stat-box__number" style="color: var(--bix-charcoal); font-size: 2.2rem;"
+                        data-target="100">0</div>
+                    <div class="stat-box__label">Eğitim Programı</div>
+                </div>
             </div>
 
         </div>
@@ -652,9 +662,9 @@
                         <a href="https://www.instagram.com/bixkurumsal/" target="_blank" class="btn btn--ghost"
                             style="padding: 0.5rem; border-radius: var(--radius-md);"><i data-lucide="instagram"
                                 size="18"></i></a>
-                        <a href="javascript:void(0);" class="btn btn--ghost"
-                            style="padding: 0.5rem; border-radius: var(--radius-md);"><i data-lucide="linkedin"
-                                size="18"></i></a>
+                        <a href="https://www.linkedin.com/company/bix-kurumsal/posts/?feedView=all" target="_blank"
+                            class="btn btn--ghost" style="padding: 0.5rem; border-radius: var(--radius-md);"><i
+                                data-lucide="linkedin" size="18"></i></a>
                     </div>
                 </div>
 
