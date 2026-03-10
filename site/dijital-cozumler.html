@@ -8,8 +8,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
@@ -43,14 +45,16 @@
 
         /* Sol: Logo */
         .header-logo img {
-            height: 54px;
+            height: 62px;
+            /* Consistency with other pages */
             width: auto;
             display: block;
-            filter: brightness(0) invert(1);
-            opacity: 0.92;
-            transition: opacity 0.3s;
+            transition: transform 0.3s;
         }
-        .header-logo img:hover { opacity: 1; }
+
+        .header-logo img:hover {
+            transform: scale(1.05);
+        }
 
         /* Orta: Nav */
         header nav {
@@ -62,7 +66,7 @@
         }
 
         header nav a {
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
             font-family: "Nunito Sans", sans-serif;
             font-size: clamp(0.55rem, 1.1vw, 0.75rem);
@@ -72,12 +76,19 @@
             transition: color 0.3s, text-shadow 0.3s;
             white-space: nowrap;
         }
-        header nav a:hover { color: #fff; text-shadow: 0 0 12px rgba(255,255,255,0.6); }
-        header nav a.active { color: #F39C12; }
+
+        header nav a:hover {
+            color: #fff;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+        }
+
+        header nav a.active {
+            color: #F39C12;
+        }
 
         /* Sağ: Geri butonu */
         .header-back {
-            color: rgba(255,255,255,0.55);
+            color: rgba(255, 255, 255, 0.55);
             text-decoration: none;
             font-family: "Nunito Sans", sans-serif;
             font-size: 0.75rem;
@@ -89,8 +100,15 @@
             align-items: center;
             gap: 0.4rem;
         }
-        .header-back:hover { color: #F39C12; }
-        .header-back::before { content: "←"; font-size: 1rem; }
+
+        .header-back:hover {
+            color: #F39C12;
+        }
+
+        .header-back::before {
+            content: "←";
+            font-size: 1rem;
+        }
 
         /* ── Sections ── */
         .section {
@@ -124,7 +142,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.38) 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.38) 100%);
             z-index: 1;
         }
 
@@ -132,15 +150,19 @@
         .s-web .background {
             background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1920&q=80');
         }
+
         .s-ai .background {
             background-image: url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=1920&q=80');
         }
+
         .s-voice .background {
             background-image: url('https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&w=1920&q=80');
         }
+
         .s-email .background {
             background-image: url('https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=1920&q=80');
         }
+
         .s-qr .background {
             background-image: url('https://images.unsplash.com/photo-1617791160536-598cf32026fb?auto=format&fit=crop&w=1920&q=80');
             background-position: 50% 40%;
@@ -181,14 +203,14 @@
 
         h2.section-title:hover {
             transform: scale(1.03);
-            text-shadow: 0 0 30px rgba(255,255,255,0.25);
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
         }
 
         .section-desc {
             font-family: "Nunito Sans", sans-serif;
             font-size: clamp(0.85rem, 1.4vw, 1.05rem);
             font-weight: 300;
-            color: rgba(255,255,255,0.72);
+            color: rgba(255, 255, 255, 0.72);
             line-height: 1.75;
             max-width: 560px;
             margin: 0 auto 2rem;
@@ -209,21 +231,33 @@
             opacity: 0.45;
             pointer-events: none;
         }
+
         .scroll-hint span {
             font-size: 0.6rem;
             letter-spacing: 0.25em;
             text-transform: uppercase;
             font-family: "Nunito Sans", sans-serif;
         }
+
         .scroll-hint-arrow {
             width: 1px;
             height: 36px;
-            background: linear-gradient(to bottom, rgba(255,255,255,0), white);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
             animation: scrollPulse 1.8s ease-in-out infinite;
         }
+
         @keyframes scrollPulse {
-            0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
-            50%       { opacity: 1;   transform: scaleY(1); }
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scaleY(0.7);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
         }
 
         /* ── Sayfa numarası ── */
@@ -235,14 +269,23 @@
             font-family: "Nunito Sans", sans-serif;
             font-size: 0.65rem;
             letter-spacing: 0.2em;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255, 255, 255, 0.4);
         }
-        .page-counter .current { color: rgba(255,255,255,0.85); font-weight: 700; }
+
+        .page-counter .current {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 700;
+        }
 
         /* ── Responsive nav ── */
         @media (max-width: 768px) {
-            header nav { display: none; }
-            h2.section-title { letter-spacing: 0.04em; }
+            header nav {
+                display: none;
+            }
+
+            h2.section-title {
+                letter-spacing: 0.04em;
+            }
         }
     </style>
 </head>
@@ -276,7 +319,8 @@
                     <div class="section-content">
                         <span class="section-label">01 / Dijital Dönüşüm</span>
                         <h2 class="section-title">Web Sitesi Tasarımı<br>ve Geliştirme</h2>
-                        <p class="section-desc">Kurumsal kimliğinizi dijital dünyaya taşıyan, hız ve estetik odaklı web siteleri tasarlıyoruz. Mobil uyumlu, SEO dostu ve yönetimi kolay çözümler sunuyoruz.</p>
+                        <p class="section-desc">Kurumsal kimliğinizi dijital dünyaya taşıyan, hız ve estetik odaklı web
+                            siteleri tasarlıyoruz. Mobil uyumlu, SEO dostu ve yönetimi kolay çözümler sunuyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -291,7 +335,9 @@
                     <div class="section-content">
                         <span class="section-label">02 / Dijital Dönüşüm</span>
                         <h2 class="section-title">Yapay Zeka Danışmanlığı<br>ve Otomasyon</h2>
-                        <p class="section-desc">İşletmenizin tekrarlayan süreçlerini yapay zeka ile otomatikleştiriyoruz. Veri analitiği, süreç optimizasyonu ve akıllı karar destek sistemleri kuruyoruz.</p>
+                        <p class="section-desc">İşletmenizin tekrarlayan süreçlerini yapay zeka ile
+                            otomatikleştiriyoruz. Veri analitiği, süreç optimizasyonu ve akıllı karar destek sistemleri
+                            kuruyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -306,7 +352,9 @@
                     <div class="section-content">
                         <span class="section-label">03 / Dijital Dönüşüm</span>
                         <h2 class="section-title">Sesli Yapay Zeka<br>Asistan Hizmetleri</h2>
-                        <p class="section-desc">Misafir karşılama, rezervasyon yönetimi ve 7/24 destek için özelleştirilmiş sesli yapay zeka asistanları geliştiriyoruz. Turizm sektörüne özel dil modelleri ile çalışıyoruz.</p>
+                        <p class="section-desc">Misafir karşılama, rezervasyon yönetimi ve 7/24 destek için
+                            özelleştirilmiş sesli yapay zeka asistanları geliştiriyoruz. Turizm sektörüne özel dil
+                            modelleri ile çalışıyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -321,7 +369,9 @@
                     <div class="section-content">
                         <span class="section-label">04 / Dijital Dönüşüm</span>
                         <h2 class="section-title">Otomatik E-posta<br>Pazarlama Sistemleri</h2>
-                        <p class="section-desc">Segmentasyona dayalı, zamanlanmış ve kişiselleştirilmiş e-posta kampanyaları kuruyoruz. Müşteri bağlılığını artıran otomatik akışlar ile dönüşüm oranlarınızı yükseltin.</p>
+                        <p class="section-desc">Segmentasyona dayalı, zamanlanmış ve kişiselleştirilmiş e-posta
+                            kampanyaları kuruyoruz. Müşteri bağlılığını artıran otomatik akışlar ile dönüşüm
+                            oranlarınızı yükseltin.</p>
                     </div>
                 </div>
             </div>
@@ -336,7 +386,8 @@
                     <div class="section-content">
                         <span class="section-label">05 / Dijital Dönüşüm</span>
                         <h2 class="section-title">QR Menü ve<br>Dijital Çözümler</h2>
-                        <p class="section-desc">Otel, restoran ve tatil köyleri için QR menü, dijital anket, misafir memnuniyet formları ve interaktif bilgi kiosk sistemleri tasarlıyoruz.</p>
+                        <p class="section-desc">Otel, restoran ve tatil köyleri için QR menü, dijital anket, misafir
+                            memnuniyet formları ve interaktif bilgi kiosk sistemleri tasarlıyoruz.</p>
                     </div>
                 </div>
             </div>
@@ -357,18 +408,18 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const sections      = document.querySelectorAll(".section");
+            const sections = document.querySelectorAll(".section");
             const outerWrappers = document.querySelectorAll(".wrapper-outer");
             const innerWrappers = document.querySelectorAll(".wrapper-inner");
-            const images        = document.querySelectorAll(".background");
-            const headings      = document.querySelectorAll(".section-title");
-            const labels        = document.querySelectorAll(".section-label");
-            const descs         = document.querySelectorAll(".section-desc");
-            const navLinks      = document.querySelectorAll("nav a");
-            const counter       = document.getElementById("counterCurrent");
+            const images = document.querySelectorAll(".background");
+            const headings = document.querySelectorAll(".section-title");
+            const labels = document.querySelectorAll(".section-label");
+            const descs = document.querySelectorAll(".section-desc");
+            const navLinks = document.querySelectorAll("nav a");
+            const counter = document.getElementById("counterCurrent");
 
             let currentIndex = -1;
-            let animating    = false;
+            let animating = false;
 
             const wrap = (i, max) => (i + max) % max;
 
@@ -395,7 +446,7 @@
                 if (currentIndex >= 0) {
                     gsap.set(sections[currentIndex], { zIndex: 0 });
                     tl.to(images[currentIndex], { yPercent: -15 * dFactor })
-                      .set(sections[currentIndex], { autoAlpha: 0 });
+                        .set(sections[currentIndex], { autoAlpha: 0 });
                 }
 
                 gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
@@ -406,13 +457,13 @@
                     { yPercent: 0 },
                     0
                 )
-                .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-                .fromTo(
-                    [headings[index], labels[index], descs[index]],
-                    { autoAlpha: 0, yPercent: 60 * dFactor },
-                    { autoAlpha: 1, yPercent: 0, duration: 1, ease: "power2", stagger: 0.08 },
-                    0.25
-                );
+                    .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+                    .fromTo(
+                        [headings[index], labels[index], descs[index]],
+                        { autoAlpha: 0, yPercent: 60 * dFactor },
+                        { autoAlpha: 1, yPercent: 0, duration: 1, ease: "power2", stagger: 0.08 },
+                        0.25
+                    );
 
                 currentIndex = index;
                 updateNav(index);
@@ -421,8 +472,8 @@
             // Mouse wheel
             window.addEventListener("wheel", (e) => {
                 if (animating) return;
-                if (e.deltaY > 0) gotoSection(currentIndex + 1,  1);
-                else              gotoSection(currentIndex - 1, -1);
+                if (e.deltaY > 0) gotoSection(currentIndex + 1, 1);
+                else gotoSection(currentIndex - 1, -1);
             }, { passive: true });
 
             // Touch (double tap → next; swipe yukarı/aşağı)
@@ -431,16 +482,16 @@
             document.addEventListener("touchend", (e) => {
                 const diff = touchStartY - e.changedTouches[0].clientY;
                 if (Math.abs(diff) > 40) {
-                    if (diff > 0) gotoSection(currentIndex + 1,  1);
-                    else          gotoSection(currentIndex - 1, -1);
+                    if (diff > 0) gotoSection(currentIndex + 1, 1);
+                    else gotoSection(currentIndex - 1, -1);
                 }
             }, { passive: true });
 
             // Keyboard
             document.addEventListener("keydown", (e) => {
                 if (animating) return;
-                if (e.key === "ArrowDown" || e.key === "PageDown") gotoSection(currentIndex + 1,  1);
-                if (e.key === "ArrowUp"   || e.key === "PageUp")   gotoSection(currentIndex - 1, -1);
+                if (e.key === "ArrowDown" || e.key === "PageDown") gotoSection(currentIndex + 1, 1);
+                if (e.key === "ArrowUp" || e.key === "PageUp") gotoSection(currentIndex - 1, -1);
             });
 
             // Nav tıklamaları
@@ -458,4 +509,5 @@
         });
     </script>
 </body>
+
 </html>
