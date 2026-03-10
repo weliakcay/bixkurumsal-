@@ -10,6 +10,11 @@
     max-width: 800px;
 }
 
+/* Hero sections lead text color improvement */
+.page-hero .text-lead {
+    color: #D1D1D1 !important;
+}
+
 /* ── Buttons ── */
 .btn {
     display: inline-flex;
