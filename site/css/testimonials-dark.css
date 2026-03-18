@@ -1,0 +1,302 @@
+/* ============================================
+   BIX KURUMSAL — Testimonials Slider
+   Light theme (off-white bg) — single card view
+   ============================================ */
+
+/* ── Section ── */
+.testimonials-dark-section {
+    background: var(--bix-off-white);
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ── Layout: Side-by-side ── */
+.testimonials-dark-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+/* ── Left Column ── */
+.testimonials-dark-left {
+    flex: 0 0 300px;
+    max-width: 300px;
+}
+
+.testimonials-dark-title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: var(--weight-bold);
+    color: var(--bix-charcoal);
+    line-height: 1.25;
+    margin-bottom: var(--space-lg);
+    letter-spacing: -0.01em;
+}
+
+.testimonials-dark-desc {
+    font-size: var(--text-small);
+    color: var(--bix-body-text);
+    line-height: var(--line-height-loose);
+    margin-bottom: var(--space-2xl);
+}
+
+/* ── Navigation Arrows ── */
+.testimonials-dark-arrows {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.testimonial-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(26, 26, 46, 0.15);
+    background: transparent;
+    color: var(--bix-charcoal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.testimonial-arrow:hover {
+    border-color: var(--bix-orange);
+    color: var(--bix-orange);
+    background: rgba(232, 146, 45, 0.06);
+}
+
+.testimonial-arrow:active {
+    transform: scale(0.95);
+}
+
+/* ── Slider Wrapper ── */
+.testimonials-dark-slider-wrapper {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+/* ── Viewport: single card shown ── */
+.testimonials-dark-viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ── Testimonial Card ── */
+.testimonial-dark-card {
+    display: none;
+    opacity: 0;
+    background: var(--bix-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl) var(--space-2xl);
+    flex-direction: column;
+    gap: var(--space-lg);
+    transition: opacity 0.45s ease-in-out;
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-dark-card--active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Fade-in animation */
+@keyframes testimonialFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-dark-card--entering {
+    display: flex;
+    animation: testimonialFadeIn 0.45s ease-out forwards;
+}
+
+/* ── Quote Icon ── */
+.testimonial-dark-quote-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-lg);
+    background: var(--bix-off-white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bix-orange-glow);
+}
+
+.testimonial-dark-quote-icon svg {
+    color: rgba(232, 146, 45, 0.25);
+}
+
+/* ── Testimonial Text ── */
+.testimonial-dark-text {
+    font-size: 1rem;
+    color: var(--bix-body-text);
+    line-height: 1.8;
+}
+
+/* ── Author Row ── */
+.testimonial-dark-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    flex-wrap: wrap;
+}
+
+.testimonial-dark-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 2px solid var(--bix-light-grey);
+}
+
+.testimonial-dark-author-info {
+    flex: 1;
+    min-width: 100px;
+}
+
+.testimonial-dark-name {
+    font-size: 0.9rem;
+    font-weight: var(--weight-semibold);
+    color: var(--bix-charcoal);
+    margin-bottom: 2px;
+}
+
+.testimonial-dark-role {
+    font-size: 0.75rem;
+    color: var(--bix-mid-grey);
+    line-height: 1.4;
+}
+
+/* ── Star Rating ── */
+.testimonial-dark-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+}
+
+.testimonial-star {
+    color: var(--bix-orange);
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.testimonial-dark-rating {
+    font-size: 0.85rem;
+    font-weight: var(--weight-bold);
+    color: var(--bix-charcoal);
+    margin-left: 6px;
+}
+
+/* ── Pagination Dots ── */
+.testimonial-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: var(--space-xl);
+    justify-content: center;
+}
+
+.testimonial-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: var(--bix-light-grey);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonial-dot:hover {
+    background: var(--bix-mid-grey);
+}
+
+.testimonial-dot--active {
+    background: var(--bix-orange);
+    transform: scale(1.3);
+    box-shadow: 0 0 8px rgba(232, 146, 45, 0.4);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .testimonials-dark-layout {
+        flex-direction: column;
+        gap: var(--space-2xl);
+    }
+
+    .testimonials-dark-left {
+        flex: none;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+
+    .testimonials-dark-title {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 0;
+    }
+
+    .testimonials-dark-desc {
+        flex-basis: 100%;
+        margin-bottom: var(--space-md);
+    }
+
+    .testimonials-dark-arrows {
+        margin-left: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .testimonials-dark-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .testimonials-dark-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .testimonials-dark-arrows {
+        margin-left: 0;
+    }
+
+    .testimonial-dark-card {
+        padding: var(--space-xl);
+    }
+
+    .testimonial-dark-author {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .testimonial-dark-stars {
+        margin-left: 0;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .testimonial-dark-card {
+        padding: var(--space-lg);
+    }
+}

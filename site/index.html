@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/earth-quotes.css">
+    <link rel="stylesheet" href="css/testimonials-dark.css">
 
     <!-- Custom inline styles for index specific elements -->
     <style>
@@ -539,76 +540,136 @@
         </div>
     </section>
 
-    <!-- Section 6: Testimonials (Clean Cards Layout) -->
-    <section class="section section--grey">
+    <!-- Section 6: Testimonials (Single Card Slider) -->
+    <section class="testimonials-dark-section" id="testimonials">
         <div class="container">
-            <div class="section-header reveal mb-2xl">
-                <h2 class="section-header__title" style="color: var(--bix-charcoal);">Müşterilerimiz Neler Söylüyor?
-                </h2>
-            </div>
-
-            <div class="grid grid--3 gap-2xl reveal-up">
-                <!-- Testimonial 1 - Meeting Point Hotels -->
-                <div class="card" style="flex-direction: column; align-items: flex-start; gap: var(--space-md);">
-                    <img src="images/testimonials/sezin-yalinli.png" alt="Sezin Yalınlı - Meeting Point Hotels"
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-                    <div>
-                        <p class="text-small text-muted mb-sm italic">"BIX Kurumsal, profesyonel ekibi ve titiz çalışma
-                            anlayışıyla süreçlerimize değer katarken sürdürülebilirlik hedeflerimize de katkı
-                            sağlamıştır. Tüm ekibe teşekkür ederiz."</p>
-                        <div class="flex gap-xs text-orange mb-xs">
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                        </div>
-                        <h4 class="text-small font-bold" style="color: var(--bix-charcoal);">Sezin Yalınlı</h4>
-                        <p class="text-xs text-muted"><strong style="color: var(--bix-charcoal);">Group Quality
-                                Manager</strong><br><strong style="color: var(--bix-charcoal);">Meeting Point Hotels
-                                Turkey</strong></p>
+            <div class="testimonials-dark-layout">
+                <!-- Sol Taraf: Başlık & Açıklama -->
+                <div class="testimonials-dark-left reveal">
+                    <h2 class="testimonials-dark-title">Müşterilerimiz Neler Söylüyor?</h2>
+                    <p class="testimonials-dark-desc">Müşterilerimizin deneyimlerini ve görüşlerini okuyun. Kalite,
+                        sürdürülebilirlik ve profesyonel hizmet anlayışımız hakkında neler söylediklerini keşfedin.</p>
+                    <!-- Slider Okları -->
+                    <div class="testimonials-dark-arrows">
+                        <button class="testimonial-arrow testimonial-arrow--prev" id="testimonialPrev" aria-label="Önceki">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="testimonial-arrow testimonial-arrow--next" id="testimonialNext" aria-label="Sonraki">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
                     </div>
                 </div>
 
-                <!-- Testimonial 2 - Loft Hotel Bodrum -->
-                <div class="card" style="flex-direction: column; align-items: flex-start; gap: var(--space-md);">
-                    <img src="images/testimonials/mustafa-ozel.jpg" alt="Mustafa Özel - Loft Hotel Bodrum"
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-                    <div>
-                        <p class="text-small text-muted mb-sm italic">"Sürdürülebilirlik yolculuğumuzda bizlere rehberlik eden ve değerli katkılarıyla sürecimizi güçlendiren tüm ekibinize içten teşekkürlerimizi sunarız. Bilgi birikiminiz, profesyonel yaklaşımınız ve çözüm odaklı desteğiniz sayesinde sürdürülebilirlik hedeflerimizi daha sağlam adımlarla ilerletme fırsatı bulduk."</p>
-                        <div class="flex gap-xs text-orange mb-xs">
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                        </div>
-                        <h4 class="text-small font-bold" style="color: var(--bix-charcoal);">Mustafa Özel</h4>
-                        <p class="text-xs text-muted"><strong style="color: var(--bix-charcoal);">Genel Müdür</strong><br><strong style="color: var(--bix-charcoal);">Loft Hotel Bodrum</strong></p>
-                    </div>
-                </div>
+                <!-- Sağ Taraf: Tek Kart Slider -->
+                <div class="testimonials-dark-slider-wrapper">
+                    <div class="testimonials-dark-viewport" id="testimonialViewport">
 
-                <!-- Testimonial 3 - Miracle Resort Hotel -->
-                <div class="card" style="flex-direction: column; align-items: flex-start; gap: var(--space-md);">
-                    <img src="images/testimonials/iclal-solak.jpg" alt="İclal Solak - Miracle Otel"
-                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-                    <div>
-                        <p class="text-small text-muted mb-sm italic">"BIX Kurumsal, 2009 yılından bu yana uluslararası
-                            standartlar kapsamında denetim, danışmanlık ve eğitim hizmetleri sunarak Miracle Resort
-                            Hotel'in kalite ve hizmet standartlarının sürekli gelişimine değerli katkılar sağlamaktadır.
-                            Profesyonel yaklaşımı ve güçlü saha deneyimi için teşekkür eder, başarılarının devamını
-                            dileriz."</p>
-                        <div class="flex gap-xs text-orange mb-xs">
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
-                            <i data-lucide="star" fill="currentColor" size="14"></i>
+                        <!-- Testimonial Card 1 - Meeting Point Hotels -->
+                        <div class="testimonial-dark-card testimonial-dark-card--active">
+                            <div class="testimonial-dark-quote-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                            </div>
+                            <p class="testimonial-dark-text">BIX Kurumsal, profesyonel ekibi ve titiz çalışma
+                                anlayışıyla süreçlerimize değer katarken sürdürülebilirlik hedeflerimize de katkı
+                                sağlamıştır. Tüm ekibe teşekkür ederiz.</p>
+                            <div class="testimonial-dark-author">
+                                <img src="images/testimonials/sezin-yalinli.png" alt="Sezin Yalınlı" class="testimonial-dark-avatar">
+                                <div class="testimonial-dark-author-info">
+                                    <h4 class="testimonial-dark-name">Sezin Yalınlı</h4>
+                                    <p class="testimonial-dark-role">Group Quality Manager — Meeting Point Hotels Turkey</p>
+                                </div>
+                                <div class="testimonial-dark-stars">
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-dark-rating">5.0</span>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="text-small font-bold" style="color: var(--bix-charcoal);">İclal Solak</h4>
-                        <p class="text-xs text-muted"><strong style="color: var(--bix-charcoal);">Kalite
-                                Müdürü</strong><br><strong style="color: var(--bix-charcoal);">Miracle Resort
-                                Hotel</strong></p>
+
+                        <!-- Testimonial Card 2 - Loft Hotel Bodrum -->
+                        <div class="testimonial-dark-card">
+                            <div class="testimonial-dark-quote-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                            </div>
+                            <p class="testimonial-dark-text">Sürdürülebilirlik yolculuğumuzda bizlere rehberlik eden ve değerli katkılarıyla sürecimizi güçlendiren tüm ekibinize içten teşekkürlerimizi sunarız. Bilgi birikiminiz, profesyonel yaklaşımınız ve çözüm odaklı desteğiniz sayesinde sürdürülebilirlik hedeflerimizi daha sağlam adımlarla ilerletme fırsatı bulduk.</p>
+                            <div class="testimonial-dark-author">
+                                <img src="images/testimonials/mustafa-ozel.jpg" alt="Mustafa Özel" class="testimonial-dark-avatar">
+                                <div class="testimonial-dark-author-info">
+                                    <h4 class="testimonial-dark-name">Mustafa Özel</h4>
+                                    <p class="testimonial-dark-role">Genel Müdür — Loft Hotel Bodrum</p>
+                                </div>
+                                <div class="testimonial-dark-stars">
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-dark-rating">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 3 - Miracle Resort Hotel -->
+                        <div class="testimonial-dark-card">
+                            <div class="testimonial-dark-quote-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                            </div>
+                            <p class="testimonial-dark-text">BIX Kurumsal, 2009 yılından bu yana uluslararası
+                                standartlar kapsamında denetim, danışmanlık ve eğitim hizmetleri sunarak Miracle Resort
+                                Hotel'in kalite ve hizmet standartlarının sürekli gelişimine değerli katkılar sağlamaktadır.
+                                Profesyonel yaklaşımı ve güçlü saha deneyimi için teşekkür eder, başarılarının devamını
+                                dileriz.</p>
+                            <div class="testimonial-dark-author">
+                                <img src="images/testimonials/iclal-solak.jpg" alt="İclal Solak" class="testimonial-dark-avatar">
+                                <div class="testimonial-dark-author-info">
+                                    <h4 class="testimonial-dark-name">İclal Solak</h4>
+                                    <p class="testimonial-dark-role">Kalite Müdürü — Miracle Resort Hotel</p>
+                                </div>
+                                <div class="testimonial-dark-stars">
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-dark-rating">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial Card 4 - Royal Wings Hotel -->
+                        <div class="testimonial-dark-card">
+                            <div class="testimonial-dark-quote-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg>
+                            </div>
+                            <p class="testimonial-dark-text">BIX Kurumsal; Royal Wings Hotel'in Kalite Yönetim Sistemleri belgelendirme süreçlerindeki eğitim ve denetim hizmetleriyle, bu sistemlerin kurum kültürümüze entegrasyonuna değerli katkılar sağlamıştır. Özellikle Sürdürülebilirlik kriterlerinin karşılanması ve sürdürülebilirlik hedeflerimizin oluşturulması aşamasındaki rehberlikleri bizlere yol göstermiştir. Bu süreçte sergiledikleri profesyonel, güler yüzlü ve çözüm odaklı yaklaşımları için tüm ekibe teşekkürlerimizi sunarız.</p>
+                            <div class="testimonial-dark-author">
+                                <img src="images/testimonials/yildiz-topkaya.jpg" alt="Yıldız Topkaya" class="testimonial-dark-avatar">
+                                <div class="testimonial-dark-author-info">
+                                    <h4 class="testimonial-dark-name">Yıldız Topkaya</h4>
+                                    <p class="testimonial-dark-role">Gıda, Hijyen ve Kalite Sorumlusu — Royal Wings Hotel</p>
+                                </div>
+                                <div class="testimonial-dark-stars">
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-star">★</span>
+                                    <span class="testimonial-dark-rating">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Kaydırma Baloncukları (Dots) -->
+                    <div class="testimonial-dots" id="testimonialDots">
+                        <button class="testimonial-dot testimonial-dot--active" data-index="0" aria-label="Yorum 1"></button>
+                        <button class="testimonial-dot" data-index="1" aria-label="Yorum 2"></button>
+                        <button class="testimonial-dot" data-index="2" aria-label="Yorum 3"></button>
+                        <button class="testimonial-dot" data-index="3" aria-label="Yorum 4"></button>
                     </div>
                 </div>
             </div>
@@ -724,7 +785,7 @@
                     <h4 class="text-white mb-lg">Kurumsal</h4>
                     <ul class="footer-links">
                         <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                        <li><a href="blog.html">Referanslar</a></li>
+                        <li><a href="#testimonials">Referanslarımız</a></li>
                         <li><a href="blog.html">Sektörel Yazılar</a></li>
                         <li><a href="iletisim.html">İletişim</a></li>
                         <li><a href="https://quality.bixkurumsal.com/" target="_blank">Dream Quality CMS</a></li>
@@ -792,6 +853,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/earth-quotes.js"></script>
+    <script src="js/testimonials-slider.js"></script>
 </body>
 
 </html>
