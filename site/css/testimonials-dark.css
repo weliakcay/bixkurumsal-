@@ -87,14 +87,32 @@
 .testimonial-dark-card {
     display: none;
     opacity: 0;
-    background: var(--bix-white);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius-xl);
     padding: var(--space-2xl) var(--space-2xl);
     flex-direction: column;
     gap: var(--space-lg);
     transition: opacity 0.45s ease-in-out;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 30px rgba(26, 26, 46, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay on top of the image */
+.testimonial-dark-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bix-hero-overlay);
+    border-radius: var(--radius-xl);
+    z-index: 0;
+}
+
+/* Ensure card content stays above the overlay */
+.testimonial-dark-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .testimonial-dark-card--active {
@@ -124,22 +142,21 @@
     width: 60px;
     height: 60px;
     border-radius: var(--radius-lg);
-    background: var(--bix-off-white);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bix-orange-glow);
 }
 
 .testimonial-dark-quote-icon svg {
-    color: rgba(232, 146, 45, 0.25);
+    color: rgba(255, 255, 255, 0.12);
 }
 
 /* ── Testimonial Text ── */
 .testimonial-dark-text {
     font-size: 1rem;
-    color: var(--bix-body-text);
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1.8;
 }
 
@@ -149,7 +166,7 @@
     align-items: center;
     gap: var(--space-md);
     padding-top: var(--space-lg);
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     flex-wrap: wrap;
 }
 
@@ -158,7 +175,7 @@
     height: 44px;
     border-radius: var(--radius-full);
     object-fit: cover;
-    border: 2px solid var(--bix-light-grey);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .testimonial-dark-author-info {
@@ -169,13 +186,13 @@
 .testimonial-dark-name {
     font-size: 0.9rem;
     font-weight: var(--weight-semibold);
-    color: var(--bix-charcoal);
+    color: #FFFFFF;
     margin-bottom: 2px;
 }
 
 .testimonial-dark-role {
     font-size: 0.75rem;
-    color: var(--bix-mid-grey);
+    color: rgba(255, 255, 255, 0.4);
     line-height: 1.4;
 }
 
@@ -196,7 +213,7 @@
 .testimonial-dark-rating {
     font-size: 0.85rem;
     font-weight: var(--weight-bold);
-    color: var(--bix-charcoal);
+    color: #FFFFFF;
     margin-left: 6px;
 }
 
