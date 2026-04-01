@@ -114,24 +114,26 @@
         /* LinkedIn butonu */
         .team-card__linkedin {
             opacity: 0;
+            visibility: hidden;
             transform: translateY(16px);
-            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease;
+            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease, visibility 0.3s 0.1s ease;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 44px;
-            height: 62px;
+            height: 44px;
             border-radius: 50%;
             background: var(--bix-orange);
             color: #fff;
             text-decoration: none;
-            transition: opacity 0.3s 0.1s ease, transform 0.3s 0.1s ease, background 0.2s ease;
+            z-index: 10;
         }
 
         .team-card:hover .team-card__overlay-title,
         .team-card:hover .team-card__overlay-desc,
         .team-card:hover .team-card__linkedin {
             opacity: 1;
+            visibility: visible;
             transform: translateY(0);
         }
 
