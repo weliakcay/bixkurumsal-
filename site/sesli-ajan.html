@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oteller İçin 7/24 Çalışan Sesli Ajan | BIX Kurumsal</title>
+    <meta name="description"
+        content="Otelinizin çağrılarını karşılayan, misafir taleplerini kayıt altına alan ve ekiplere düzenli bilgi aktaran yapay zeka destekli sesli asistan.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS (site sistemi) -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Sayfaya özel stil -->
+    <style>
+        /* ── Sayfa kapsayıcı ── */
+        body {
+            background: var(--bix-off-white);
+        }
+
+        .serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        .accent-orange {
+            color: var(--bix-orange);
+        }
+
+        /* ── Hero ── */
+        .voice-hero {
+            position: relative;
+            padding: clamp(7rem, 12vw, 10rem) 0 clamp(4rem, 8vw, 7rem);
+            background:
+                radial-gradient(circle at 80% 10%, rgba(232, 146, 45, 0.08), transparent 50%),
+                radial-gradient(circle at 10% 90%, rgba(22, 33, 62, 0.05), transparent 60%),
+                linear-gradient(180deg, #fffaf3 0%, #f8f9fa 100%);
+            overflow: hidden;
+        }
+
+        .voice-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(26, 26, 46, 0.04) 1px, transparent 1px);
+            background-size: 4px 4px;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .voice-hero__grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 991px) {
+            .voice-hero__grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .voice-hero__eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--bix-charcoal);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(26, 26, 46, 0.08);
+            border-radius: 50rem;
+            backdrop-filter: blur(8px);
+        }
+
+        .voice-hero__eyebrow .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--bix-orange);
+            box-shadow: 0 0 0 4px rgba(232, 146, 45, 0.18);
+        }
+
+        .voice-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 1.05;
+            letter-spacing: -0.015em;
+            color: var(--bix-charcoal);
+            margin: 1.4rem 0 1.2rem;
+        }
+
+        .voice-hero__title em {
+            font-style: italic;
+            color: var(--bix-orange);
+        }
+
+        .voice-hero__lead {
+            font-size: clamp(1rem, 1.3vw, 1.18rem);
+            color: var(--bix-dark-grey);
+            line-height: 1.6;
+            max-width: 580px;
+            margin-bottom: 1rem;
+        }
+
+        .voice-hero__desc {
+            font-size: 0.95rem;
+            color: var(--bix-body-text);
+            line-height: 1.7;
+            max-width: 580px;
+            margin-bottom: 2rem;
+        }
+
+        .voice-hero__ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* ── Hero görsel ── */
+        .voice-hero__visual {
+            position: relative;
+            min-height: 460px;
+        }
+
+        .v-card {
+            position: absolute;
+            background: #fff;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 20px 50px rgba(26, 26, 46, 0.15);
+            border: 1px solid rgba(26, 26, 46, 0.06);
+        }
+
+        .v-card--main {
+            inset: 0;
+            padding: 1.8rem;
+            background: linear-gradient(160deg, #16213E 0%, #1A1A2E 100%);
+            color: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .v-card--main::before {
+            content: "";
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(circle at 30% 30%, rgba(232, 146, 45, 0.25), transparent 50%);
+        }
+
+        .call-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .call-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--bix-gradient);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .call-meta .name {
+            font-size: 0.92rem;
+            font-weight: 600;
+            letter-spacing: -0.005em;
+            color: #fff;
+        }
+
+        .call-meta .sub {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 2px;
+        }
+
+        .call-status {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .call-status .pulse {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4ADE80;
+            box-shadow: 0 0 0 0 rgba(74, 222, 128, .5);
+            animation: pulse 1.6s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(74, 222, 128, .5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(74, 222, 128, 0);
+            }
+        }
+
+        .call-wave {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            height: 80px;
+            position: relative;
+            z-index: 2;
+            margin: 1rem 0;
+        }
+
+        .call-wave span {
+            width: 3px;
+            border-radius: 3px;
+            background: linear-gradient(180deg, #F4A94D, #E8922D);
+            animation: wave 1.2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                height: 5px;
+                opacity: .4;
+            }
+
+            50% {
+                height: 56px;
+                opacity: 1;
+            }
+        }
+
+        .call-wave span:nth-child(1) { animation-delay: 0s; }
+        .call-wave span:nth-child(2) { animation-delay: .08s; }
+        .call-wave span:nth-child(3) { animation-delay: .16s; }
+        .call-wave span:nth-child(4) { animation-delay: .24s; }
+        .call-wave span:nth-child(5) { animation-delay: .32s; }
+        .call-wave span:nth-child(6) { animation-delay: .4s; }
+        .call-wave span:nth-child(7) { animation-delay: .48s; }
+        .call-wave span:nth-child(8) { animation-delay: .56s; }
+        .call-wave span:nth-child(9) { animation-delay: .64s; }
+        .call-wave span:nth-child(10) { animation-delay: .72s; }
+        .call-wave span:nth-child(11) { animation-delay: .8s; }
+        .call-wave span:nth-child(12) { animation-delay: .88s; }
+        .call-wave span:nth-child(13) { animation-delay: .96s; }
+        .call-wave span:nth-child(14) { animation-delay: 1.04s; }
+        .call-wave span:nth-child(15) { animation-delay: 1.12s; }
+        .call-wave span:nth-child(16) { animation-delay: 1.2s; }
+        .call-wave span:nth-child(17) { animation-delay: 1.28s; }
+        .call-wave span:nth-child(18) { animation-delay: 1.36s; }
+
+        .call-transcript {
+            position: relative;
+            z-index: 2;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            line-height: 1.45;
+            color: #fff;
+        }
+
+        .call-transcript .q {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(244, 169, 77, 0.9);
+            margin-bottom: 0.5rem;
+        }
+
+        .call-transcript em {
+            font-style: normal;
+            color: #F4A94D;
+            background: linear-gradient(120deg, transparent 0 30%, rgba(244, 169, 77, .15) 30%);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .v-card--check {
+            top: -22px;
+            right: -22px;
+            padding: 0.85rem 1rem;
+            width: 230px;
+            background: #fff;
+        }
+
+        .v-card--check .row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            color: var(--bix-charcoal);
+            padding: 0.3rem 0;
+        }
+
+        .v-card--check .check {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #22C55E;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .v-card--lead {
+            bottom: -22px;
+            left: -28px;
+            width: 240px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: #fff;
+        }
+
+        .v-card--lead .ic {
+            width: 38px;
+            height: 38px;
+            border-radius: 11px;
+            background: var(--bix-orange-glow);
+            color: var(--bix-orange);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .v-card--lead .t {
+            font-size: 0.7rem;
+            color: var(--bix-mid-grey);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .v-card--lead .v {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--bix-charcoal);
+            margin-top: 2px;
+        }
+
+        @media (max-width: 991px) {
+            .voice-hero__visual {
+                min-height: 400px;
+                margin-top: 1rem;
+            }
+
+            .v-card--check { right: 0; top: -18px; }
+            .v-card--lead { left: 0; bottom: -18px; }
+        }
+
+        /* ── Hero trust strip ── */
+        .trust-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 580px;
+            margin-top: 2rem;
+        }
+
+        .trust-item {
+            padding: 1rem 1.1rem;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(26, 26, 46, 0.07);
+            backdrop-filter: blur(8px);
+        }
+
+        .trust-item__ic {
+            color: var(--bix-orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-item__title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--bix-charcoal);
+            line-height: 1.3;
+        }
+
+        .trust-item__sub {
+            font-size: 0.75rem;
+            color: var(--bix-mid-grey);
+            margin-top: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .trust-strip { grid-template-columns: 1fr; }
+        }
+
+        /* ── Section başlık (numaralı editöryel) ── */
+        .voice-section {
+            padding: clamp(4rem, 8vw, 7rem) 0;
+            position: relative;
+        }
+
+        .voice-section--grey {
+            background: var(--bix-off-white);
+        }
+
+        .voice-section--cream {
+            background: linear-gradient(180deg, #fffaf3 0%, var(--bix-off-white) 100%);
+        }
+
+        .voice-section--dark {
+            background: var(--bix-dark-gradient);
+            color: var(--bix-white);
+        }
+
+        .voice-section--dark p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .voice-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--bix-orange);
+            margin-bottom: 0.85rem;
+        }
+
+        .voice-eyebrow::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+            background: var(--bix-orange);
+        }
+
+        .voice-section--dark .voice-eyebrow {
+            color: var(--bix-orange-light);
+        }
+
+        .voice-section--dark .voice-eyebrow::before {
+            background: var(--bix-orange-light);
+        }
+
+        .voice-h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: clamp(1.9rem, 3.6vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -0.015em;
+            color: var(--bix-charcoal);
+            max-width: 820px;
+        }
+
+        .voice-section--dark .voice-h2 {
+            color: var(--bix-white);
+        }
+
+        .voice-h2 em {
+            font-style: italic;
+            color: var(--bix-orange);
+        }
+
+        .voice-lead {
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
+            color: var(--bix-body-text);
+            max-width: 720px;
+            margin-top: 1.1rem;
+            line-height: 1.65;
+        }
+
+        .voice-section--dark .voice-lead {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .voice-section__head {
+            margin-bottom: 3rem;
+        }
+
+        /* ── Reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal.delay-1 { transition-delay: 0.08s; }
+        .reveal.delay-2 { transition-delay: 0.16s; }
+        .reveal.delay-3 { transition-delay: 0.24s; }
+        .reveal.delay-4 { transition-delay: 0.32s; }
+
+        /* ── Problem grid ── */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .problem-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 560px) {
+            .problem-grid { grid-template-columns: 1fr; }
+        }
+
+        .p-card {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            padding: 1.75rem 1.6rem;
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .p-card::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 3px;
+            background: var(--bix-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s var(--ease-out);
+        }
+
+        .p-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .p-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .p-card__ic {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--bix-off-white);
+            color: var(--bix-charcoal);
+            display: grid;
+            place-items: center;
+            margin-bottom: 1.1rem;
+        }
+
+        .p-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--bix-charcoal);
+            line-height: 1.3;
+            letter-spacing: -0.005em;
+        }
+
+        /* ── Çözüm liste (dark editorial) ── */
+        .sol-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .sol-list { grid-template-columns: 1fr; }
+        }
+
+        .sol-item {
+            display: flex;
+            gap: 1.3rem;
+            padding: 1.8rem 1.6rem 1.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            transition: padding 0.3s var(--ease-out), background 0.3s var(--ease-out);
+        }
+
+        .sol-list .sol-item:nth-child(2n) {
+            padding-left: 1.8rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        @media (max-width: 800px) {
+            .sol-list .sol-item:nth-child(2n) {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+
+        .sol-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .sol-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--bix-orange-light);
+            font-size: 1.05rem;
+            flex-shrink: 0;
+            width: 36px;
+        }
+
+        .sol-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--bix-white);
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
+            line-height: 1.25;
+        }
+
+        .sol-body p {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.6;
+        }
+
+        /* ── Inline CTA strip ── */
+        .cta-strip {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(26, 26, 46, 0.06);
+            border-bottom: 1px solid rgba(26, 26, 46, 0.06);
+            background: var(--bix-off-white);
+        }
+
+        .cta-strip__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-strip h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+            color: var(--bix-charcoal);
+            line-height: 1.2;
+            max-width: 640px;
+            letter-spacing: -0.01em;
+        }
+
+        .cta-strip h3 em {
+            font-style: italic;
+            color: var(--bix-orange);
+        }
+
+        /* ── Bento (kullanım senaryoları) ── */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: minmax(180px, auto);
+            gap: 0.85rem;
+        }
+
+        .bc {
+            background: #fff;
+            border-radius: var(--radius-xl);
+            padding: 1.75rem;
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bc:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .bc__ic {
+            color: var(--bix-orange);
+            margin-bottom: 1rem;
+        }
+
+        .bc h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.2;
+            color: var(--bix-charcoal);
+            margin-bottom: 0.65rem;
+            letter-spacing: -0.01em;
+        }
+
+        .bc p {
+            font-size: 0.88rem;
+            color: var(--bix-body-text);
+            line-height: 1.55;
+        }
+
+        .bc__tag {
+            position: absolute;
+            top: 1.3rem;
+            right: 1.3rem;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--bix-orange);
+            font-weight: 700;
+        }
+
+        .bc--feature {
+            grid-column: span 3;
+            grid-row: span 2;
+            background: linear-gradient(160deg, #16213E 0%, #1A1A2E 100%);
+            color: #fff;
+            border: none;
+        }
+
+        .bc--feature h3 {
+            color: #fff;
+            font-size: 1.7rem;
+        }
+
+        .bc--feature p {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.95rem;
+        }
+
+        .bc--feature .bc__ic, .bc--feature .bc__tag {
+            color: var(--bix-orange-light);
+        }
+
+        .bc--w3 { grid-column: span 3; }
+        .bc--w2 { grid-column: span 2; }
+        .bc--full {
+            grid-column: span 6;
+            background: #fffaf3;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .bento { grid-template-columns: repeat(2, 1fr); }
+            .bc--feature, .bc--w3, .bc--w2, .bc--full {
+                grid-column: span 2;
+                grid-row: auto;
+            }
+            .bc--full {
+                grid-template-columns: 1fr;
+                align-items: flex-start;
+            }
+        }
+
+        /* ── Manager value ── */
+        .mg-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 880px) {
+            .mg-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .mg-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mg-item {
+            display: flex;
+            gap: 1.1rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+        }
+
+        .mg-item:last-child {
+            border-bottom: none;
+        }
+
+        .mg-num {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--bix-orange);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+            width: 34px;
+            padding-top: 2px;
+        }
+
+        .mg-item h4 {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--bix-charcoal);
+            line-height: 1.4;
+            letter-spacing: -0.005em;
+        }
+
+        .mg-quote {
+            background: #fff;
+            border-radius: var(--radius-2xl);
+            padding: 2.7rem 2.4rem;
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            box-shadow: var(--shadow-card);
+            position: relative;
+        }
+
+        .mg-quote::before {
+            content: "\201C";
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            line-height: 0.8;
+            color: var(--bix-orange);
+            opacity: 0.18;
+            position: absolute;
+            top: 1rem;
+            left: 1.4rem;
+            pointer-events: none;
+        }
+
+        .mg-quote p {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.45rem;
+            line-height: 1.3;
+            color: var(--bix-charcoal);
+            position: relative;
+            z-index: 1;
+            letter-spacing: -0.01em;
+        }
+
+        .mg-quote .who {
+            margin-top: 1.4rem;
+            font-size: 0.78rem;
+            color: var(--bix-mid-grey);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* ── Comparison Table ── */
+        .tbl {
+            background: #fff;
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tbl-head {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            background: var(--bix-charcoal);
+            color: var(--bix-white);
+            padding: 1.3rem 1.7rem;
+        }
+
+        .tbl-head div {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .tbl-head div:nth-child(3) {
+            background: linear-gradient(90deg, transparent, rgba(232, 146, 45, 0.15));
+            margin: -1.3rem -1.7rem -1.3rem 0;
+            padding: 1.3rem 1.7rem;
+            color: var(--bix-orange-light);
+        }
+
+        .tbl-row {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            padding: 1.4rem 1.7rem;
+            border-bottom: 1px solid rgba(26, 26, 46, 0.06);
+            align-items: center;
+        }
+
+        .tbl-row:last-child {
+            border-bottom: none;
+        }
+
+        .tbl-row .lbl {
+            font-weight: 600;
+            color: var(--bix-charcoal);
+            font-size: 0.92rem;
+            letter-spacing: -0.005em;
+        }
+
+        .tbl-row .col {
+            font-size: 0.88rem;
+            color: var(--bix-body-text);
+            line-height: 1.5;
+            padding-right: 1rem;
+        }
+
+        .tbl-row .col.bix {
+            color: var(--bix-charcoal);
+            font-weight: 500;
+            position: relative;
+            padding-left: 1.4rem;
+        }
+
+        .tbl-row .col.bix::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--bix-orange);
+            box-shadow: 0 0 0 4px var(--bix-orange-glow);
+        }
+
+        @media (max-width: 780px) {
+            .tbl-head { display: none; }
+
+            .tbl-row {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+                padding: 1.4rem;
+            }
+
+            .tbl-row .col {
+                padding: 0;
+            }
+
+            .tbl-row .col::before {
+                content: attr(data-label);
+                display: block;
+                font-size: 0.65rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--bix-mid-grey);
+                margin-bottom: 4px;
+                font-weight: 600;
+            }
+
+            .tbl-row .col.bix {
+                padding-left: 0;
+            }
+
+            .tbl-row .col.bix::before {
+                display: block;
+                content: attr(data-label);
+            }
+        }
+
+        .tbl-foot {
+            font-size: 0.82rem;
+            color: var(--bix-mid-grey);
+            font-style: italic;
+            margin-top: 1.2rem;
+            line-height: 1.55;
+            max-width: 780px;
+        }
+
+        /* ── Pilot ── */
+        .pilot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.1rem;
+            margin-top: 2.4rem;
+        }
+
+        @media (max-width: 880px) {
+            .pilot-grid { grid-template-columns: 1fr; }
+        }
+
+        .pilot-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-xl);
+            padding: 1.7rem;
+            transition: background 0.3s var(--ease-out), border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+        }
+
+        .pilot-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(244, 169, 77, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .pilot-card .pn {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--bix-orange-light);
+            font-size: 0.92rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pilot-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.32rem;
+            color: var(--bix-white);
+            margin-bottom: 0.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        .pilot-card p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.55;
+        }
+
+        .pilot-outputs {
+            margin-top: 3rem;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: var(--radius-2xl);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .pilot-outputs__title {
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--bix-orange-light);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        .pilot-outputs ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.85rem 1.7rem;
+        }
+
+        @media (max-width: 780px) {
+            .pilot-outputs ul { grid-template-columns: 1fr; }
+        }
+
+        .pilot-outputs li {
+            font-size: 0.92rem;
+            color: var(--bix-white);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .pilot-outputs li i {
+            color: var(--bix-orange-light);
+            flex-shrink: 0;
+        }
+
+        .pilot-cta {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        /* ── Steps timeline ── */
+        .steps {
+            position: relative;
+        }
+
+        .steps::before {
+            content: "";
+            position: absolute;
+            left: 46px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--bix-orange) 0%, var(--bix-orange) 30%, rgba(26, 26, 46, 0.1) 100%);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 680px) {
+            .steps::before { left: 24px; }
+        }
+
+        .step {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            gap: 2rem;
+            padding: 1.7rem 0;
+            position: relative;
+        }
+
+        @media (max-width: 680px) {
+            .step { grid-template-columns: 56px 1fr; gap: 1rem; }
+        }
+
+        .step-num {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--bix-orange);
+            display: grid;
+            place-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--bix-orange);
+            position: relative;
+            z-index: 1;
+            margin-left: 14px;
+            transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+        }
+
+        @media (max-width: 680px) {
+            .step-num { width: 48px; height: 48px; font-size: 1.1rem; margin-left: 0; }
+        }
+
+        .step:hover .step-num {
+            background: var(--bix-orange);
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        .step-body { padding-top: 0.85rem; }
+
+        .step-body h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            color: var(--bix-charcoal);
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+        }
+
+        .step-body p {
+            font-size: 0.92rem;
+            color: var(--bix-body-text);
+            margin-top: 0.5rem;
+            max-width: 560px;
+            line-height: 1.55;
+        }
+
+        /* ── FAQ ── */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 880px) {
+            .faq-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(26, 26, 46, 0.1);
+        }
+
+        .faq-q {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.2rem;
+            padding: 1.4rem 0;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            color: var(--bix-charcoal);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.25s var(--ease-out);
+            letter-spacing: -0.005em;
+        }
+
+        .faq-q:hover { color: var(--bix-orange); }
+
+        .faq-q .pm {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 1px solid rgba(26, 26, 46, 0.15);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            color: var(--bix-charcoal);
+            transition: background 0.25s, border-color 0.25s, transform 0.3s, color 0.25s;
+        }
+
+        .faq-item.open .faq-q .pm {
+            background: var(--bix-orange);
+            border-color: var(--bix-orange);
+            color: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s var(--ease-out), padding 0.3s, opacity 0.3s;
+            opacity: 0;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 280px;
+            padding: 0 0 1.4rem 0;
+            opacity: 1;
+        }
+
+        .faq-a p {
+            font-size: 0.92rem;
+            color: var(--bix-body-text);
+            line-height: 1.65;
+            max-width: 580px;
+        }
+
+        /* ── Form ── */
+        .voice-contact {
+            background: linear-gradient(180deg, var(--bix-off-white) 0%, #fffaf3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .voice-contact::before {
+            content: "";
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 460px;
+            height: 460px;
+            border-radius: 50%;
+            background: var(--bix-orange-glow);
+            filter: blur(100px);
+            pointer-events: none;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 4rem;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        @media (max-width: 980px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        .contact-bullets {
+            margin-top: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-bullets li {
+            display: flex;
+            gap: 0.7rem;
+            align-items: center;
+            font-size: 0.92rem;
+            color: var(--bix-body-text);
+        }
+
+        .contact-bullets li i {
+            color: var(--bix-orange);
+            flex-shrink: 0;
+        }
+
+        .voice-form {
+            background: #fff;
+            border-radius: var(--radius-2xl);
+            padding: 2.2rem;
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.1rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-grid { grid-template-columns: 1fr; }
+        }
+
+        .fg {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .fg.full {
+            grid-column: 1 / -1;
+        }
+
+        .fg label {
+            font-size: 0.78rem;
+            color: var(--bix-mid-grey);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .fg input,
+        .fg select,
+        .fg textarea {
+            font-family: inherit;
+            font-size: 0.92rem;
+            color: var(--bix-charcoal);
+            padding: 0.82rem 0.9rem;
+            border: 1px solid rgba(26, 26, 46, 0.12);
+            border-radius: var(--radius-md);
+            background: #fff;
+            transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+            width: 100%;
+        }
+
+        .fg textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+
+        .fg input:focus,
+        .fg select:focus,
+        .fg textarea:focus {
+            outline: none;
+            border-color: var(--bix-orange);
+            box-shadow: 0 0 0 4px var(--bix-orange-glow);
+        }
+
+        .form-foot {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .form-foot button {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 0.95rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-note {
+            font-size: 0.75rem;
+            color: var(--bix-mid-grey);
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        /* CTA ikon */
+        .btn-arrow {
+            margin-left: 0.5rem;
+            transition: transform 0.2s var(--ease-out);
+        }
+
+        .btn:hover .btn-arrow {
+            transform: translateX(4px);
+        }
+
+        /* Geri linki (sticky alt) */
+        .breadcrumb-back {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb-back a {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--bix-mid-grey);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-back a:hover {
+            color: var(--bix-orange);
+        }
+
+        .breadcrumb-back a::before {
+            content: "←";
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar--scrolled">
+        <div class="container navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                <img src="images/logo.png" alt="BIX Kurumsal" style="height: 62px; width: auto; display: block;">
+            </a>
+
+            <div class="navbar__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="navbar__menu">
+                <a href="index.html" class="navbar__link">Ana Sayfa</a>
+                <a href="hizmetlerimiz.html" class="navbar__link">Hizmetlerimiz</a>
+                <a href="hakkimizda.html" class="navbar__link">Hakkımızda</a>
+                <a href="ekibimiz.html" class="navbar__link">Ekibimiz</a>
+                <a href="blog.html" class="navbar__link">Uzman Görüşü</a>
+                <a href="iletisim.html" class="navbar__link">İletişim</a>
+                <a href="https://quality.bixkurumsal.com/" target="_blank" class="btn btn--primary"
+                    style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Online İşlemler</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="voice-hero">
+        <div class="container">
+            <div class="breadcrumb-back reveal">
+                <a href="dijital-cozumler.html">Dijital Çözümler</a>
+            </div>
+
+            <div class="voice-hero__grid">
+                <div>
+                    <span class="voice-hero__eyebrow reveal"><span class="dot"></span> Otelcilik · Sesli Ajan
+                        Sistemi</span>
+                    <h1 class="voice-hero__title reveal delay-1">
+                        Oteller İçin <em>7/24</em> Çalışan Sesli Ajan
+                    </h1>
+                    <p class="voice-hero__lead reveal delay-2">Çağrıları karşılayan, misafir taleplerini not alan,
+                        rezervasyon fırsatlarını yakalayan ve ekiplerinize düzenli bilgi aktaran yapay zeka destekli
+                        sesli asistan.</p>
+                    <p class="voice-hero__desc reveal delay-3">Otelinizde telefon trafiği sadece cevaplanması gereken
+                        bir iş değil; rezervasyon, misafir deneyimi ve operasyon kalitesi için kritik bir temas
+                        noktasıdır. BIX Kurumsal sesli ajan sistemi, yoğun saatlerde, gece operasyonlarında ve tekrar
+                        eden taleplerde ekibinize destek olur.</p>
+
+                    <div class="voice-hero__ctas reveal delay-3">
+                        <a href="#iletisim" class="btn btn--primary">Kısa Tanıtım Talep Et <span
+                                class="btn-arrow">→</span></a>
+                        <a href="#senaryo" class="btn btn--ghost-dark">Otelim İçin Kullanım Senaryosunu Gör</a>
+                    </div>
+
+                    <div class="trust-strip">
+                        <div class="trust-item reveal delay-1">
+                            <div class="trust-item__ic"><i data-lucide="phone-call" style="width:20px;height:20px"></i>
+                            </div>
+                            <div class="trust-item__title">7/24 çağrı karşılama</div>
+                            <div class="trust-item__sub">Vardiya kesintisiz</div>
+                        </div>
+                        <div class="trust-item reveal delay-2">
+                            <div class="trust-item__ic"><i data-lucide="clipboard-check"
+                                    style="width:20px;height:20px"></i></div>
+                            <div class="trust-item__title">Talep kayıt disiplini</div>
+                            <div class="trust-item__sub">Konuşma → not</div>
+                        </div>
+                        <div class="trust-item reveal delay-3">
+                            <div class="trust-item__ic"><i data-lucide="share-2" style="width:20px;height:20px"></i>
+                            </div>
+                            <div class="trust-item__title">Departmanlara aktarım</div>
+                            <div class="trust-item__sub">Yapısal özet ile</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="voice-hero__visual reveal delay-2" aria-hidden="true">
+                    <div class="v-card v-card--main">
+                        <div class="call-header">
+                            <div class="call-avatar">B</div>
+                            <div class="call-meta">
+                                <div class="name">BIX Sesli Asistan</div>
+                                <div class="sub">Gelen çağrı · 02:14</div>
+                            </div>
+                            <div class="call-status"><span class="pulse"></span> Aktif</div>
+                        </div>
+
+                        <div class="call-wave">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+
+                        <div class="call-transcript">
+                            <div class="q">Misafir</div>
+                            <div>"Önümüzdeki Cumartesi <em>iki kişilik deniz manzaralı</em> bir oda için fiyat
+                                öğrenebilir miyim?"</div>
+                        </div>
+                    </div>
+
+                    <div class="v-card v-card--check">
+                        <div class="row"><span class="check">✓</span> İsim &amp; iletişim alındı</div>
+                        <div class="row"><span class="check">✓</span> Tarih ve oda tipi notlandı</div>
+                        <div class="row"><span class="check">✓</span> Rezervasyon ekibine iletildi</div>
+                    </div>
+
+                    <div class="v-card v-card--lead">
+                        <div class="ic"><i data-lucide="sparkles" style="width:18px;height:18px"></i></div>
+                        <div>
+                            <div class="t">Yeni sıcak lead</div>
+                            <div class="v">Rezervasyon · 1 kayıt</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 01 — Problem -->
+    <section class="voice-section voice-section--cream" id="problem">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">01 — Problem</span>
+                <h2 class="voice-h2 reveal delay-1">Otel Telefonları Sadece Çalmıyor; <em>Gelir ve Deneyim</em> Fırsatı
+                    Taşıyor</h2>
+                <p class="voice-lead reveal delay-2">Otel operasyonlarında telefon çağrıları; rezervasyon soruları, oda
+                    talepleri, transfer bilgisi, restoran saatleri, teknik problemler, şikayetler ve özel istekler gibi
+                    birçok farklı konuyu içerir. Yoğun saatlerde veya gece vardiyasında bu çağrıların tamamını kusursuz
+                    yönetmek zordur.</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="p-card reveal">
+                    <div class="p-card__ic"><i data-lucide="phone-off" style="width:22px;height:22px"></i></div>
+                    <h3>Yoğun saatlerde kaçan çağrılar</h3>
+                </div>
+                <div class="p-card reveal delay-1">
+                    <div class="p-card__ic"><i data-lucide="repeat" style="width:22px;height:22px"></i></div>
+                    <h3>Sürekli tekrar eden bilgi talepleri</h3>
+                </div>
+                <div class="p-card reveal delay-2">
+                    <div class="p-card__ic"><i data-lucide="moon" style="width:22px;height:22px"></i></div>
+                    <h3>Gece gelen misafir istekleri</h3>
+                </div>
+                <div class="p-card reveal delay-1">
+                    <div class="p-card__ic"><i data-lucide="file-warning" style="width:22px;height:22px"></i></div>
+                    <h3>Departmanlara eksik aktarılan notlar</h3>
+                </div>
+                <div class="p-card reveal delay-2">
+                    <div class="p-card__ic"><i data-lucide="languages" style="width:22px;height:22px"></i></div>
+                    <h3>Yabancı dilde ilk karşılama zorluğu</h3>
+                </div>
+                <div class="p-card reveal delay-3">
+                    <div class="p-card__ic"><i data-lucide="users" style="width:22px;height:22px"></i></div>
+                    <h3>Personelin operasyon içinde bölünmesi</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 — Çözüm (dark) -->
+    <section class="voice-section voice-section--dark" id="cozum">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">02 — Çözüm</span>
+                <h2 class="voice-h2 reveal delay-1">BIX Sesli Ajan <em>Ne Yapar?</em></h2>
+                <p class="voice-lead reveal delay-2">Personelin yerine değil, personelin yetişemediği yerlere destek
+                    olarak çalışır. Konuşma sonunda ortada kayıp bilgi bırakmaz.</p>
+            </div>
+
+            <div class="sol-list">
+                <div class="sol-item reveal">
+                    <div class="sol-num">01</div>
+                    <div class="sol-body">
+                        <h3>Aramaları 7/24 karşılar</h3>
+                        <p>Yoğun saatlerde, gece operasyonunda ve tatil günlerinde çağrılar yanıtsız kalmaz.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal delay-1">
+                    <div class="sol-num">02</div>
+                    <div class="sol-body">
+                        <h3>Misafir bilgilerini düzgün toplar</h3>
+                        <p>İsim, telefon, e-posta ve talep bilgilerini yapısal olarak kayıt altına alır.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal">
+                    <div class="sol-num">03</div>
+                    <div class="sol-body">
+                        <h3>Otelin kurallarına göre yanıtlar</h3>
+                        <p>Sık sorulan check-in saatleri, restoran, transfer, otopark gibi soruları sizin söyleyiş
+                            tarzınızla cevaplar.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal delay-1">
+                    <div class="sol-num">04</div>
+                    <div class="sol-body">
+                        <h3>Rezervasyon niyetini yakalar</h3>
+                        <p>İlgili müşteriyi tespit eder, satış ekibine sıcak lead olarak yapısal şekilde bırakır.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal">
+                    <div class="sol-num">05</div>
+                    <div class="sol-body">
+                        <h3>Gece taleplerini kayıt altına alır</h3>
+                        <p>Gece vardiyasında oluşan oda istekleri ve şikayetler ertesi güne sağlam bir not olarak
+                            iletilir.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal delay-1">
+                    <div class="sol-num">06</div>
+                    <div class="sol-body">
+                        <h3>Departman bazlı senaryolar</h3>
+                        <p>Ön büro, rezervasyon, misafir ilişkileri, teknik servis ve housekeeping için ayrı akışlarla
+                            çalışabilir.</p>
+                    </div>
+                </div>
+                <div class="sol-item reveal">
+                    <div class="sol-num">07</div>
+                    <div class="sol-body">
+                        <h3>Görüşme özeti ve takip notu</h3>
+                        <p>Her aramanın sonunda kim aradı, neyi sordu, ne kararlaştırıldı bilgisi yapısal özet olarak
+                            çıkar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section class="cta-strip">
+        <div class="container">
+            <div class="cta-strip__inner">
+                <h3 class="reveal">Otelinize özel bir <em>kullanım senaryosu</em> ister misiniz?</h3>
+                <a href="#iletisim" class="btn btn--primary reveal delay-1">Tanıtım Talep Et <span
+                        class="btn-arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 — Senaryolar -->
+    <section class="voice-section voice-section--grey" id="senaryo">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">03 — Senaryolar</span>
+                <h2 class="voice-h2 reveal delay-1">Otelinizde <em>Nerelerde</em> Kullanılabilir?</h2>
+                <p class="voice-lead reveal delay-2">Sistem, tek bir sabit bot gibi değil; otelinizin departmanlarına ve
+                    operasyon alışkanlıklarına göre tasarlanır.</p>
+            </div>
+
+            <div class="bento">
+                <div class="bc bc--feature reveal">
+                    <div>
+                        <div class="bc__tag">Öne çıkan</div>
+                        <div class="bc__ic"><i data-lucide="bell-ring" style="width:32px;height:32px"></i></div>
+                    </div>
+                    <div>
+                        <h3>Ön Büro</h3>
+                        <p>Sık soruları karşılar, yoğun anlarda çağrıları kaçırmadan temel bilgileri toplar, gerekli
+                            durumlarda insan ekibe yönlendirme yapılmasını sağlar.</p>
+                    </div>
+                </div>
+
+                <div class="bc bc--w3 reveal delay-1">
+                    <div>
+                        <div class="bc__ic"><i data-lucide="calendar-check" style="width:22px;height:22px"></i></div>
+                        <h3>Rezervasyon</h3>
+                    </div>
+                    <p>Tarih, kişi sayısı, oda tercihi ve iletişim bilgilerini toplayarak satış ekibine sıcak lead
+                        bırakır.</p>
+                </div>
+
+                <div class="bc bc--w3 reveal delay-2">
+                    <div>
+                        <div class="bc__ic"><i data-lucide="message-circle-heart"
+                                style="width:22px;height:22px"></i></div>
+                        <h3>Misafir İlişkileri</h3>
+                    </div>
+                    <p>Özel talepleri, memnuniyet notlarını ve şikayetleri düzenli şekilde kayıt altına alır.</p>
+                </div>
+
+                <div class="bc bc--w2 reveal">
+                    <div>
+                        <div class="bc__ic"><i data-lucide="moon" style="width:22px;height:22px"></i></div>
+                        <h3>Gece Operasyonu</h3>
+                    </div>
+                    <p>Gece gelen istekleri unutulmayacak şekilde not eder ve özet oluşturur.</p>
+                </div>
+
+                <div class="bc bc--w2 reveal delay-1">
+                    <div>
+                        <div class="bc__ic"><i data-lucide="bed-double" style="width:22px;height:22px"></i></div>
+                        <h3>Housekeeping</h3>
+                    </div>
+                    <p>Ek havlu, yastık, bebek yatağı, temizlik saati gibi talepleri netleştirir.</p>
+                </div>
+
+                <div class="bc bc--w2 reveal delay-2">
+                    <div>
+                        <div class="bc__ic"><i data-lucide="wrench" style="width:22px;height:22px"></i></div>
+                        <h3>Teknik Servis</h3>
+                    </div>
+                    <p>Klima, internet, TV, kasa gibi sorunları kısa sorularla anlayıp düzgün not haline getirir.</p>
+                </div>
+
+                <div class="bc bc--full reveal">
+                    <div>
+                        <div class="bc__ic" style="margin-bottom:0.6rem"><i data-lucide="briefcase"
+                                style="width:22px;height:22px"></i></div>
+                        <h3>Satış ve Etkinlik</h3>
+                        <p>Toplantı, grup, organizasyon ve etkinlik taleplerini ön elemeden geçirir; satış ekibine
+                            yapılandırılmış brif olarak iletir.</p>
+                    </div>
+                    <div>
+                        <a href="#iletisim" class="btn btn--ghost-dark">Bu senaryoyu konuşalım <span
+                                class="btn-arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 — Yönetici Değeri -->
+    <section class="voice-section voice-section--cream">
+        <div class="container">
+            <div class="mg-grid">
+                <div>
+                    <span class="voice-eyebrow reveal">04 — Yönetici Değeri</span>
+                    <h2 class="voice-h2 reveal delay-1" style="font-size:clamp(1.7rem,3vw,2.4rem); margin-bottom:1rem">
+                        Yöneticiler İçin Asıl Değer: <em>Kayıt, Takip ve Ölçüm</em></h2>
+
+                    <div class="mg-list reveal delay-2" style="margin-top:1.5rem">
+                        <div class="mg-item"><span class="mg-num">01</span>
+                            <h4>Hangi konularda daha çok arama geldiği görülebilir</h4>
+                        </div>
+                        <div class="mg-item"><span class="mg-num">02</span>
+                            <h4>Misafir talepleri kategorize edilebilir</h4>
+                        </div>
+                        <div class="mg-item"><span class="mg-num">03</span>
+                            <h4>İlgilenen potansiyel müşteriler tabloya kaydedilebilir</h4>
+                        </div>
+                        <div class="mg-item"><span class="mg-num">04</span>
+                            <h4>Takip edilmesi gereken kişiler netleşir</h4>
+                        </div>
+                        <div class="mg-item"><span class="mg-num">05</span>
+                            <h4>Operasyonel tekrarlar görünür hale gelir</h4>
+                        </div>
+                        <div class="mg-item"><span class="mg-num">06</span>
+                            <h4>Personel zamanını tüketen çağrı tipleri analiz edilebilir</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mg-quote reveal delay-2">
+                    <p>"Telefon görüşmesi bittiğinde bilgi kaybolmaz; düzenli bir takip notuna dönüşür."</p>
+                    <div class="who">— BIX Kurumsal Yaklaşımı</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 — Karşılaştırma -->
+    <section class="voice-section">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">05 — Karşılaştırma</span>
+                <h2 class="voice-h2 reveal delay-1">Personel Yerine Değil, <em>Yetişemediği Yerlere Destek</em></h2>
+                <p class="voice-lead reveal delay-2">Aşağıda yaklaşık operasyonel karşılaştırma sunulmaktadır. Amaç bir
+                    tarafı küçümsemek değil; iki yapının nerede tamamlayıcı olabileceğini göstermektir.</p>
+            </div>
+
+            <div class="tbl reveal">
+                <div class="tbl-head">
+                    <div>Kapsam</div>
+                    <div>İnsan Operasyonu</div>
+                    <div>Sesli Ajan Desteği</div>
+                </div>
+                <div class="tbl-row">
+                    <div class="lbl">Çalışma süresi</div>
+                    <div class="col" data-label="İnsan Operasyonu">Vardiya ve izin planına bağlı</div>
+                    <div class="col bix" data-label="Sesli Ajan Desteği">7/24 çalışabilir</div>
+                </div>
+                <div class="tbl-row">
+                    <div class="lbl">Dil desteği</div>
+                    <div class="col" data-label="İnsan Operasyonu">Personel yetkinliğine bağlı</div>
+                    <div class="col bix" data-label="Sesli Ajan Desteği">Seçilen dil senaryolarına göre genişletilebilir
+                    </div>
+                </div>
+                <div class="tbl-row">
+                    <div class="lbl">Kayıt disiplini</div>
+                    <div class="col" data-label="İnsan Operasyonu">Manuel not alma gerekir</div>
+                    <div class="col bix" data-label="Sesli Ajan Desteği">Görüşme özetini ve lead bilgisini kayıt altına
+                        alabilir</div>
+                </div>
+                <div class="tbl-row">
+                    <div class="lbl">Gece operasyonu</div>
+                    <div class="col" data-label="İnsan Operasyonu">Ek vardiya maliyeti oluşturur</div>
+                    <div class="col bix" data-label="Sesli Ajan Desteği">Gece taleplerini karşılayıp not alabilir</div>
+                </div>
+                <div class="tbl-row">
+                    <div class="lbl">Ölçeklenebilirlik</div>
+                    <div class="col" data-label="İnsan Operasyonu">Ek çağrı için ek personel gerekebilir</div>
+                    <div class="col bix" data-label="Sesli Ajan Desteği">Çağrı hacmine göre genişletilebilir</div>
+                </div>
+            </div>
+
+            <p class="tbl-foot reveal delay-1">Rakamlar ve kapsam, otelin çağrı hacmine, dil ihtiyacına ve entegrasyon
+                seviyesine göre değişir. Bu nedenle BIX Kurumsal önce kullanım senaryosunu analiz eder, ardından uygun
+                pilot yapıyı önerir.</p>
+        </div>
+    </section>
+
+    <!-- 06 — Pilot (dark) -->
+    <section class="voice-section voice-section--dark" id="pilot">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">06 — Pilot</span>
+                <h2 class="voice-h2 reveal delay-1">Önce <em>Küçük Bir Pilotla</em> Başlayın</h2>
+                <p class="voice-lead reveal delay-2">Tüm oteli bir anda dönüştürmek yerine, en çok değer yaratacak tek
+                    senaryodan başlıyoruz. Birkaç hafta içinde somut çıktıları görür, sonra kapsamı genişletiriz.</p>
+            </div>
+
+            <div class="pilot-grid">
+                <div class="pilot-card reveal">
+                    <span class="pn">Pilot 01</span>
+                    <h4>Gece Çağrı ve Talep Kayıt Pilotu</h4>
+                    <p>Gece vardiyasında gelen talepleri ve çağrıları net bir özetle ertesi güne taşıyın.</p>
+                </div>
+                <div class="pilot-card reveal delay-1">
+                    <span class="pn">Pilot 02</span>
+                    <h4>Rezervasyon Lead Toplama Pilotu</h4>
+                    <p>Rezervasyon niyetli misafirleri sıcak lead olarak satış ekibine yapılandırılmış şekilde aktarın.
+                    </p>
+                </div>
+                <div class="pilot-card reveal delay-2">
+                    <span class="pn">Pilot 03</span>
+                    <h4>Ön Büro Sık Sorular Pilotu</h4>
+                    <p>Tekrar eden bilgi taleplerini sesli ajan karşılasın, ön büro yüksek değerli işlere odaklansın.
+                    </p>
+                </div>
+                <div class="pilot-card reveal delay-3">
+                    <span class="pn">Pilot 04</span>
+                    <h4>Misafir İlişkileri Talep ve Şikayet Kayıt Pilotu</h4>
+                    <p>Özel talep ve şikayetleri kategorili biçimde toplayın, hiçbiri kaybolmasın.</p>
+                </div>
+            </div>
+
+            <div class="pilot-outputs reveal">
+                <div class="pilot-outputs__title">Pilot Çıktıları</div>
+                <ul>
+                    <li><i data-lucide="check" style="width:16px;height:16px"></i> Arama özetleri</li>
+                    <li><i data-lucide="check" style="width:16px;height:16px"></i> İlgili müşteri kayıtları</li>
+                    <li><i data-lucide="check" style="width:16px;height:16px"></i> Talep kategorileri</li>
+                    <li><i data-lucide="check" style="width:16px;height:16px"></i> Takip edilmesi gereken kişiler</li>
+                    <li><i data-lucide="check" style="width:16px;height:16px"></i> Haftalık değerlendirme notu</li>
+                </ul>
+            </div>
+
+            <div class="pilot-cta reveal delay-1">
+                <a href="#iletisim" class="btn btn--primary">Otelim İçin Pilot Senaryo Belirleyin <span
+                        class="btn-arrow">→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 — Süreç -->
+    <section class="voice-section voice-section--cream">
+        <div class="container">
+            <div class="voice-section__head">
+                <span class="voice-eyebrow reveal">07 — Süreç</span>
+                <h2 class="voice-h2 reveal delay-1">Kurulum Süreci <em>Nasıl İlerler?</em></h2>
+                <p class="voice-lead reveal delay-2">Süreç, otelinizin operasyon ritmini bozmadan ilerler. Her adım
+                    birlikte gözden geçirilir.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <h4>İhtiyaçlar belirlenir</h4>
+                        <p>Otelinizin çağrı yapısı, en sık konular ve mevcut operasyon ekibi ile yaşanan darboğazlar
+                            konuşulur.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <h4>Sık sorular ve operasyon senaryoları çıkarılır</h4>
+                        <p>Ön büro, rezervasyon, misafir ilişkileri ve diğer departmanlardaki tekrar eden konular
+                            yapılandırılır.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <h4>Sesli ajan otelinize göre hazırlanır</h4>
+                        <p>Otelinizin diline, iletişim tarzına ve süreçlerine uygun hale getirilir.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">4</div>
+                    <div class="step-body">
+                        <h4>Test aramaları yapılır</h4>
+                        <p>Senaryolar gerçek aramalarla denenir, ekipten gelen geri bildirimle iyileştirilir.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">5</div>
+                    <div class="step-body">
+                        <h4>Pilot kullanım başlatılır</h4>
+                        <p>Belirlenen tek senaryo üzerinde canlı kullanım başlar.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">6</div>
+                    <div class="step-body">
+                        <h4>Görüşme notları ve performans çıktıları raporlanır</h4>
+                        <p>Kategori dağılımı, lead sayısı, takip edilmesi gerekenler düzenli olarak iletilir.</p>
+                    </div>
+                </div>
+                <div class="step reveal">
+                    <div class="step-num">7</div>
+                    <div class="step-body">
+                        <h4>Departman bazlı genişleme</h4>
+                        <p>Pilot sonuçlarına göre kapsam, hız kesmeden diğer departmanlara taşınır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 — SSS -->
+    <section class="voice-section" id="sss">
+        <div class="container">
+            <div class="faq-grid">
+                <div>
+                    <span class="voice-eyebrow reveal">08 — SSS</span>
+                    <h2 class="voice-h2 reveal delay-1"
+                        style="font-size:clamp(1.8rem,3vw,2.6rem); margin-bottom:1rem">Sık Sorulan <em>Sorular</em></h2>
+                    <p class="voice-lead reveal delay-2">Otel yöneticilerinden gelen en sık soruları ve net cevaplarımızı
+                        bir araya getirdik.</p>
+                </div>
+
+                <div class="reveal delay-1">
+                    <div class="faq-item">
+                        <button class="faq-q">Bu sistem personelin yerine mi geçer?<span class="pm"><i
+                                    data-lucide="plus" style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>Hayır. Amaç personelin yerine geçmek değil; tekrar eden çağrıları, yoğun saatleri ve gece
+                                taleplerini daha düzenli yönetmektir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Misafir bunun yapay zeka olduğunu anlar mı?<span class="pm"><i
+                                    data-lucide="plus" style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>Sistem doğal bir sesle konuşur. Gerektiğinde yapay zeka destekli bir asistan olduğu
+                                açıkça söylenebilir. Şeffaf ve güvenli kullanım esastır.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Otelimize göre özelleştirilebilir mi?<span class="pm"><i
+                                    data-lucide="plus" style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>Evet. Ön büro, rezervasyon, misafir ilişkileri, teknik servis, housekeeping ve satış
+                                süreçlerine göre senaryo hazırlanabilir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Yabancı dil desteği var mı?<span class="pm"><i data-lucide="plus"
+                                    style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>İlk kurulumda en stabil diller belirlenir. Türkçe ve İngilizce temel alınabilir; Rusça,
+                                Almanca, Arapça gibi diller ihtiyaç halinde ayrı testlerle genişletilebilir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Görüşmeler nereye kaydedilir?<span class="pm"><i data-lucide="plus"
+                                    style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>İlgili müşteriler, talepler ve görüşme özetleri yapılandırılmış tabloya veya seçilen
+                                sisteme aktarılabilir.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">PMS veya CRM ile entegre olur mu?<span class="pm"><i data-lucide="plus"
+                                    style="width:14px;height:14px"></i></span></button>
+                        <div class="faq-a">
+                            <p>İlk pilot entegrasyonsuz başlayabilir. İkinci fazda PMS, CRM, Google Sheets, n8n, Make
+                                veya özel backend entegrasyonları değerlendirilebilir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09 — İletişim -->
+    <section class="voice-section voice-contact" id="iletisim">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <span class="voice-eyebrow reveal">09 — İletişim</span>
+                    <h2 class="voice-h2 reveal delay-1"
+                        style="font-size:clamp(1.7rem,2.8vw,2.4rem); margin-top:0.5rem">Otelinizde İlk Sesli Ajan
+                        Senaryosunu <em>Birlikte Belirleyelim</em></h2>
+                    <p class="voice-lead reveal delay-2">Formu doldurun, BIX Kurumsal ekibi oteliniz için en uygun
+                        kullanım senaryosunu değerlendirsin. Satış baskısı yok; önce sizinle ihtiyacınızı konuşur, sonra
+                        somut bir plan öneririz.</p>
+
+                    <ul class="contact-bullets reveal delay-3">
+                        <li><i data-lucide="check" style="width:18px;height:18px"></i> 30 dakikalık kısa tanıtım
+                            görüşmesi</li>
+                        <li><i data-lucide="check" style="width:18px;height:18px"></i> Otelinize özel pilot senaryo
+                            önerisi</li>
+                        <li><i data-lucide="check" style="width:18px;height:18px"></i> Şeffaf süreç, sözleşme öncesi
+                            netlik</li>
+                    </ul>
+                </div>
+
+                <form class="voice-form reveal delay-1" id="leadForm" novalidate>
+                    <div class="form-grid">
+                        <div class="fg">
+                            <label for="ad">Ad Soyad</label>
+                            <input id="ad" name="ad" type="text" required placeholder="Örn. Ayşe Yılmaz" />
+                        </div>
+                        <div class="fg">
+                            <label for="otel">Otel / İşletme Adı</label>
+                            <input id="otel" name="otel" type="text" required placeholder="Örn. Marina Resort" />
+                        </div>
+                        <div class="fg">
+                            <label for="gorev">Görev</label>
+                            <input id="gorev" name="gorev" type="text" placeholder="Örn. Ön Büro Müdürü" />
+                        </div>
+                        <div class="fg">
+                            <label for="telefon">Telefon</label>
+                            <input id="telefon" name="telefon" type="tel" placeholder="+90 ___ ___ __ __" />
+                        </div>
+                        <div class="fg full">
+                            <label for="eposta">E-posta</label>
+                            <input id="eposta" name="eposta" type="email" required placeholder="ornek@oteliniz.com" />
+                        </div>
+                        <div class="fg full">
+                            <label for="alan">En çok ilgilendiğiniz alan</label>
+                            <select id="alan" name="alan">
+                                <option value="">Seçiniz…</option>
+                                <option>Ön Büro</option>
+                                <option>Rezervasyon</option>
+                                <option>Gece Operasyonu</option>
+                                <option>Misafir İlişkileri</option>
+                                <option>Teknik Servis</option>
+                                <option>Satış ve Etkinlik</option>
+                                <option>Genel Bilgi</option>
+                            </select>
+                        </div>
+                        <div class="fg full">
+                            <label for="not">Notunuz</label>
+                            <textarea id="not" name="not"
+                                placeholder="Otelinizin ihtiyacını birkaç cümleyle anlatabilirsiniz."></textarea>
+                        </div>
+                    </div>
+                    <div class="form-foot">
+                        <button type="submit" class="btn btn--primary">Beni Bilgilendirin <span
+                                class="btn-arrow">→</span></button>
+                        <p class="form-note">Bilgileriniz yalnızca BIX Kurumsal ekibi tarafından, sizinle iletişime
+                            geçmek amacıyla kullanılır.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section section--dark pt-4xl pb-lg">
+        <div class="container text-center">
+            <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="BIX Kurumsal"
+                    style="height: 84px; width: auto; display: inline-block;"></a>
+            <p class="text-small opacity-70 mb-lg">Arbo Yönetim Danışmanlığı ve Öz. Eğ. Hiz. Öz. Sağ. Tur. Tic. Ltd.
+                Şti.</p>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <div>&copy; 2024 BIX Kurumsal Kalite Denetim Hizmetleri. Tüm Hakları Saklıdır.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+    <script src="js/navbar.js"></script>
+
+    <script>
+        /* Reveal on scroll */
+        (function () {
+            const els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(e => e.classList.add('in'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('in');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            els.forEach(el => io.observe(el));
+        })();
+
+        /* FAQ accordion */
+        document.querySelectorAll('.faq-q').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const open = item.classList.contains('open');
+                document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+                if (!open) item.classList.add('open');
+            });
+        });
+
+        /* Form submit (placeholder — backend bağlanacak) */
+        const form = document.getElementById('leadForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const f = e.currentTarget;
+                if (!f.ad.value || !f.otel.value || !f.eposta.value) {
+                    alert('Lütfen Ad Soyad, Otel Adı ve E-posta alanlarını doldurun.');
+                    return;
+                }
+                const btn = f.querySelector('button[type=submit]');
+                const orig = btn.innerHTML;
+                btn.innerHTML = 'Gönderiliyor…';
+                btn.disabled = true;
+                setTimeout(() => {
+                    btn.innerHTML = '✓ Talebiniz alındı';
+                    setTimeout(() => {
+                        f.reset();
+                        btn.innerHTML = orig;
+                        btn.disabled = false;
+                    }, 2400);
+                }, 800);
+            });
+        }
+    </script>
+</body>
+
+</html>

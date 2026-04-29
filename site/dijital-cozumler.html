@@ -220,6 +220,46 @@
             letter-spacing: 0.03em;
         }
 
+        /* ── Section CTA (Detaylı İncele) ── */
+        .section-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-top: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: clamp(0.65rem, 1vw, 0.75rem);
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 50rem;
+            transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+            cursor: pointer;
+        }
+
+        .section-cta::after {
+            content: "→";
+            font-size: 1rem;
+            letter-spacing: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .section-cta:hover {
+            background: #F39C12;
+            border-color: #F39C12;
+            color: #1A1A2E;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.25);
+        }
+
+        .section-cta:hover::after {
+            transform: translateX(4px);
+        }
+
         /* ── Scroll hint ── */
         .scroll-hint {
             position: fixed;
@@ -358,6 +398,7 @@
                         <p class="section-desc">Misafir karşılama, rezervasyon yönetimi ve 7/24 destek için
                             özelleştirilmiş sesli yapay zeka asistanları geliştiriyoruz. Turizm sektörüne özel dil
                             modelleri ile çalışıyoruz.</p>
+                        <a href="sesli-ajan.html" class="section-cta">Detaylı İncele</a>
                     </div>
                 </div>
             </div>
