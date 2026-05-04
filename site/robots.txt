@@ -1,0 +1,75 @@
+# BIX Kurumsal — robots.txt
+# Generative Engine Optimization (GEO) için açık AI crawler izinleri.
+
+# ============ Genel arama motorları ============
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /bilgiler/
+
+# ============ AI / LLM crawler'ları (cite-able içerik için) ============
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ============ Sitemap ============
+Sitemap: https://www.bixkurumsal.com/sitemap.xml
+
+# ============ Host ============
+Host: https://www.bixkurumsal.com
